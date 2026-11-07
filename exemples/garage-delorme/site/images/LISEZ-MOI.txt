@@ -1,2 +1,2 @@
-atelier.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération YjUbZj8irY7SI4N6xQDR
-diagnostic.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération swp9ZEJUtDTuQW6wy8lg
+Illustrations générées par IA pour la démonstration (exemple fictif). À remplacer par les vraies photos ou une vraie vidéo du garage.
+Le pont élévateur (../img/pont/) : image ElevenLabs bytedance-seedream-5-pro (génération Vptx2gR4J2hYuldNbAEf), vidéo kling-2.5-turbo (génération JfITSzbwRWDEOmNdaBti, 5 s), 60 images WebP 1280x720. Détails dans ../img/pont/provenance.json.

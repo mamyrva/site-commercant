@@ -70,6 +70,32 @@
   }
   var ligne = document.querySelector('.horaires tr[data-jour="' + t.jour + '"]');
   if (ligne) ligne.classList.add("aujourdhui");
+  var court = document.querySelector("[data-etat-court]");
+  if (court && etat) {
+    court.textContent = ouvert ? (EN ? "Open until " : "Ouvert jusqu'à ") + heure(ouvert[1]) : (EN ? "Closed now" : "Fermé pour le moment");
+    if (!ouvert) court.classList.add("ferme");
+    court.hidden = false;
+  }
+
+  /* ---------- Onglets des services (clavier : flèches gauche/droite) ---------- */
+  var onglets = Array.prototype.slice.call(document.querySelectorAll(".onglet"));
+  function choisir(i, focus) {
+    onglets.forEach(function (o, j) {
+      var actif = i === j, panneau = document.getElementById(o.getAttribute("aria-controls"));
+      o.setAttribute("aria-selected", actif ? "true" : "false");
+      o.tabIndex = actif ? 0 : -1;
+      if (actif) { panneau.removeAttribute("data-cache"); panneau.classList.remove("entre"); void panneau.offsetWidth; panneau.classList.add("entre"); }
+      else panneau.setAttribute("data-cache", "");
+    });
+    if (focus) onglets[i].focus();
+  }
+  onglets.forEach(function (o, i) {
+    o.addEventListener("click", function () { choisir(i, false); });
+    o.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); choisir((i + 1) % onglets.length, true); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); choisir((i - 1 + onglets.length) % onglets.length, true); }
+    });
+  });
 
   /* ---------- Contenu modifiable : contenu/infos.json ---------- */
   if (document.querySelector("[data-annonce]") && window.fetch && location.protocol !== "file:") {
@@ -83,27 +109,79 @@
     }).catch(function () {});
   }
 
-  /* ---------- Le pont élévateur : la voiture monte avec le défilement ---------- */
+  /* ---------- Le pont élévateur : une vraie séquence filmée, pilotée par le défilement ----------
+     Les images sont dessinées sur un canvas. La position suit le défilement avec un lissage
+     (lerp) : le mouvement démarre et s'arrête en douceur, comme un vrai pont hydraulique.
+     Sans JS, en mouvement réduit ou en capture : on garde l'image fixe (voiture levée). */
   var scene = document.querySelector(".scene");
+  var film = scene && scene.querySelector(".pont-film");
   if (scene) {
-    var etiquettes = Array.prototype.slice.call(scene.querySelectorAll(".etiquettes li"));
-    var prevu = false;
-    var regler = function (p) {
+    var releve = Array.prototype.slice.call(scene.querySelectorAll(".releve li"));
+    var marquer = function (p) {
+      releve.forEach(function (li) { li.classList.toggle("visible", p >= parseFloat(li.dataset.seuil)); });
       scene.style.setProperty("--p", p.toFixed(3));
-      etiquettes.forEach(function (li) { li.classList.toggle("visible", p >= parseFloat(li.dataset.seuil)); });
     };
-    if (calme) regler(1);
+    var statique = calme || document.documentElement.classList.contains("capture") || !film || !film.getContext;
+    if (statique) marquer(1);
     else {
-      var calcul = function () {
-        prevu = false;
+      var ctx = film.getContext("2d");
+      var nb = parseInt(film.dataset.images, 10);
+      var dossier = film.dataset.dossier;
+      var images = new Array(nb);
+      var pret = new Array(nb);
+      var cible = 0, actuel = 0, dessine = -1, boucle = false;
+
+      var charger = function (i) {
+        var im = new Image();
+        im.decoding = "async";
+        im.onload = function () { pret[i] = true; if (i === 0) { scene.querySelector(".pont").classList.add("en-film"); dessine = -1; peindre(); } };
+        im.src = dossier + String(i + 1).padStart(3, "0") + ".webp";
+        images[i] = im;
+      };
+      // La première image d'abord, puis le reste, en sautant pour avoir vite une séquence grossière.
+      charger(0);
+      [8, 4, 2, 1].forEach(function (pas) { for (var i = pas; i < nb; i += pas) if (!images[i]) charger(i); });
+
+      var proche = function (i) {
+        for (var d = 0; d < nb; d++) {
+          if (i - d >= 0 && pret[i - d]) return i - d;
+          if (i + d < nb && pret[i + d]) return i + d;
+        }
+        return -1;
+      };
+      var peindre = function () {
+        var i = proche(Math.round(actuel * (nb - 1)));
+        if (i < 0 || i === dessine) return;
+        var im = images[i];
+        var cw = film.width, ch = film.height, iw = im.naturalWidth, ih = im.naturalHeight;
+        var echelle = Math.max(cw / iw, ch / ih);
+        var sw = cw / echelle, sh = ch / echelle;
+        ctx.drawImage(im, (iw - sw) / 2, (ih - sh) / 2, sw, sh, 0, 0, cw, ch);
+        dessine = i;
+      };
+      var dimensionner = function () {
+        var r = film.getBoundingClientRect();
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        var w = Math.round(r.width * dpr), h = Math.round(r.height * dpr);
+        if (w && h && (film.width !== w || film.height !== h)) { film.width = w; film.height = h; dessine = -1; peindre(); }
+      };
+      var lire = function () {
         var r = scene.getBoundingClientRect();
         var course = r.height - window.innerHeight;
-        regler(Math.max(0, Math.min(1, course > 0 ? -r.top / course : 1)));
+        cible = Math.max(0, Math.min(1, course > 0 ? -r.top / course : 1));
       };
-      var demander = function () { if (!prevu) { prevu = true; requestAnimationFrame(calcul); } };
-      window.addEventListener("scroll", demander, { passive: true });
-      window.addEventListener("resize", demander);
-      calcul();
+      var tic = function () {
+        actuel += (cible - actuel) * 0.12;
+        if (Math.abs(cible - actuel) < 0.0005) actuel = cible;
+        peindre();
+        marquer(actuel);
+        if (actuel !== cible) requestAnimationFrame(tic); else boucle = false;
+      };
+      var relancer = function () { lire(); if (!boucle) { boucle = true; requestAnimationFrame(tic); } };
+      window.addEventListener("scroll", relancer, { passive: true });
+      window.addEventListener("resize", function () { dimensionner(); relancer(); });
+      dimensionner();
+      lire(); actuel = cible; marquer(actuel);
     }
   }
 

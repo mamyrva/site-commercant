@@ -1,373 +1,197 @@
-/* Maison Vauclair : maison de joaillerie moderne.
-   Blanc lumineux, encre presque noire, une couleur signature (vert jade),
-   titres très fins (Italiana), texte et libellés en Jost. Beaucoup d'espace. */
+/* Maison Vauclair : « l'écrin après la fermeture ».
+   La boutique est fermée, une seule lampe reste allumée sur l'établi.
+   Noir pur, blanc, un seul crème (la lampe) réservé au bouton principal.
+   Titres en Jost très fin, un seul mot en italique sérif (Instrument Serif) par grand titre. */
 
-@font-face {
-  font-family: "Italiana";
-  src: url("../fonts/italiana.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
 @font-face {
   font-family: "Jost";
   src: url("../fonts/jost.woff2") format("woff2");
   font-weight: 100 900;
   font-display: swap;
 }
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("../fonts/instrument-serif-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
 
 :root {
-  /* Couleurs : modifier ici pour changer l'ambiance */
-  --fond: #FFFFFF;        /* fond de page */
-  --fond-doux: #F5F5F3;   /* section « Venir » */
-  --encre: #141414;
-  --encre-douce: #55524C;
-  --filet: #E3E2DE;
-  --photo: #EFEEEB;
-  --jade: #134E46;
-
-  --titre: "Italiana", "Didot", "Bodoni 72", serif;
-  --texte: "Jost", "Futura", "Avenir Next", sans-serif;
-
-  --marge: clamp(1.25rem, 5vw, 5rem);
-  --section: clamp(5rem, 10vw, 9rem);
+  --vide: #000000;        /* le noir de la boutique fermée : le fond, partout */
+  --blanc: #FFFFFF;       /* le texte, les titres */
+  --charbon: #202020;     /* une marche au-dessus du vide : les cartes */
+  --graphite: #333333;    /* filets et contours */
+  --lampe: #F5F5F0;       /* la lampe : seul bouton plein */
+  --fumee: #A3A3A3;       /* textes secondaires (AA sur noir et sur #202020) */
+  --sans: "Jost", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --large: 75rem;
+  --marge: 1.25rem;
+  --section: 6rem;
+  --entete: 4.5rem;
 }
+@media (min-width: 48rem) { :root { --marge: 2.5rem; --section: 7.5rem; } }
 
 *, *::before, *::after { box-sizing: border-box; }
-
-html {
-  background: var(--fond);
-  color: var(--encre);
-  font-family: var(--texte);
-  font-weight: 400;
-  line-height: 1.65;
-  -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
-  scrollbar-color: var(--jade) var(--fond);
-}
-body { margin: 0; }
-
-::selection { background: var(--jade); color: var(--fond); }
-:focus-visible { outline: 1px solid var(--encre); outline-offset: 4px; }
-.atelier :focus-visible { outline-color: var(--fond); }
-
-a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px; }
-
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: var(--entete); }
+body { margin: 0; background: var(--vide); color: var(--blanc); font: 400 1rem/1.5 var(--sans); font-feature-settings: "ss01" on; -webkit-font-smoothing: antialiased; }
+img, video { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 1px solid var(--lampe); outline-offset: 4px; border-radius: 4px; }
 .defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.ic { width: 1.05rem; height: 1.05rem; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.ic--plein { fill: currentColor; stroke: none; }
 
-.fictif {
-  margin: 0;
-  padding: 0.45rem 1rem;
-  background: var(--encre);
-  color: #D8D4CC;
-  font-size: 0.75rem;
-  letter-spacing: 0.02em;
-  text-align: center;
-}
+/* L'italique sérif : un seul mot, le mot qui porte l'émotion */
+em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+.fictif em, .pied-petit em { font-family: inherit; font-style: italic; letter-spacing: 0; }
 
-/* ---------- En-tête ---------- */
-.entete {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  gap: 0.75rem;
-  padding: 1.5rem var(--marge) 0;
-  background: var(--fond);
-  border-bottom: 1px solid var(--filet);
-}
-.entete-lieu, .entete-etat {
-  margin: 0;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--encre-douce);
-}
-.entete-lieu { display: none; }
-.entete-etat { order: 3; font-size: 0.6875rem; letter-spacing: 0.1em; }
-.entete-etat a { padding: 0.4rem 0; display: inline-block; }
-.entete-etat a { color: var(--encre); margin-left: 1rem; }
-.logotype {
-  font-family: var(--titre);
-  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
-  letter-spacing: 0.32em;
-  margin-right: -0.32em;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: 1.1;
-  color: var(--encre);
-}
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0 clamp(0.9rem, 3vw, 2.75rem);
-}
-.nav a {
-  display: inline-block;
-  padding: 0.85rem 0 0.95rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 300ms ease-out;
-}
-.nav a:hover { border-bottom-color: var(--jade); color: var(--jade); }
-@media (max-width: 26rem) { .nav a { letter-spacing: 0.12em; } }
+.libelle { margin: 0; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fumee); }
 
-/* ---------- Emplacements photo ---------- */
-.visuel { margin: 0; }
-.photo {
-  position: relative;
-  display: grid;
-  place-items: center;
-  background: var(--photo);
-  overflow: hidden;
-}
-.trait {
-  width: min(58%, 15rem);
-  aspect-ratio: 1;
-  fill: none;
-  stroke: #857E71;
-  stroke-width: 1.1;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.photo--paysage .trait { width: min(40%, 14rem); margin-bottom: 1.5rem; }
-.trait--hero { width: auto; height: 80%; margin-bottom: 1.25rem; aspect-ratio: 400 / 320; }
-.trait--atelier { width: auto; height: 62%; aspect-ratio: 320 / 400; }
-.photo-mention {
-  position: absolute;
-  bottom: 1.1rem;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 0.6875rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #5F594F;
-}
-.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.visuel--hero .photo img { object-position: 70% 50%; animation: approcher 2400ms cubic-bezier(.16, 1, .3, 1) both; }
-@keyframes approcher { from { transform: scale(1.08); } to { transform: none; } }
-.tuile .photo img { transition: transform 900ms cubic-bezier(.16, 1, .3, 1); }
-.tuile:hover .photo img { transform: scale(1.04); }
-.photo--carre { aspect-ratio: 1; }
-.photo--portrait { aspect-ratio: 4 / 5; }
-.photo--paysage { aspect-ratio: 3 / 2; }
-.photo--sombre { background: #0F3F39; }
-.photo--sombre .photo-mention { color: #C4D6D1; }
-.photo--sombre .trait { stroke: #8DB3AB; }
+.fictif { margin: 0; padding: 0.5rem var(--marge); background: var(--charbon); color: var(--fumee); font-size: 0.75rem; letter-spacing: 0.03em; text-align: center; }
 
-/* ---------- Ouverture ---------- */
-.ouverture { padding-bottom: var(--section); }
-.visuel--hero .photo {
-  aspect-ratio: 4 / 3;
-  max-height: 36svh;
-  width: 100%;
-  animation: devoiler 1600ms cubic-bezier(.16, 1, .3, 1) both;
-}
-@keyframes devoiler {
-  from { clip-path: inset(0 0 100% 0); }
-  to { clip-path: inset(0 0 0 0); }
-}
-.ouverture-texte {
-  display: grid;
-  justify-items: center;
-  text-align: center;
-  padding: 1.75rem var(--marge) 0;
-}
-.titre {
-  margin: 0;
-  font-family: var(--titre);
-  font-weight: 400;
-  font-size: clamp(2.3rem, 1.4rem + 4.2vw, 5.25rem);
-  line-height: 1.04;
-  letter-spacing: 0.005em;
-  text-wrap: balance;
-}
-.chapeau {
-  margin: 0.9rem 0 1.5rem;
-  max-width: 36ch;
-  font-size: 1.0625rem;
-  font-weight: 300;
-  color: var(--encre-douce);
+/* ---------- En-tête : logotype à gauche, trois liens, la lampe à droite ---------- */
+.entete { position: sticky; top: 0; z-index: 10; height: var(--entete); display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 max(var(--marge), (100% - var(--large)) / 2); background: var(--vide); }
+.logotype { margin: 0; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+.nav { display: none; gap: 2rem; }
+.nav a { font-size: 0.9375rem; font-weight: 500; text-decoration: none; color: var(--blanc); opacity: 0.8; transition: opacity 200ms; }
+.nav a:hover { opacity: 1; }
+@media (min-width: 56rem) { .nav { display: flex; position: absolute; left: 50%; translate: -50% 0; } }
+
+/* ---------- Pilules ---------- */
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.pilule { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; min-height: 3rem; padding: 0 1.5rem; border-radius: 9999px; font: 500 1rem/1 var(--sans); text-decoration: none; white-space: nowrap; transition: background-color 250ms, color 250ms, border-color 250ms; }
+.pilule--lampe { background: var(--lampe); color: var(--vide); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); }
+.pilule--lampe:hover { background: var(--blanc); }
+.pilule--fantome { border: 1px solid rgba(255, 255, 255, 0.7); color: var(--blanc); padding: 0 1.25rem; }
+.pilule--fantome:hover { border-color: var(--blanc); background: rgba(255, 255, 255, 0.06); }
+.pilule--petite { min-height: 2.5rem; padding: 0 1.1rem; font-size: 0.875rem; }
+
+/* Pastille en verre dépoli (catégories, état d'ouverture) */
+.verre { display: inline-flex; align-items: center; width: fit-content; margin: 0; padding: 0.5rem 1rem; border-radius: 9999px; background: rgba(200, 200, 200, 0.1); -webkit-backdrop-filter: blur(20px) saturate(1.4); backdrop-filter: blur(20px) saturate(1.4); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08); color: var(--blanc); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* ---------- Titres ---------- */
+.titre, .titre-section, .pied-titre { margin: 0; font-weight: 300; color: var(--blanc); text-wrap: balance; }
+.titre { font-size: clamp(2.75rem, 1.4rem + 5.6vw, 6.5rem); line-height: 1; letter-spacing: -0.05em; }
+.titre em, .titre-section em, .pied-titre em { letter-spacing: -0.02em; }
+.titre-section { font-size: clamp(2rem, 1.3rem + 2.6vw, 3.5rem); line-height: 1.1; letter-spacing: -0.035em; }
+
+/* ---------- Ouverture : la photo est le premier écran ---------- */
+.ouverture { position: relative; min-height: calc(100svh - var(--entete) - 2rem); display: grid; align-items: end; overflow: hidden; }
+.ouverture-image, .ouverture-image img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ouverture-image img { object-fit: cover; object-position: 60% 40%; }
+.ouverture::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.45) 30%, rgba(0, 0, 0, 0) 55%); pointer-events: none; }
+.ouverture-texte { position: relative; z-index: 1; display: grid; gap: 1.25rem; justify-items: start; width: min(100%, var(--large) + 2 * var(--marge)); margin-inline: auto; padding: 8rem var(--marge) 7rem; }
+.ouverture .chapeau { margin: 0; max-width: 34rem; font-size: 1.125rem; line-height: 1.5; color: rgba(255, 255, 255, 0.86); }
+.ouverture .actions { margin-top: 0.5rem; }
+@media (min-width: 48rem) { .ouverture-texte { padding-bottom: 4.5rem; } }
+
+/* Le bouton rond du film, en bas à droite */
+.film-bouton { position: absolute; z-index: 2; right: var(--marge); bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; padding: 0; border: 0; background: none; color: var(--blanc); cursor: pointer; font: inherit; }
+.film-rond { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.85); background: rgba(255, 255, 255, 0.08); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); transition: background-color 250ms, transform 400ms cubic-bezier(.16,1,.3,1); }
+.film-bouton:hover .film-rond { background: rgba(255, 255, 255, 0.16); transform: scale(1.06); }
+.film-bouton .libelle { color: var(--blanc); font-size: 0.8125rem; letter-spacing: 0.03em; font-weight: 400; }
+@media (max-width: 47.99rem) { .film-bouton .libelle { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } }
+
+/* ---------- Sections ---------- */
+main > section:not(.ouverture) { width: min(100% - 2 * var(--marge), var(--large)); margin-inline: auto; padding-top: var(--section); }
+
+/* Créations : cartes cinéma, texte en bas à gauche sur un voile, pastille en haut à droite */
+.grille { list-style: none; margin: 3rem 0 0; padding: 0; display: grid; gap: 1rem; }
+@media (min-width: 48rem) { .grille { grid-template-columns: 1fr 1fr; gap: 1.5rem; } }
+.carte-media { position: relative; display: block; overflow: hidden; border-radius: 10px; aspect-ratio: 1000 / 860; text-decoration: none; background: var(--charbon); }
+.carte-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1200ms cubic-bezier(.16,1,.3,1), filter 1600ms cubic-bezier(.16,1,.3,1); }
+.carte-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 45%); pointer-events: none; }
+.carte-media .verre { position: absolute; top: 1rem; right: 1rem; z-index: 1; }
+.carte-texte { position: absolute; left: 1.25rem; right: 1.25rem; bottom: 1.25rem; z-index: 1; display: grid; gap: 0.25rem; }
+.carte-texte strong { font-size: 1.3125rem; font-weight: 400; letter-spacing: -0.01em; }
+.carte-texte span { color: rgba(255, 255, 255, 0.82); font-size: 1rem; }
+.carte-media:hover img { transform: scale(1.03); }
+@media (min-width: 48rem) { .carte-texte { left: 1.75rem; bottom: 1.5rem; } }
+
+/* Atelier : une carte charbon, une marche au-dessus du noir */
+.atelier-carte { display: grid; overflow: hidden; border-radius: 10px; background: var(--charbon); }
+.atelier-image { position: relative; margin: 0; aspect-ratio: 16 / 10; overflow: hidden; }
+.atelier-image img { width: 100%; height: 100%; object-fit: cover; transition: filter 1600ms cubic-bezier(.16,1,.3,1), transform 1600ms cubic-bezier(.16,1,.3,1); }
+.atelier-texte { display: grid; align-content: center; gap: 1.5rem; padding: 2rem 1.5rem 2.25rem; }
+.atelier-texte > p { margin: 0; max-width: 32rem; font-size: 1.125rem; color: rgba(255, 255, 255, 0.86); }
+.services { margin: 0.5rem 0 0; display: grid; gap: 0; border-top: 1px solid var(--graphite); }
+.services div { display: grid; gap: 0.15rem; padding: 1rem 0; border-bottom: 1px solid var(--graphite); }
+.services dt { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+.services dd { margin: 0; color: var(--fumee); }
+@media (min-width: 60rem) {
+  .atelier-carte { grid-template-columns: 1.15fr 1fr; }
+  .atelier-image { aspect-ratio: auto; min-height: 36rem; }
+  .atelier-texte { padding: 3.5rem 3.5rem 3.5rem 3rem; }
+  .services div { grid-template-columns: 13rem 1fr; align-items: baseline; }
 }
 
-/* ---------- Boutons ---------- */
-.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
-.ouverture .bouton { min-width: 10.5rem; }
-.bouton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  min-height: 3.25rem;
-  min-width: 13rem;
-  padding: 0.8rem 1.75rem;
-  border: 1px solid var(--encre);
-  background: transparent;
-  color: var(--encre);
-  font-family: var(--texte);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background-color 300ms ease-out, color 300ms ease-out, border-color 300ms ease-out;
-}
-.bouton:hover { background: var(--encre); color: var(--fond); }
-.bouton--plein { background: var(--jade); border-color: var(--jade); color: var(--fond); }
-.bouton--plein:hover { background: #0C3832; border-color: #0C3832; color: var(--fond); }
-.ic { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+/* Montres : grande photo, texte dessous à gauche */
+.montres-image { position: relative; margin: 0; overflow: hidden; border-radius: 10px; aspect-ratio: 16 / 9; }
+.montres-image img { width: 100%; height: 100%; object-fit: cover; transition: filter 1600ms cubic-bezier(.16,1,.3,1), transform 1600ms cubic-bezier(.16,1,.3,1); }
+.montres-texte { display: grid; gap: 1.25rem; margin-top: 2.5rem; }
+.montres-texte > p:not(.libelle) { margin: 0; max-width: 36rem; font-size: 1.125rem; color: rgba(255, 255, 255, 0.86); }
+@media (min-width: 60rem) { .montres-texte { grid-template-columns: 1.3fr 1fr; column-gap: 4rem; align-items: start; } .montres-texte .libelle { grid-column: 2; } .montres-texte .titre-section { grid-row: span 2; } }
 
-/* ---------- Titres de section ---------- */
-.titre-section {
-  margin: 0 0 1.5rem;
-  font-family: var(--titre);
-  font-weight: 400;
-  font-size: clamp(2.2rem, 1.4rem + 3.4vw, 4.25rem);
-  line-height: 1.06;
-  text-wrap: balance;
-}
-
-/* ---------- Créations ---------- */
-.univers { padding: 0 var(--marge) var(--section); }
-.univers .titre-section { text-align: center; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
-.grille {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(2rem, 4vw, 3.5rem) clamp(1rem, 2.5vw, 2rem);
-}
-.tuile { display: block; text-decoration: none; color: inherit; }
-.tuile .photo { transition: background-color 400ms ease-out; }
-.tuile:hover .photo { background: #E6EEEB; }
-.tuile:hover h3 { color: var(--jade); }
-.tuile h3::after { content: ""; display: block; width: 1.5rem; height: 1px; margin-top: 0.5rem; background: var(--jade); transition: width 400ms cubic-bezier(.16,1,.3,1); }
-.tuile:hover h3::after { width: 3.5rem; }
-.grille h3 {
-  margin: 1.1rem 0 0.25rem;
-  font-family: var(--texte);
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-.grille p { margin: 0.4rem 0 0; font-size: 0.9375rem; font-weight: 300; color: var(--encre-douce); }
-
-/* ---------- Atelier : l'aplat jade ---------- */
-.atelier {
-  display: grid;
-  gap: 3rem;
-  padding: var(--section) var(--marge);
-  background: var(--jade);
-  color: var(--fond);
-}
-.atelier p { max-width: 42ch; font-weight: 300; font-size: 1.0625rem; color: #E3ECE9; margin: 0 0 2.5rem; }
-
-.atelier .promesse {
-  font-family: var(--titre);
-  font-size: clamp(1.9rem, 1.2rem + 2.6vw, 3.4rem);
-  line-height: 1.12;
-  color: var(--fond);
-  font-weight: 400;
-  max-width: none;
-}
-.services { margin: 0; display: grid; border-top: 1px solid rgb(250 248 244 / 0.25); }
-.services > div { padding: 1.1rem 0; border-bottom: 1px solid rgb(250 248 244 / 0.25); display: grid; gap: 0.15rem; }
-.services dt { font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; }
-.services dd { margin: 0; font-size: 0.9375rem; font-weight: 300; color: #D6E4E0; }
-
-/* ---------- Montres ---------- */
-.montres { display: grid; gap: 2.5rem; padding: var(--section) var(--marge); }
-.montres p { margin: 0 0 1rem; max-width: 40ch; font-weight: 300; font-size: 1.0625rem; color: var(--encre-douce); }
-.montres .marques { font-size: 0.875rem; color: var(--encre); }
-
-/* ---------- Visite ---------- */
-.visite {
-  padding: var(--section) var(--marge);
-  background: var(--fond-doux);
-  border-top: 1px solid var(--filet);
-}
-.visite .titre-section { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
-.visite-grille { display: grid; gap: 3.5rem; }
-.etiquette {
-  margin: 0 0 0.75rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--encre-douce);
-  text-align: left;
-}
-.grand { margin: 0 0 1.25rem; font-family: var(--titre); font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem); line-height: 1.2; }
-.etat { margin: 0 0 2rem; font-size: 0.9375rem; color: var(--encre-douce); min-height: 1.5em; }
-.etat strong { color: var(--jade); font-weight: 600; }
-.visite .actions { justify-content: flex-start; }
+/* Visite */
+.visite-grille { display: grid; gap: 2.5rem; margin-top: 3rem; }
+.grand { margin: 0; font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem); font-weight: 300; line-height: 1.2; letter-spacing: -0.025em; }
+.etat { margin: 1rem 0 1.75rem; min-height: 1.5em; color: rgba(255, 255, 255, 0.86); }
+.etat strong { font-weight: 500; color: var(--blanc); }
+.horaires-carte { padding: 1.5rem 1.5rem 1.25rem; border-radius: 10px; background: var(--charbon); }
 .horaires { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-.horaires th, .horaires td { padding: 0.8rem 0; border-bottom: 1px solid #CFDAD6; font-weight: 300; text-align: left; font-size: 0.9375rem; }
-.horaires tr:first-child th, .horaires tr:first-child td { border-top: 1px solid var(--filet); }
-.horaires td { text-align: right; white-space: nowrap; }
-.horaires .ferme { color: #5F594F; }
-.horaires tr.aujourdhui th, .horaires tr.aujourdhui td { font-weight: 500; color: var(--jade); }
-.note { margin: 2rem 0 0; font-size: 0.8125rem; color: var(--encre-douce); }
+.horaires caption { text-align: left; padding-bottom: 0.75rem; }
+.horaires th, .horaires td { padding: 0.7rem 0; border-bottom: 1px solid var(--graphite); font-weight: 400; text-align: left; }
+.horaires td { text-align: right; }
+.horaires .ferme { color: var(--fumee); }
+.horaires .aujourdhui th, .horaires .aujourdhui td { color: var(--blanc); font-weight: 500; }
+.horaires .aujourdhui th::before { content: ""; display: inline-block; width: 0.4rem; height: 0.4rem; margin-right: 0.6rem; border-radius: 50%; background: var(--lampe); vertical-align: 0.15em; }
+.note { margin: 1rem 0 0; font-size: 0.875rem; color: var(--fumee); }
+@media (min-width: 56rem) { .visite-grille { grid-template-columns: 1.2fr 1fr; column-gap: 5rem; align-items: start; } .horaires-carte { padding: 2rem 2rem 1.5rem; } }
 
-/* ---------- Pied de page ---------- */
-.pied {
-  display: grid;
-  justify-items: center;
-  gap: 0.9rem;
-  text-align: center;
-  padding: 4rem var(--marge) 3rem;
-  background: var(--fond);
-  border-top: 1px solid var(--filet);
-  font-size: 0.8125rem;
-  color: var(--encre-douce);
-}
-.logotype--pied { margin: 0; font-size: 1.5rem; }
-.pied address { font-style: normal; }
-.pied-liens { margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 2rem; }
-.pied-liens a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.75rem; color: var(--encre); }
-.pied-petit { margin: 0; font-size: 0.75rem; }
+/* ---------- Pied : un grand titre de clôture ---------- */
+.pied { width: min(100% - 2 * var(--marge), var(--large)); margin: var(--section) auto 0; padding-bottom: 2rem; }
+.pied-titre { font-size: clamp(2.75rem, 1.2rem + 6vw, 7rem); line-height: 1; letter-spacing: -0.05em; padding-bottom: 3rem; border-bottom: 1px solid var(--graphite); }
+.pied-bas { display: grid; gap: 0.75rem; padding-top: 1.75rem; }
+.pied address { font-style: normal; color: var(--fumee); }
+.pied address a { color: var(--blanc); }
+.pied-liens { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 0; }
+.pied-liens a { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 2.75rem; color: var(--blanc); text-decoration: none; opacity: 0.85; }
+.pied-liens a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+.pied-petit { margin: 1.5rem 0 0; font-size: 0.8125rem; color: var(--fumee); }
+@media (min-width: 56rem) { .pied-bas { grid-template-columns: auto 1fr auto; align-items: center; column-gap: 3rem; } }
+
+/* ---------- Le film ---------- */
+.film { width: min(100% - 2rem, 70rem); max-width: none; padding: 0; border: 0; border-radius: 10px; background: var(--vide); color: var(--blanc); overflow: visible; }
+.film::backdrop { background: rgba(0, 0, 0, 0.88); }
+.film-cadre { position: relative; }
+.film video { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: var(--vide); }
+.film-mention { margin: 0.75rem 0 0; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--fumee); }
+.film-fermer { position: absolute; top: 0.75rem; right: 0.75rem; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.6); background: rgba(0, 0, 0, 0.4); color: var(--blanc); cursor: pointer; }
+
+/* ---------- La lampe s'allume : les photos sortent de l'ombre quand on y arrive ---------- */
+.js [data-lampe] img { filter: brightness(0.3) saturate(0.6); transform: scale(1.04); }
+.js [data-lampe].allume img { filter: none; transform: none; }
+.js .carte-media.allume:hover img { transform: scale(1.03); }
 
 /* ---------- Pages légales ---------- */
-.legal main { padding: var(--section) var(--marge); }
-.feuille { max-width: 46rem; margin: 0 auto; }
-.feuille h1 { margin: 0 0 2.5rem; font-family: var(--titre); font-weight: 400; font-size: clamp(2.4rem, 1.6rem + 3vw, 4rem); line-height: 1.05; }
-.feuille h2 { margin: 2.5rem 0 0.6rem; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; }
-.feuille p, .feuille li { font-weight: 300; max-width: 68ch; }
-.retour { display: inline-block; margin-top: 3rem; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.legal .feuille { width: min(100% - 2 * var(--marge), 46rem); margin: 4rem auto 0; }
+.legal .feuille h1 { margin: 0 0 2rem; font-size: clamp(2.25rem, 1.6rem + 2vw, 3.25rem); font-weight: 300; line-height: 1.1; letter-spacing: -0.035em; }
+.legal .feuille h2 { margin: 2.5rem 0 0.75rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fumee); }
+.legal .feuille p, .legal .feuille li { color: rgba(255, 255, 255, 0.86); }
+.legal .retour { display: inline-flex; align-items: center; min-height: 3rem; margin: 2rem 0 0 max(var(--marge), (100% - 46rem) / 2); color: var(--blanc); }
+.legal .pied { display: grid; gap: 0.75rem; padding-top: 2rem; border-top: 1px solid var(--graphite); }
 
-/* ---------- Écrans larges ---------- */
-@media (min-width: 56rem) {
-  .entete { grid-template-columns: 1fr auto 1fr; align-items: center; padding-top: 1.75rem; }
-  .entete-lieu { display: block; justify-self: start; }
-  .entete-etat { display: block; justify-self: end; order: 0; font-size: 0.75rem; letter-spacing: 0.14em; }
-  .nav { grid-column: 1 / -1; }
-  /* Ordinateur : la photo occupe le premier écran, le titre se pose dans son espace vide à gauche */
-  .ouverture { display: grid; }
-  .ouverture > * { grid-area: 1 / 1; }
-  .visuel--hero .photo { aspect-ratio: auto; height: calc(100svh - 8.5rem); min-height: 34rem; max-height: none; }
-  .ouverture-texte { align-self: center; justify-self: start; justify-items: start; text-align: left; padding: 0 var(--marge); max-width: 40rem; position: relative; z-index: 1; }
-  .ouverture-texte .actions { justify-content: flex-start; }
-  .ouverture-texte { padding-top: 2.5rem; }
-  .chapeau { margin: 1rem 0 1.75rem; }
-  .grille { grid-template-columns: repeat(4, 1fr); }
-  .atelier { grid-template-columns: 1fr 1fr; align-items: center; column-gap: clamp(3rem, 8vw, 8rem); }
-  .montres { grid-template-columns: 1.4fr 1fr; align-items: center; column-gap: clamp(3rem, 8vw, 8rem); }
-  .visite-grille { grid-template-columns: 1.2fr 1fr; column-gap: clamp(3rem, 8vw, 8rem); }
-}
-
+/* ---------- Mode capture (?capture) et mouvement réduit : état final ---------- */
+.capture .ouverture { min-height: 46rem; }
+.capture [data-lampe] img { filter: none; transform: none; transition: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .visuel--hero .photo, .visuel--hero .photo img { animation: none; }
-  .tuile:hover .photo img { transform: none; }
+  .js [data-lampe] img { filter: none; transform: none; transition: none; }
+  .film-rond, .carte-media img { transition: none; }
 }
 
-/* Petits écrans : libellés des créations en bas de casse, sur deux lignes au plus */
-@media (max-width: 26rem) {
-  .grille h3 { text-transform: none; letter-spacing: 0; font-size: 1rem; font-weight: 500; text-wrap: balance; }
-}
+/* Téléphone : la bague reste dans le cadre ; le numéro ne se coupe pas */
+@media (max-width: 40rem) { .ouverture-image img { object-position: 88% 40%; } }
+a[href^="tel:"] { white-space: nowrap; }

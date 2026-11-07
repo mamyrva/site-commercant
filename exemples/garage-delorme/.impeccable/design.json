@@ -1,421 +1,359 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-07T18:00:00+01:00",
+  "generatedAt": "2026-11-07T18:06:19.408212+00:00",
   "title": "Design System: Garage Delorme",
   "extensions": {
     "colorMeta": {
       "nuit": {
         "role": "neutral",
-        "displayName": "Sol d'atelier",
-        "canonical": "oklch(19.0% 0.009 256)",
+        "displayName": "Bleu nuit d'atelier",
         "tonalRamp": [
-          "#090B0F",
-          "#22252A",
-          "#3F4247",
-          "#5E6267",
-          "#7F8388",
-          "#A1A5AB",
-          "#C5C9CF",
-          "#EAEFF5"
+          "oklch(15% 0.013 258)",
+          "oklch(25% 0.02 258)",
+          "oklch(35% 0.027 258)",
+          "oklch(48% 0.035 258)",
+          "oklch(60% 0.037 258)",
+          "oklch(72% 0.029 258)",
+          "oklch(84% 0.021 258)",
+          "oklch(95% 0.013 258)"
         ]
       },
-      "nuit-2": {
+      "carte": {
         "role": "neutral",
-        "displayName": "Panneau anthracite",
-        "canonical": "oklch(23.7% 0.014 253)",
+        "displayName": "Ardoise de carte",
         "tonalRamp": [
-          "#0A0B0D",
-          "#232528",
-          "#3F4247",
-          "#5D6268",
-          "#7D838A",
-          "#A0A6AC",
-          "#C5CACF",
-          "#ECEFF2"
+          "oklch(15% 0.015 262)",
+          "oklch(25% 0.022 262)",
+          "oklch(35% 0.03 262)",
+          "oklch(48% 0.04 262)",
+          "oklch(60% 0.041 262)",
+          "oklch(72% 0.032 262)",
+          "oklch(84% 0.023 262)",
+          "oklch(95% 0.015 262)"
         ]
       },
-      "clair": {
-        "role": "neutral",
-        "displayName": "Blanc atelier",
-        "canonical": "oklch(94.2% 0.005 248)",
+      "signal": {
+        "role": "primary",
+        "displayName": "Cyan voyant",
         "tonalRamp": [
-          "#090B0D",
-          "#232527",
-          "#404245",
-          "#5F6164",
-          "#808385",
-          "#A2A5A8",
-          "#C6C9CC",
-          "#ECEFF2"
+          "oklch(15% 0.043 212)",
+          "oklch(25% 0.065 212)",
+          "oklch(35% 0.087 212)",
+          "oklch(48% 0.115 212)",
+          "oklch(60% 0.119 212)",
+          "oklch(72% 0.093 212)",
+          "oklch(84% 0.067 212)",
+          "oklch(95% 0.043 212)"
         ]
       },
       "blanc": {
         "role": "neutral",
-        "displayName": "Blanc",
-        "canonical": "oklch(100.0% 0.000 90)",
+        "displayName": "Blanc de lecture",
         "tonalRamp": [
-          "#0B0B0B",
-          "#252525",
-          "#424242",
-          "#616161",
-          "#828282",
-          "#A5A5A5",
-          "#C9C9C9",
-          "#EEEEEE"
+          "oklch(15% 0.0 0)",
+          "oklch(25% 0.0 0)",
+          "oklch(35% 0.0 0)",
+          "oklch(48% 0.0 0)",
+          "oklch(60% 0.0 0)",
+          "oklch(72% 0.0 0)",
+          "oklch(84% 0.0 0)",
+          "oklch(95% 0.0 0)"
         ]
       },
-      "jaune": {
-        "role": "primary",
-        "displayName": "Jaune sécurité",
-        "canonical": "oklch(83.4% 0.158 89)",
-        "tonalRamp": [
-          "#120A00",
-          "#332200",
-          "#573D00",
-          "#7F5B00",
-          "#A87B00",
-          "#C5A038",
-          "#E2C67F",
-          "#FFEDBC"
-        ]
-      },
-      "jaune-vif": {
-        "role": "primary",
-        "displayName": "Jaune vif",
-        "canonical": "oklch(88.0% 0.154 90)",
-        "tonalRamp": [
-          "#110A00",
-          "#322300",
-          "#563E00",
-          "#7D5C00",
-          "#A67C00",
-          "#C3A13E",
-          "#E1C781",
-          "#FFEDBE"
-        ]
-      },
-      "acier": {
+      "brume": {
         "role": "neutral",
-        "displayName": "Acier",
-        "canonical": "oklch(50.3% 0.026 257)",
+        "displayName": "Brume",
         "tonalRamp": [
-          "#090B0E",
-          "#22252B",
-          "#3D424B",
-          "#5A626D",
-          "#798392",
-          "#9DA6B2",
-          "#C3CAD3",
-          "#EAEFF6"
-        ]
-      },
-      "acier-clair": {
-        "role": "neutral",
-        "displayName": "Acier clair",
-        "canonical": "oklch(74.1% 0.020 256)",
-        "tonalRamp": [
-          "#0A0B0D",
-          "#222529",
-          "#3E4249",
-          "#5B626B",
-          "#7B838E",
-          "#9FA6AF",
-          "#C4CAD1",
-          "#EBEFF4"
-        ]
-      },
-      "texte": {
-        "role": "neutral",
-        "displayName": "Encre",
-        "canonical": "oklch(19.0% 0.009 256)",
-        "tonalRamp": [
-          "#090B0F",
-          "#22252A",
-          "#3F4247",
-          "#5E6267",
-          "#7F8388",
-          "#A1A5AB",
-          "#C5C9CF",
-          "#EAEFF5"
-        ]
-      },
-      "texte-doux": {
-        "role": "neutral",
-        "displayName": "Encre douce",
-        "canonical": "oklch(43.6% 0.021 256)",
-        "tonalRamp": [
-          "#0A0B0D",
-          "#22252A",
-          "#3E4249",
-          "#5B626B",
-          "#7B838F",
-          "#9EA6B0",
-          "#C4CAD2",
-          "#EBEFF4"
+          "oklch(15% 0.003 262)",
+          "oklch(25% 0.005 262)",
+          "oklch(35% 0.007 262)",
+          "oklch(48% 0.009 262)",
+          "oklch(60% 0.009 262)",
+          "oklch(72% 0.007 262)",
+          "oklch(84% 0.005 262)",
+          "oklch(95% 0.003 262)"
         ]
       },
       "filet": {
         "role": "neutral",
-        "displayName": "Filet",
-        "canonical": "oklch(84.9% 0.010 253)",
+        "displayName": "Filet noir",
         "tonalRamp": [
-          "#080B0F",
-          "#22252A",
-          "#3E4247",
-          "#5D6267",
-          "#7E8388",
-          "#A1A5AB",
-          "#C5CAD0",
-          "#EAEFF5"
+          "oklch(15% 0.0 0)",
+          "oklch(25% 0.0 0)",
+          "oklch(35% 0.0 0)",
+          "oklch(48% 0.0 0)",
+          "oklch(60% 0.0 0)",
+          "oklch(72% 0.0 0)",
+          "oklch(84% 0.0 0)",
+          "oklch(95% 0.0 0)"
         ]
       },
-      "erreur": {
-        "role": "status",
-        "displayName": "Erreur",
-        "canonical": "oklch(50.1% 0.178 29)",
+      "trait": {
+        "role": "neutral",
+        "displayName": "Trait discret",
         "tonalRamp": [
-          "#1A0302",
-          "#44110D",
-          "#72231C",
-          "#A4362C",
-          "#D74D40",
-          "#F17F71",
-          "#FFAEA1",
-          "#FFDDD2"
+          "oklch(15% 0.017 264)",
+          "oklch(25% 0.025 264)",
+          "oklch(35% 0.033 264)",
+          "oklch(48% 0.044 264)",
+          "oklch(60% 0.046 264)",
+          "oklch(72% 0.036 264)",
+          "oklch(84% 0.026 264)",
+          "oklch(95% 0.017 264)"
         ]
       },
-      "erreur-fond": {
-        "role": "status",
-        "displayName": "Fond d'erreur"
+      "positif-depart": {
+        "role": "tertiary",
+        "displayName": "Turquoise positif (départ du dégradé)",
+        "tonalRamp": [
+          "oklch(15% 0.047 168)",
+          "oklch(25% 0.07 168)",
+          "oklch(35% 0.093 168)",
+          "oklch(48% 0.124 168)",
+          "oklch(60% 0.128 168)",
+          "oklch(72% 0.1 168)",
+          "oklch(84% 0.072 168)",
+          "oklch(95% 0.047 168)"
+        ]
       },
-      "erreur-texte": {
-        "role": "status",
-        "displayName": "Texte d'erreur"
+      "positif-arrivee": {
+        "role": "tertiary",
+        "displayName": "Cyan positif (arrivée du dégradé)",
+        "tonalRamp": [
+          "oklch(15% 0.047 220)",
+          "oklch(25% 0.07 220)",
+          "oklch(35% 0.093 220)",
+          "oklch(48% 0.124 220)",
+          "oklch(60% 0.128 220)",
+          "oklch(72% 0.1 220)",
+          "oklch(84% 0.072 220)",
+          "oklch(95% 0.047 220)"
+        ]
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Titre de scène",
-        "purpose": "Titre de la scène du pont et de la page de suivi."
+        "displayName": "Titre d'ouverture",
+        "purpose": "Titre centré sous le halo, un mot en cyan."
+      },
+      "chiffre": {
+        "displayName": "Grand chiffre",
+        "purpose": "Les quatre chiffres vrais, en tabulaires."
       },
       "headline": {
         "displayName": "Titre de section",
-        "purpose": "Titres de section et pages légales."
+        "purpose": "Ouvre chaque section."
       },
       "title": {
-        "displayName": "Titre de service",
-        "purpose": "Noms des services ; l'adresse reprend cette voix en 800."
+        "displayName": "Titre de panneau",
+        "purpose": "Panneau de service, adresse."
       },
-      "logotype": {
-        "displayName": "Logotype",
-        "purpose": "Nom « Garage Delorme » en capitales étendues dans l'en-tête."
+      "title-sm": {
+        "displayName": "Titre de colonne",
+        "purpose": "Colonnes « Vous êtes… »."
       },
       "lead": {
         "displayName": "Chapeau",
-        "purpose": "Paragraphe d'introduction sous les titres."
+        "purpose": "Phrase d'ouverture avec l'adresse."
       },
       "body": {
-        "displayName": "Texte",
-        "purpose": "Texte courant."
+        "displayName": "Texte courant",
+        "purpose": "Descriptions, souvent en brume."
       },
       "label": {
-        "displayName": "Intitulé",
-        "purpose": "Intitulés de champ, légendes de choix et du tableau des horaires ; casse normale."
+        "displayName": "Libellé",
+        "purpose": "Libellés de champs, légendes, actions d'en-tête."
       },
-      "pin-label": {
-        "displayName": "Étiquette du pont",
-        "purpose": "Nom du service épinglé sur la voiture."
+      "small": {
+        "displayName": "Petit texte",
+        "purpose": "Bandeau fictif, pied, puces."
       }
     },
-    "shadows": [
+    "gradients": [
       {
-        "name": "focus-champ",
-        "value": "0 0 0 3px rgb(242 194 48 / 0.6)",
-        "purpose": "Halo jaune autour d'un champ en focus ; seule « ombre » d'état."
+        "name": "phares",
+        "value": "radial-gradient(ellipse 60% 55% at 50% 0%, rgb(41 138 203 / 0.55), rgb(8 33 143 / 0.35) 45%, rgb(23 32 46 / 0) 75%)",
+        "purpose": "Halo derrière l'ouverture seulement."
       },
       {
-        "name": "cerne-aujourdhui",
-        "value": "0 0 0 1px #111418",
-        "purpose": "Cerne du point jaune du jour en cours dans les horaires."
+        "name": "positif",
+        "value": "linear-gradient(73.6deg, #34EDB3 2%, #00D1FF)",
+        "purpose": "Étapes faites du suivi seulement."
       }
     ],
+    "shadows": [],
     "motion": [
       {
-        "name": "pont-defilement",
-        "value": "translateY(calc(var(--p) * -34%)), --p de 0 à 1 selon le défilement de la scène (230vh)",
-        "purpose": "La signature unique : la voiture monte avec le défilement."
+        "name": "ease-sortie",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Survols, entrée des panneaux, apparitions, pastilles du relevé."
       },
       {
-        "name": "etiquette-fondu",
-        "value": "opacity 450ms ease-out",
-        "purpose": "Apparition d'une étiquette à son seuil (0,2 / 0,4 / 0,6 / 0,8)."
+        "name": "ease-pont",
+        "value": "cubic-bezier(.65,0,.35,1)",
+        "purpose": "Bras du logotype (1,6 s) et indicateur de défilement (1,8 s)."
       },
       {
-        "name": "etiquette-tige",
-        "value": "transform 500ms cubic-bezier(.16,1,.3,1) 120ms",
-        "purpose": "La tige jaune se déroule vers le bas."
+        "name": "survol",
+        "value": "200ms",
+        "purpose": "Changements de fond et montée de 1 px des pilules."
       },
       {
-        "name": "logo-monter",
-        "value": "1.6s cubic-bezier(.65,0,.35,1) 0.2s",
-        "purpose": "La traverse jaune du logotype monte au chargement."
+        "name": "releve",
+        "value": "400ms ease-out",
+        "purpose": "Allumage d'un élément du relevé."
       },
       {
-        "name": "logo-reveler",
-        "value": "clip-path 900ms cubic-bezier(.16,1,.3,1) 0.9s",
-        "purpose": "Le nom du logotype se dévoile de gauche à droite."
+        "name": "panneau",
+        "value": "450ms",
+        "purpose": "Entrée du panneau de service (8 px)."
       },
       {
         "name": "apparition",
-        "value": "opacity 600ms ease-out, transform 700ms cubic-bezier(.16,1,.3,1), translateY(18px)",
-        "purpose": "Apparitions au défilement, une seule fois, si JavaScript est actif."
+        "value": "opacity 600ms ease-out, transform 700ms",
+        "purpose": "Apparition au défilement (16 px)."
       },
       {
-        "name": "etat",
-        "value": "200ms ease-out",
-        "purpose": "Survol et clic des boutons."
-      },
-      {
-        "name": "mouvement-reduit",
-        "value": "prefers-reduced-motion: reduce",
-        "purpose": "État final statique : voiture levée, étiquettes visibles, logotype fixe, apparitions immédiates."
-      },
-      {
-        "name": "capture",
-        "value": "?capture",
-        "purpose": "Mêmes états statiques que le mouvement réduit, scène de 780px minimum, pour les captures pleine page."
+        "name": "lerp-pont",
+        "value": "0.12 par image",
+        "purpose": "Lissage de la séquence filmée du pont."
       }
     ],
     "breakpoints": [
       {
-        "name": "telephone",
+        "name": "moyen",
         "value": "40rem"
       },
       {
-        "name": "bureau",
+        "name": "large",
         "value": "60rem"
       }
     ]
   },
   "components": [
     {
-      "name": "Bouton principal",
+      "name": "Pilule pleine",
       "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Action principale, une seule par groupe : jaune sécurité, texte nuit.",
-      "html": "<a class=\"ds-btn-primary\" href=\"#\">Prendre rendez-vous</a>",
-      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:3.25rem;padding:.8rem 1.4rem;border:1.5px solid var(--jaune,#F2C230);border-radius:3px;background:var(--jaune,#F2C230);color:var(--nuit,#111418);font-family:Archivo, 'Helvetica Neue', Arial, sans-serif;font-weight:700;font-size:1rem;letter-spacing:.01em;text-decoration:none;transition:background-color 200ms ease-out,transform 200ms ease-out}.ds-btn-primary:hover{background:#FFD24D}.ds-btn-primary:active{transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:2px solid var(--jaune,#F2C230);outline-offset:3px}"
+      "refersTo": "pilule-pleine",
+      "description": "Action principale : blanc plein, texte noir.",
+      "html": "<a class=\"ds-pilule\" href=\"#\">Prendre rendez-vous</a>",
+      "css": ".ds-pilule { display:inline-flex; align-items:center; justify-content:center; min-height:3rem; padding:0.75rem 1.4rem; border-radius:80px; background:#FFFFFF; color:#000; font:600 0.9375rem/1 Archivo, 'Helvetica Neue', Arial, sans-serif; letter-spacing:-0.01em; text-decoration:none; transition:transform 200ms cubic-bezier(.16,1,.3,1), background-color 200ms; } .ds-pilule:hover { background:#E6F9FF; transform:translateY(-1px); } .ds-pilule:focus-visible { outline:2px solid #6AE4FF; outline-offset:3px; }"
     },
     {
-      "name": "Bouton filet",
+      "name": "Lien fantôme",
       "kind": "button",
-      "refersTo": "button-outline",
-      "description": "Action secondaire : bordure dans la couleur du texte, ici sur fond sombre.",
-      "html": "<div style=\"background:#111418;padding:1.5rem\"><a class=\"ds-btn-outline\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2\"/></svg>Appeler</a></div>",
-      "css": ".ds-btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:3.25rem;padding:.8rem 1.4rem;border:1.5px solid currentColor;border-radius:3px;background:transparent;color:var(--clair,#E9ECEF);font-family:Archivo, 'Helvetica Neue', Arial, sans-serif;font-weight:700;font-size:1rem;text-decoration:none;transition:background-color 200ms ease-out,transform 200ms ease-out}.ds-btn-outline:hover{background:rgb(127 127 127 / .12)}.ds-btn-outline:active{transform:translateY(1px)}.ds-btn-outline:focus-visible{outline:2px solid var(--jaune,#F2C230);outline-offset:3px}"
+      "refersTo": "lien-fantome",
+      "description": "Action secondaire : contour cyan, flèche qui avance.",
+      "html": "<a class=\"ds-fantome\" href=\"#\">Appeler<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-fantome { display:inline-flex; align-items:center; gap:0.5rem; min-height:3rem; padding:0.7rem 1.1rem; border:1px solid #6AE4FF; border-radius:80px; color:#6AE4FF; font:400 0.9375rem Archivo, 'Helvetica Neue', Arial, sans-serif; text-decoration:none; background:#17202E; transition:background-color 200ms; } .ds-fantome svg { transition:transform 250ms cubic-bezier(.16,1,.3,1); } .ds-fantome:hover { background:rgb(106 228 255 / 0.08); } .ds-fantome:hover svg { transform:translateX(3px); } .ds-fantome:focus-visible { outline:2px solid #6AE4FF; outline-offset:3px; }"
     },
     {
-      "name": "Champ de formulaire",
-      "kind": "input",
-      "refersTo": "input-field",
-      "description": "Champ blanc à bordure filet ; focus en bordure nuit et halo jaune.",
-      "html": "<label class=\"ds-champ\"><span>Véhicule</span><input placeholder=\"marque, modèle, année\"></label>",
-      "css": ".ds-champ{display:grid;gap:.35rem;font-family:Archivo, 'Helvetica Neue', Arial, sans-serif;max-width:22rem}.ds-champ span{font-size:.8125rem;font-weight:700;color:#111418}.ds-champ input{min-height:3rem;padding:.7rem .85rem;border:1.5px solid var(--filet,#C9CED4);border-radius:3px;background:#fff;font:inherit;font-size:1rem;color:#111418}.ds-champ input:focus{outline:none;border-color:var(--nuit,#111418);box-shadow:0 0 0 3px rgb(242 194 48 / .6)}"
-    },
-    {
-      "name": "Choix",
+      "name": "Puce d'état",
       "kind": "chip",
-      "refersTo": "choice-chip",
-      "description": "Bascule rendez-vous ou devis ; l'option cochée passe en nuit.",
-      "html": "<div class=\"ds-choix\"><label><input type=\"radio\" name=\"t\" checked><span>Rendez-vous</span></label><label><input type=\"radio\" name=\"t\"><span>Devis</span></label></div>",
-      "css": ".ds-choix{display:flex;gap:.5rem;font-family:Archivo, 'Helvetica Neue', Arial, sans-serif}.ds-choix label{position:relative}.ds-choix input{position:absolute;opacity:0;inset:0;cursor:pointer}.ds-choix span{display:inline-flex;align-items:center;min-height:2.75rem;padding:.5rem 1.1rem;border:1.5px solid #C9CED4;border-radius:3px;font-weight:600;background:#fff;color:#111418}.ds-choix input:checked+span{border-color:#111418;background:#111418;color:#fff}.ds-choix input:focus-visible+span{outline:2px solid #111418;outline-offset:3px}"
+      "refersTo": "puce",
+      "description": "État ouvert/fermé de l'atelier.",
+      "html": "<p class=\"ds-puce\">Ouvert jusqu'à 18 h 30</p>",
+      "css": ".ds-puce { display:inline-flex; align-items:center; gap:0.5rem; margin:0; padding:0.35rem 0.9rem; border:1px solid #6AE4FF; border-radius:80px; color:#6AE4FF; font:600 0.8125rem Archivo, 'Helvetica Neue', Arial, sans-serif; background:#17202E; } .ds-puce::before { content:''; width:0.5rem; height:0.5rem; border-radius:50%; background:#6AE4FF; }"
     },
     {
-      "name": "En-tête et logotype",
+      "name": "Onglets des services",
       "kind": "nav",
-      "refersTo": "header",
-      "description": "En-tête collant anthracite : logotype animé (traverse jaune qui monte, nom dévoilé), navigation, téléphone.",
-      "html": "<header class=\"ds-entete\"><a class=\"ds-logo\" href=\"#\"><svg viewBox=\"0 0 40 32\" width=\"34\" height=\"27\" fill=\"none\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M5 2v28M35 2v28\" stroke=\"#A3ACB8\" stroke-width=\"2.4\"/><path class=\"ds-bras\" d=\"M5 22h30\" stroke=\"#F2C230\" stroke-width=\"3\"/><path d=\"M1 30.5h38\" stroke=\"#5B6573\" stroke-width=\"1.4\"/></svg><span class=\"ds-nom\"><span>Garage</span> Delorme</span></a><nav class=\"ds-nav\"><a href=\"#\">Services</a><a href=\"#\">Rendez-vous</a><a href=\"#\">Suivi</a></nav><a class=\"ds-tel\" href=\"#\">04 92 00 00 00</a></header>",
-      "css": ".ds-entete{display:flex;align-items:center;gap:1rem 2rem;padding:.75rem 1.5rem;background:rgb(17 20 24 / .94);border-bottom:1px solid #262C33;color:#E9ECEF;font-family:Archivo, 'Helvetica Neue', Arial, sans-serif}.ds-logo{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff}.ds-bras{animation:ds-monter 1.6s cubic-bezier(.65,0,.35,1) .2s both}@keyframes ds-monter{from{transform:translateY(6px)}60%{transform:translateY(-13px)}to{transform:translateY(-11px)}}.ds-nom{font-weight:800;font-stretch:125%;font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}.ds-nom span{font-weight:400;color:#A3ACB8}.ds-nav{display:flex;gap:1.75rem;margin-left:auto}.ds-nav a{font-size:.875rem;font-weight:500;text-decoration:none;color:#A3ACB8}.ds-nav a:hover{color:#fff}.ds-tel{font-weight:700;font-variant-numeric:tabular-nums;color:#F2C230;text-decoration:none}.ds-tel:focus-visible,.ds-nav a:focus-visible,.ds-logo:focus-visible{outline:2px solid #F2C230;outline-offset:3px}@media (prefers-reduced-motion:reduce){.ds-bras{animation:none;transform:translateY(-11px)}}"
+      "refersTo": "onglet",
+      "description": "Barre d'onglets en pilules, l'actif en blanc plein.",
+      "html": "<div class=\"ds-onglets\" role=\"tablist\"><button class=\"ds-onglet\" role=\"tab\" aria-selected=\"true\">Entretien et révision</button><button class=\"ds-onglet\" role=\"tab\" aria-selected=\"false\">Diagnostic électronique</button><button class=\"ds-onglet\" role=\"tab\" aria-selected=\"false\">Carrosserie</button></div>",
+      "css": ".ds-onglets { display:flex; flex-wrap:wrap; gap:0.4rem; padding:1rem; background:#17202E; } .ds-onglet { min-height:2.75rem; padding:0.6rem 1.2rem; border:0; border-radius:80px; background:transparent; color:#CDD0D6; font:400 0.9375rem Archivo, 'Helvetica Neue', Arial, sans-serif; cursor:pointer; transition:background-color 200ms, color 200ms; } .ds-onglet:hover { color:#FFFFFF; } .ds-onglet[aria-selected='true'] { background:#FFFFFF; color:#000; font-weight:600; } .ds-onglet:focus-visible { outline:2px solid #6AE4FF; outline-offset:3px; }"
+    },
+    {
+      "name": "Carte",
+      "kind": "card",
+      "refersTo": "carte",
+      "description": "Bloc plat à filet noir, sans ombre.",
+      "html": "<div class=\"ds-carte\"><p class=\"ds-carte-t\">Horaires de l'atelier</p><p class=\"ds-carte-p\">Lundi au vendredi, 8 h – 12 h · 14 h – 18 h 30</p></div>",
+      "css": ".ds-carte { background:#202A3E; border:1px solid #000; border-radius:15px; padding:1.5rem; font-family:Archivo, 'Helvetica Neue', Arial, sans-serif; color:#FFFFFF; } .ds-carte-t { margin:0 0 0.5rem; font-weight:600; } .ds-carte-p { margin:0; color:#CDD0D6; font-variant-numeric:tabular-nums; }"
+    },
+    {
+      "name": "Champ",
+      "kind": "input",
+      "refersTo": "champ",
+      "description": "Champ de formulaire nuit, bordure cyan au focus.",
+      "html": "<label class=\"ds-champ\"><span>Véhicule</span><input placeholder=\"marque, modèle, année\"></label>",
+      "css": ".ds-champ { display:grid; gap:0.4rem; font-family:Archivo, 'Helvetica Neue', Arial, sans-serif; color:#FFFFFF; } .ds-champ span { font-size:0.875rem; font-weight:600; } .ds-champ input { min-height:3rem; padding:0.7rem 0.9rem; border:1px solid #000; border-radius:4px; background:#17202E; color:#FFFFFF; font:inherit; font-size:1rem; caret-color:#6AE4FF; } .ds-champ input::placeholder { color:#8A93A6; } .ds-champ input:focus { outline:none; border-color:#6AE4FF; }"
+    },
+    {
+      "name": "Relevé du pont",
+      "kind": "custom",
+      "refersTo": "releve-item",
+      "description": "Éléments du relevé sous la séquence du pont ; ils s'allument en cyan quand la voiture monte.",
+      "html": "<ol class=\"ds-releve\"><li class=\"on\"><span class=\"ds-pastille\"></span><strong>Carrosserie</strong><em>portes, peinture</em></li><li class=\"on\"><span class=\"ds-pastille\"></span><strong>Diagnostic</strong><em>prise de diagnostic</em></li><li><span class=\"ds-pastille\"></span><strong>Entretien</strong><em>carter, freins</em></li><li><span class=\"ds-pastille\"></span><strong>Dépannage</strong><em>anneau de remorquage</em></li></ol>",
+      "css": ".ds-releve { list-style:none; margin:0; padding:1rem; display:grid; grid-template-columns:repeat(2,1fr); gap:0.75rem; background:#17202E; font-family:Archivo, 'Helvetica Neue', Arial, sans-serif; } .ds-releve li { display:grid; grid-template-columns:auto 1fr; column-gap:0.6rem; align-items:center; padding:0.7rem 0.9rem; border:1px solid #34405A; border-radius:15px; opacity:0.35; transition:opacity 400ms ease-out, border-color 400ms ease-out; } .ds-releve li.on, .ds-releve li:hover { opacity:1; border-color:#6AE4FF; } .ds-pastille { grid-row:span 2; position:relative; width:1.1rem; height:1.1rem; border-radius:50%; border:1.5px solid #6AE4FF; } .ds-pastille::after { content:''; position:absolute; inset:3px; border-radius:50%; background:#6AE4FF; transform:scale(0); transition:transform 400ms cubic-bezier(.16,1,.3,1); } .ds-releve li.on .ds-pastille::after, .ds-releve li:hover .ds-pastille::after { transform:scale(1); } .ds-releve strong { font-size:0.9375rem; color:#FFFFFF; } .ds-releve em { font-style:normal; font-size:0.8125rem; color:#CDD0D6; }"
     },
     {
       "name": "Étapes du suivi",
       "kind": "custom",
-      "refersTo": "tracking-step-active",
-      "description": "Quatre étapes numérotées : faite (nuit, coche jaune), active (jaune), à venir (acier clair).",
+      "refersTo": "etapes",
+      "description": "Avancement de la réparation : faites en dégradé positif, active en cyan.",
       "html": "<ol class=\"ds-etapes\"><li class=\"faite\">Véhicule reçu</li><li class=\"faite\">Diagnostic</li><li class=\"active\">Réparation</li><li>Prête à récupérer</li></ol>",
-      "css": ".ds-etapes{list-style:none;margin:0;padding:1rem;display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;counter-reset:e;background:#fff;font-family:Archivo, 'Helvetica Neue', Arial, sans-serif}.ds-etapes li{display:flex;flex-direction:column;gap:.6rem;padding-top:.9rem;border-top:2px solid #C9CED4;font-weight:600;color:#A3ACB8;counter-increment:e}.ds-etapes li::before{content:counter(e);display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;border:1.5px solid currentColor;font-size:.875rem;font-variant-numeric:tabular-nums}.ds-etapes li.faite,.ds-etapes li.active{color:#111418;border-top-color:#F2C230}.ds-etapes li.faite::before{content:'';border-color:#111418;background:#111418 url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='%23F2C230' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\") center/70% no-repeat}.ds-etapes li.active::before{background:#F2C230;border-color:#F2C230;color:#111418}"
-    },
-    {
-      "name": "Étiquette épinglée du pont",
-      "kind": "custom",
-      "refersTo": "pin-label",
-      "description": "Pastille jaune sur la pièce, tige jaune qui descend, nom du service ; apparaît à son seuil de défilement.",
-      "html": "<div class=\"ds-scene\"><div class=\"ds-etiquette\"><span class=\"ds-pastille\"></span><span class=\"ds-tige\"></span><strong>Diagnostic</strong><em>prise de diagnostic</em></div></div>",
-      "css": ".ds-scene{background:#111418;padding:1.5rem 2rem;height:10rem;font-family:Archivo, 'Helvetica Neue', Arial, sans-serif}.ds-etiquette{display:flex;flex-direction:column;align-items:flex-start;height:100%}.ds-pastille{width:1.2rem;height:1.2rem;border-radius:50%;border:2px solid #F2C230;position:relative;flex:none}.ds-pastille::after{content:'';position:absolute;inset:3px;border-radius:50%;background:#F2C230}.ds-tige{flex:1;width:0;margin-inline:calc(.6rem - .5px);border-left:1px solid #F2C230;transform-origin:top;animation:ds-tige 500ms cubic-bezier(.16,1,.3,1) 120ms both}@keyframes ds-tige{from{transform:scaleY(0)}to{transform:scaleY(1)}}.ds-etiquette strong{margin-top:.35rem;font-size:.875rem;font-weight:700;font-stretch:110%;color:#fff}.ds-etiquette em{font-style:normal;font-size:.75rem;color:#A3ACB8}@media (prefers-reduced-motion:reduce){.ds-tige{animation:none}}"
-    },
-    {
-      "name": "Horaires",
-      "kind": "custom",
-      "refersTo": "hours-table",
-      "description": "Tableau à filets, chiffres tabulaires ; le jour en cours en 800 avec un point jaune.",
-      "html": "<table class=\"ds-horaires\"><tr><th>Lundi</th><td>8 h–12 h, 14 h–18 h 30</td></tr><tr class=\"auj\"><th>Samedi</th><td>8 h–12 h</td></tr><tr><th>Dimanche</th><td class=\"ferme\">Fermé</td></tr></table>",
-      "css": ".ds-horaires{width:100%;max-width:26rem;border-collapse:collapse;font-variant-numeric:tabular-nums;font-family:Archivo, 'Helvetica Neue', Arial, sans-serif;color:#111418;background:#E9ECEF}.ds-horaires th,.ds-horaires td{padding:.7rem 0;border-bottom:1px solid #C9CED4;text-align:left;font-weight:500}.ds-horaires td{text-align:right}.ds-horaires .ferme{color:#4A525D}.ds-horaires tr.auj th,.ds-horaires tr.auj td{font-weight:800}.ds-horaires tr.auj th::after{content:'';display:inline-block;width:.5rem;height:.5rem;margin-left:.5rem;border-radius:50%;background:#F2C230;box-shadow:0 0 0 1px #111418;vertical-align:middle}"
+      "css": ".ds-etapes { list-style:none; margin:0; padding:1.5rem; display:grid; gap:0.25rem; counter-reset:e; background:#202A3E; border:1px solid #000; border-radius:15px; font-family:Archivo, 'Helvetica Neue', Arial, sans-serif; } .ds-etapes li { counter-increment:e; display:flex; align-items:center; gap:0.9rem; padding:0.6rem 0; color:#CDD0D6; font-weight:600; } .ds-etapes li::before { content:counter(e); display:grid; place-items:center; width:2rem; height:2rem; border-radius:80px; border:1px solid #4A5873; font-size:0.875rem; } .ds-etapes li.faite, .ds-etapes li.active { color:#FFFFFF; } .ds-etapes li.faite::before { border:0; background:linear-gradient(73.6deg, #34EDB3 2%, #00D1FF); color:#000; } .ds-etapes li.active::before { border-color:#6AE4FF; color:#6AE4FF; box-shadow:inset 0 0 0 1px #6AE4FF; }"
     }
   ],
   "narrative": {
-    "northStar": "Le pont élévateur",
-    "overview": "Le site se comporte comme le pont élévateur de l'atelier : au défilement, la voiture dessinée au trait monte, son dessous apparaît, et les quatre services s'épinglent sur les pièces concernées. Tout le système découle de cette image de transparence technique : un sol d'atelier anthracite et un blanc d'atelier en grandes zones, un jaune sécurité rare, et un dessin acier précis comme une notice.\n\nLa densité est faible et l'échelle grande, au niveau de finition d'un site constructeur : titres étendus, peu de texte, actions évidentes. Les sections alternent fond sombre (scène, « En panne », suivi, pied de page) et fond clair (services, formulaire, infos). Les surfaces sont plates, avec des filets d'un pixel ; la profondeur vient du mouvement du pont, pas d'ombres.\n\nLe site refuse la photo d'atelier générique accompagnée de « Votre garage de confiance ». Il n'y a pas d'illustration décorative : chaque trait dessine une pièce réelle.",
+    "northStar": "Le terminal de diagnostic de l'atelier",
+    "overview": "**Creative North Star: \"Le terminal de diagnostic de l'atelier\"**\n\nLe site se lit comme l'écran de diagnostic d'un garage moderne : un fond bleu nuit uniforme, un seul voyant cyan qui s'allume là où il se passe quelque chose, et du blanc pour lire et pour agir. Le système est la traduction, imposée par l'utilisateur, d'une référence de style de terminal financier (« Idle Finance ») : le cyan devient le voyant du diagnostic, le halo bleu radial devient la lumière des phares derrière le haut de page.\n\nLa densité est faible et la hiérarchie brutale : titres très gras et serrés (Archivo 700, interlettrage -0,036 em), un mot du titre en cyan, de grands chiffres vrais, des pilules pour tout ce qui se touche, des cartes plates à filet noir. Aucune ombre portée : la profondeur vient du seul écart entre le fond nuit et les cartes.\n\nLa signature est le pont élévateur, en vraie séquence filmée : 60 images WebP d'une voiture que le pont soulève, dessinées sur un canvas et pilotées par le défilement, avec un relevé de quatre services qui s'allume en cyan à mesure qu'elle monte. Rien n'est caché, on voit le dessous.",
     "keyCharacteristics": [
-      "Deux grands fonds en alternance, anthracite (nuit) et blanc atelier (clair).",
-      "Un seul accent, le jaune sécurité, pour les bras du pont, l'action principale et l'état actif.",
-      "Archivo variable : étendu (110 à 125 %) pour les titres et le logotype, largeur normale pour le texte.",
-      "Dessin technique au trait (acier et clair), pas d'aplats illustratifs.",
-      "Une seule signature animée : la voiture qui monte avec le défilement."
+      "Fond bleu nuit unique sur toutes les pages, cartes un cran plus claires.",
+      "Un seul accent, le cyan voyant, réservé aux signaux et aux contours d'action.",
+      "Action principale en pilule blanche pleine, action secondaire en contour cyan.",
+      "Archivo 700 très serré pour les titres, chiffres en chasse fixe.",
+      "Plat : filet noir de 1 px, aucune ombre portée.",
+      "Le pont élévateur filmé comme pièce maîtresse, avec repli en image fixe."
     ],
     "rules": [
       {
-        "name": "The Yellow Rule",
-        "body": "Le jaune sert seulement aux bras du pont, à l'action principale et à l'état actif (étape en cours, jour en cours, focus, sélection). Les pastilles et tiges des étiquettes en font partie, car elles appartiennent au pont. Sur un écran, une seule action est en jaune par groupe d'actions ; la seconde est en filet. Le jaune n'est jamais une décoration ni une couleur de titre.",
+        "name": "La règle du voyant unique",
+        "body": "Le cyan est le seul accent. Il marque un signal, un état ou un contour d'action ; il ne remplit jamais une grande surface ni un bouton plein.",
         "section": "colors"
       },
       {
-        "name": "The Two Floors Rule",
-        "body": "Une section est soit sur le sol d'atelier (nuit), soit sur le blanc atelier (clair). Pas de dégradés, pas de troisième fond de section.",
+        "name": "La règle des phares",
+        "body": "Le halo radial bleu (`radial-gradient(ellipse 60% 55% at 50% 0%, …)`) vit seulement derrière l'ouverture du haut de page. Ailleurs, le fond est nuit uni.",
         "section": "colors"
       },
       {
-        "name": "The Width Carries Rank Rule",
-        "body": "La hiérarchie passe par la largeur et la graisse d'Archivo (110 à 125 % pour les titres et le logotype), jamais par une seconde famille.",
+        "name": "La règle du positif réservé",
+        "body": "Le dégradé turquoise-cyan ne sert qu'à l'avancement réel du suivi. Pas de dégradé décoratif.",
+        "section": "colors"
+      },
+      {
+        "name": "La règle du titre serré",
+        "body": "Tout titre de 1,6 rem et plus est en 700 à -0,036 em. Pas de titre maigre, pas de titre espacé.",
         "section": "typography"
       },
       {
-        "name": "The Tabular Figures Rule",
-        "body": "Les téléphones, horaires, numéros d'étape et codes de suivi sont en chiffres tabulaires.",
+        "name": "La règle des chiffres alignés",
+        "body": "Téléphones, horaires, chiffres et codes de suivi passent en chiffres tabulaires.",
         "section": "typography"
       },
       {
-        "name": "The Lift Is The Depth Rule",
-        "body": "Aucune carte flottante ni ombre décorative : si quelque chose doit sembler en relief, c'est la voiture sur le pont.",
+        "name": "La règle du filet noir",
+        "body": "Une surface se détache par sa teinte et son filet noir de 1 px, jamais par une ombre.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** réserver le jaune (jaune) aux bras du pont, à l'action principale et à l'état actif, selon The Yellow Rule.",
-      "**Do** composer chaque section sur l'un des deux fonds, nuit ou clair.",
-      "**Do** porter la hiérarchie par la largeur d'Archivo : 118 % pour le titre de scène, 112 % pour les titres de section et de service, 125 % pour le logotype.",
-      "**Do** dessiner au trait avec des extrémités arrondies, en acier pour la structure et en blanc atelier pour la voiture.",
-      "**Do** utiliser les chiffres tabulaires pour les téléphones, horaires, étapes et codes.",
-      "**Do** fournir un état final statique pour toute animation, en mouvement réduit comme en mode capture.",
-      "**Do** garder des cibles tactiles d'au moins 2,75 rem."
+      "**Do** garder le fond bleu nuit sur toutes les pages et poser les blocs sur l'ardoise de carte avec un filet noir de 1 px.",
+      "**Do** réserver le cyan aux signaux : un mot du titre, contours d'action, icônes, états, focus.",
+      "**Do** utiliser la pilule blanche pleine pour l'action principale et le contour cyan pour l'action secondaire, côte à côte.",
+      "**Do** composer les titres en Archivo 700 à -0,036 em et les chiffres en tabulaires.",
+      "**Do** donner à toute animation un état final statique en mouvement réduit et en `?capture`.",
+      "**Do** n'afficher que des chiffres vrais dans les grands chiffres."
     ],
     "donts": [
-      "**Don't** ajouter une seconde animation pilotée par le défilement : le pont est la seule signature.",
-      "**Don't** utiliser de photo d'atelier générique ni d'illustration décorative ; les emplacements photo restent des panneaux nuit-2 jusqu'à l'arrivée des vraies photos.",
-      "**Don't** ajouter d'ombres portées ni de cartes flottantes.",
-      "**Don't** mettre deux boutons jaunes côte à côte.",
-      "**Don't** introduire une seconde famille de caractères.",
-      "**Don't** reprendre la petite capitale espacée (comme « Exemple de suivi ») comme style de surtitre : c'est un défaut ouvert, pas une règle."
+      "**Don't** ajouter d'ombre portée : la profondeur vient de la teinte et du filet.",
+      "**Don't** introduire un second accent (le jaune de la version précédente est retiré) ni un rouge d'erreur.",
+      "**Don't** remplir un bouton ou une grande surface en cyan.",
+      "**Don't** étendre le halo des phares au-delà de l'ouverture, ni le dégradé positif au-delà du suivi.",
+      "**Don't** utiliser d'icônes pleines ni de caractères en guise d'icônes : trait arrondi uniquement.",
+      "**Don't** reprendre l'identité, les logos ou les noms de constructeurs automobiles."
     ]
   }
 }

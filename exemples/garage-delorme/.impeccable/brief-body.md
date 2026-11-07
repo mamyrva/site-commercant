@@ -1,21 +1,18 @@
-# Surface : accueil Garage Delorme (+ suivi, + version anglaise)
+# Surface : accueil Garage Delorme (version terminal de diagnostic)
 
-Scope : site/index.html, site/suivi.html, site/en/index.html, site/en/suivi.html, pages légales. Mode : Persuade.
-Audience : automobilistes de la région ; touristes en panne orientés par leur assistance, stressés, sur téléphone. Action : rassurer, montrer les services, prendre rendez-vous / devis, appeler, suivre sa réparation.
-Contraintes : statique (Netlify Forms, contenu/*.json), polices auto-hébergées, aucune ressource externe, pas de photos (emplacements prévus), rien d'inventé, bandeau « exemple fictif ».
+Scope : site/index.html, site/suivi.html, site/en/, pages légales. Mode : Persuade.
+Direction imposée par l'utilisateur : fiche de style « Idle Finance » traduite pour un garage (voir .impeccable/reference-style-source.md). Elle l'emporte sur le tirage.
 
 ## Direction contract
 
-THESIS: La page est le pont élévateur de l'atelier : au défilement, la voiture monte et on voit dessous ; les services apparaissent comme des pièces qu'on inspecte, étiquetées sur la voiture. Rien n'est caché. Elle refuse la photo d'atelier générique avec « Votre garage de confiance ».
+THESIS: Le garage comme l'écran de diagnostic de l'atelier : bleu nuit, un seul voyant cyan, et un titre qui affirme « entre de bonnes mains » ; le pont élévateur au trait cyan montre qu'on ne cache rien. Refuse la photo d'atelier générique.
 
-OWN-WORLD: Anthracite de sol époxy (#111418) et blanc atelier (#E9ECEF) en grandes zones ; jaune sécurité (#F2C230) réservé aux bras du pont, à l'action principale et à l'état actif ; acier (#5B6573) pour le dessin technique au trait. Archivo (variable, largeur étendue pour les titres, normale pour le texte), chiffres tabulaires. Dessin au trait précis, pas d'illustration décorative.
+OWN-WORLD: Fond bleu nuit #17202E, cartes #202A3E à filet noir 1 px, rayon 15 px (panneau 24 px) ; un seul cyan #6AE4FF (mot du titre, contours d'action, icônes, pont, voyants) ; blanc pour le texte et la pilule pleine ; brume #CDD0D6 pour le secondaire ; halo bleu radial seulement derrière le haut de page ; dégradé turquoise-cyan seulement pour les étapes faites du suivi ; Archivo 700 à interlettrage -0,036 em ; pilules 80 px ; aucune ombre.
 
-STORY: Le visiteur lit « Votre voiture est entre de bonnes mains », voit tout de suite Appeler et Prendre rendez-vous, puis fait monter la voiture : les quatre services s'épinglent dessus. Ensuite : « En panne sur la route ? », le formulaire rendez-vous/devis, le suivi de réparation, les horaires et l'adresse.
+STORY: L'état ouvert/fermé, puis le titre, l'adresse, Prendre rendez-vous et le téléphone ; le pont qui monte au défilement avec les services épinglés ; les services en onglets ; quatre chiffres vrais ; trois publics (région, en panne, envoyé par l'assistance) ; le formulaire ; le suivi ; les horaires.
 
-FIRST VIEWPORT: En-tête : logotype animé (deux colonnes de pont et une traverse jaune qui monte, puis DELORME), téléphone toujours visible, lien EN. Scène plein écran anthracite : titre étendu à gauche, deux actions (Prendre rendez-vous en jaune, Appeler en filet) ; à droite (dessous sur téléphone), la voiture au trait posée sur les bras jaunes du pont, au sol.
+FIRST VIEWPORT: En-tête : logotype à gauche, liens au centre, téléphone en contour cyan et EN à droite. Centré sous le halo : pastille d'état, titre en trois lignes avec « mains. » en cyan, phrase avec l'adresse, pilule blanche Prendre rendez-vous et lien cyan du téléphone.
 
-ADAPTATIONS : sur téléphone (moins de 40 rem), le numéro de l'en-tête est réduit à l'icône téléphone (la largeur de 390 px ne tient pas logotype + numéro + EN sur une ligne) ; le numéro complet reste dans les deux boutons Appeler du premier écran. Les étiquettes du pont s'étagent sur quatre lignes sous la voiture.
-
-FORM: Le pont élévateur, ma candidate n° 1 (carte IMPECCABLE’S PICK choisie par l'utilisateur). seed:47f8320c979ab44f. Signature : la voiture monte avec le défilement (scène collante), le dessous se révèle, quatre étiquettes de services s'épinglent tour à tour sur les pièces concernées. Mouvement réduit : état final statique.
+FORM: Référence de style imposée par l'utilisateur, traduite. seed: none. Aucun tirage pour cette refonte : l'utilisateur a imposé la direction (fiche collée le 2026-11-07, consignée dans PRODUCT.md), qui prime ; le tirage de direction-round.json concernait la version archivée (archive-pont-jaune). Signature : le pont élévateur, en vraie séquence filmée (60 images, caméra fixe) que le défilement fait monter, avec un relevé des quatre services qui s'allume.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

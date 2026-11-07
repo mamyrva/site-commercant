@@ -2,6 +2,12 @@
 
 Le projet évolue à chaque nouveau site testé. · The project evolves with every site it is tested on.
 
+## 0.5.0 · 2026-11-07
+
+- **Mouvement naturel : filmer plutôt que dessiner.** Pour un objet réel qui bouge, le skill produit une vraie séquence filmée (image de départ, courte vidéo caméra fixe, 60 images WebP) que le défilement fait avancer sur un `<canvas>`, avec un lissage qui fait démarrer et s'arrêter le mouvement en douceur. Il prévoit une image fixe en mouvement réduit. Ajouté à `excellence.md` et `motion.md`. · Natural motion: film it, don't draw it (scroll-scrubbed image sequence with smoothing).
+- **Le garage d'exemple refait** à partir d'une fiche de style « fintech nocturne », traduite en terminal de diagnostic bleu nuit et cyan : une vraie voiture monte sur le pont au défilement, et un relevé des quatre services s'allume.
+- **La bijouterie d'exemple refaite** à partir d'une fiche de style « projection privée », traduite en « l'écrin après la fermeture » : noir pur, une seule lampe, titres très fins avec un mot en italique, un court film (« Regarder le film ») et des photos qui s'allument au défilement.
+
 ## 0.4.0 · 2026-11-07
 
 - **Partir d'une référence de style** (`reference-style.md`) : trouver le `DESIGN.md` d'un site que le commerçant aime (par exemple sur styles.refero.design), puis le traduire dans l'univers du commerce sans jamais le cloner. Méthode tirée de la vidéo « Site Web à +10 000 € avec Claude Code » (Web Marketing Tuto). · Start from a reference style sheet.

@@ -13,7 +13,7 @@
 <meta property="og:description" content="Car repair garage in Gap (French Alps): servicing, electronic diagnostics, breakdown and towing, bodywork. Book, get a quote and track your repair online.">
 <meta property="og:image" content="[À COMPLÉTER : adresse du site]/images/partage.jpg">
 <meta property="og:locale" content="en_GB">
-<meta name="theme-color" content="#111418">
+<meta name="theme-color" content="#17202E">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preload" href="../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
@@ -38,6 +38,13 @@
   <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.5a11 11 0 0 0 7.1 7.1l1.5-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z"/></symbol>
   <symbol id="i-lieu" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10" r="2.4"/></symbol>
   <symbol id="i-fleche" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-cle" viewBox="0 0 48 48"><path d="M30 6a10 10 0 0 0-9 14L7 34a4 4 0 0 0 6 6l14-14a10 10 0 0 0 14-9l-6 6-6-2-2-6z"/></symbol>
+  <symbol id="i-diag" viewBox="0 0 48 48"><rect x="6" y="10" width="26" height="20" rx="3"/><path d="M11 24l5-6 4 4 6-8M32 18h6a4 4 0 0 1 4 4v14M38 36h8M19 30v8M13 38h12"/></symbol>
+  <symbol id="i-remorque" viewBox="0 0 48 48"><path d="M4 32V20h14l6 8h8V14l12 10M4 32h40M10 32a4 4 0 1 0 8 0M30 32a4 4 0 1 0 8 0M44 24v8"/></symbol>
+  <symbol id="i-carrosserie" viewBox="0 0 48 48"><path d="M6 30l4-10c1-3 3-4 6-4h16c3 0 5 1 6 4l4 10v8H6zM6 30h36M12 38v3M36 38v3"/><circle cx="14" cy="32" r="2"/><circle cx="34" cy="32" r="2"/><path d="M20 10l4-4M28 10l-2-5M24 12V4"/></symbol>
+  <symbol id="i-maison" viewBox="0 0 48 48"><path d="M6 22L24 8l18 14M10 20v20h28V20M20 40V28h8v12"/></symbol>
+  <symbol id="i-route" viewBox="0 0 48 48"><path d="M16 42L22 6M32 42L26 6M24 12v4M24 22v4M24 32v4"/></symbol>
+  <symbol id="i-bouclier" viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10"/></symbol>
 </svg>
 <p class="fictif">Fictional example: this site demonstrates the <em>site-commercant</em> skill. This garage does not exist.</p>
 <header class="entete">
@@ -52,82 +59,44 @@
   </div>
 </header>
 <main>
-  <section class="scene" aria-labelledby="t-titre">
+  <section class="ouverture" aria-labelledby="t-titre">
+    <p class="puce puce--etat" data-etat-court hidden></p>
+    <h1 id="t-titre" class="titre">Your car is in good <span class="signal">hands.</span></h1>
+    <p class="chapeau">Car repair garage at 14 avenue d'Embrun, Gap, French Alps. Servicing, diagnostics, breakdown and bodywork: we show you everything we do.</p>
+    <div class="actions actions--centre">
+      <a class="pilule pilule--pleine" href="#demande">Book a visit</a>
+      <a class="lien-fantome" href="tel:+33492000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>04 92 00 00 00</a>
+    </div>
+  </section>
+
+  <section class="scene" aria-label="The vehicle lift">
     <div class="scene-collante">
-      <div class="scene-texte">
-        <h1 id="t-titre" class="titre">Your car is in good hands.</h1>
-        <p class="chapeau">Car repair garage in Gap, French Alps. Servicing, diagnostics, breakdown and bodywork: we show you everything we do.</p>
-        <div class="actions">
-          <a class="bouton bouton--jaune" href="#demande">Book a visit</a>
-          <a class="bouton" href="tel:+33492000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>Call us</a>
+      <figure class="pont">
+        <div class="pont-image">
+          <img class="pont-affiche" src="../img/pont/fin.webp" width="1280" height="720" alt="A grey car on a two-post lift in a blue-lit workshop. As you scroll, the lift raises it to show its underside." decoding="async">
+          <canvas class="pont-film" width="1280" height="720" data-images="60" data-dossier="../img/pont/" aria-hidden="true"></canvas>
+          <span class="pont-mention">AI-generated illustration</span>
         </div>
-      </div>
-      <p class="defiler" aria-hidden="true"><span></span>Scroll to lift the car</p>
-      <figure class="pont" role="img" aria-label="Drawing of a car on a lift, rising as you scroll to show its underside.">
-        <svg class="pont-colonnes" viewBox="0 0 640 300" aria-hidden="true">
-  <g class="trait-acier">
-    <path d="M22 18h20v262H22zM598 18h20v262h-20z"/>
-    <path d="M12 280h40M588 280h40"/>
-    <path d="M0 281.5h640"/>
-  </g>
-  <g class="sol"><path d="M60 290l12-8M110 290l12-8M160 290l12-8M210 290l12-8M260 290l12-8M310 290l12-8M360 290l12-8M410 290l12-8M460 290l12-8M510 290l12-8M560 290l12-8"/></g>
-</svg>
-<div class="pont-charge">
-  <svg class="pont-voiture" viewBox="0 0 640 300" aria-hidden="true">
-    <g class="dessous">
-      <path d="M470 252h56c6 0 10-4 10-9v-6h-76v6c0 5 4 9 10 9z"/><path d="M478 252v-14M490 252v-14M502 252v-14M514 252v-14"/>
-      <path d="M472 236l36 4M544 236l-36 4M200 236l-36 4M128 236l36 4"/>
-      <path d="M464 248H350M250 248H232M172 248H120l-24-4"/><rect x="176" y="241" width="56" height="14" rx="7"/><path d="M96 244h-8"/>
-      <rect x="250" y="239" width="100" height="16" rx="4"/><path d="M262 247h76"/>
-      <path d="M508 240m-24 0a24 24 0 1 0 48 0a24 24 0 1 0-48 0M164 240m-24 0a24 24 0 1 0 48 0a24 24 0 1 0-48 0"/>
-      <path d="M526 224a24 24 0 0 1 6 12M182 224a24 24 0 0 1 6 12" stroke-width="3.2"/>
-      <path d="M598 214h8"/><circle cx="612" cy="214" r="5"/>
-      <path d="M394 194h18v8h-18z"/>
-    </g>
-    <g class="bras">
-      <path d="M42 238h20l70 6h40"/><path d="M598 238h-20l-70 6h-40"/>
-      <rect x="20" y="228" width="24" height="18" rx="2"/><rect x="596" y="228" width="24" height="18" rx="2"/>
-    </g>
-    <g class="carrosserie">
-      <path d="M58 236v-26c0-20 12-30 34-34l74-14c32-30 68-50 116-54l136-2c44 2 78 26 104 54l64 12c18 4 26 18 26 38v26z"/>
-      <path d="M190 162c24-24 52-40 90-42l58-1v43z"/><path d="M350 119h58c34 2 60 18 80 41l-138 2z"/>
-      <path d="M344 114v118"/><path d="M576 176l22 4M60 186h14"/><path d="M402 172h22"/>
-    </g>
-    <g class="roues">
-      <circle class="passage" cx="164" cy="240" r="40"/><circle cx="164" cy="240" r="31"/><circle cx="164" cy="240" r="17"/><circle cx="164" cy="240" r="4"/>
-      <circle class="passage" cx="508" cy="240" r="40"/><circle cx="508" cy="240" r="31"/><circle cx="508" cy="240" r="17"/><circle cx="508" cy="240" r="4"/>
-    </g>
-  </svg>
-  <ul class="etiquettes">
-    <li style="--x:47%;--y:62%" data-seuil="0.2"><span class="pastille"></span><span class="tige"></span><strong>Bodywork</strong><em>doors, paint</em></li>
-    <li style="--x:63%;--y:66%" data-seuil="0.4"><span class="pastille"></span><span class="tige"></span><strong>Diagnostics</strong><em>diagnostic port</em></li>
-    <li class="a-gauche" style="--x:79%;--y:82%" data-seuil="0.6"><span class="pastille"></span><span class="tige"></span><strong>Servicing</strong><em>sump, brakes</em></li>
-    <li class="a-gauche" style="--x:95.6%;--y:71.3%" data-seuil="0.8"><span class="pastille"></span><span class="tige"></span><strong>Breakdown</strong><em>towing eye</em></li>
-  </ul>
-</div>
+        <figcaption>
+          <ol class="releve"><li data-seuil="0.15"><span class="pastille"></span><strong>Bodywork</strong><em>doors, paint</em></li><li data-seuil="0.35"><span class="pastille"></span><strong>Diagnostics</strong><em>diagnostic port</em></li><li data-seuil="0.55"><span class="pastille"></span><strong>Servicing</strong><em>sump, brakes</em></li><li data-seuil="0.75"><span class="pastille"></span><strong>Breakdown</strong><em>towing eye</em></li></ol>
+        </figcaption>
       </figure>
+      <p class="defiler" aria-hidden="true"><span></span>Scroll to lift the car</p>
     </div>
   </section>
 
   <section class="services" id="services" aria-labelledby="t-services">
-    <div class="services-tete">
-      <h2 id="t-services" class="titre-section">What we do for you</h2>
-      <figure class="photo photo--diag" data-apparait><img src="../images/diagnostic.jpg" width="1500" height="1000" loading="lazy" alt="A mechanic's hand plugs the diagnostic connector under the dashboard; a tablet shows graphs."><figcaption>Illustration · fictional example</figcaption></figure>
-    </div>
-    <ul class="liste-services"><li data-apparait><h3>Servicing</h3><p>Oil change, brakes, tyres, timing belt, air conditioning. Your service book is kept up to date.</p></li><li data-apparait><h3>Electronic diagnostics</h3><p>A warning light is on? We read what the car says before touching anything.</p></li><li data-apparait><h3>Breakdown and towing</h3><p>Broken down on the road: we come and get you and your vehicle.</p></li><li data-apparait><h3>Bodywork</h3><p>Accident repair, paint, windscreen.</p></li></ul>
+    <h2 id="t-services" class="titre-section">What we do for you</h2>
+    <div class="onglets" role="tablist" aria-label="What we do for you"><button class="onglet" role="tab" id="o-0" aria-controls="p-0" aria-selected="true" tabindex="0" type="button">Servicing</button><button class="onglet" role="tab" id="o-1" aria-controls="p-1" aria-selected="false" tabindex="-1" type="button">Electronic diagnostics</button><button class="onglet" role="tab" id="o-2" aria-controls="p-2" aria-selected="false" tabindex="-1" type="button">Breakdown and towing</button><button class="onglet" role="tab" id="o-3" aria-controls="p-3" aria-selected="false" tabindex="-1" type="button">Bodywork</button></div>
+    <div class="panneaux"><article class="panneau" role="tabpanel" id="p-0" aria-labelledby="o-0"><svg class="ic-ligne" aria-hidden="true"><use href="#i-cle"/></svg><h3>Servicing</h3><p>Oil change, brakes, tyres, timing belt, air conditioning. Your service book is kept up to date.</p><div class="actions"><a class="pilule pilule--pleine" href="#demande">Book a visit</a><a class="lien-fantome" href="tel:+33492000000">Call us<svg class="ic" aria-hidden="true"><use href="#i-fleche"/></svg></a></div></article><article class="panneau" role="tabpanel" id="p-1" aria-labelledby="o-1" data-cache><svg class="ic-ligne" aria-hidden="true"><use href="#i-diag"/></svg><h3>Electronic diagnostics</h3><p>A warning light is on? We read what the car says before touching anything.</p><div class="actions"><a class="pilule pilule--pleine" href="#demande">Book a visit</a><a class="lien-fantome" href="tel:+33492000000">Call us<svg class="ic" aria-hidden="true"><use href="#i-fleche"/></svg></a></div></article><article class="panneau" role="tabpanel" id="p-2" aria-labelledby="o-2" data-cache><svg class="ic-ligne" aria-hidden="true"><use href="#i-remorque"/></svg><h3>Breakdown and towing</h3><p>Broken down on the road: we come and get you and your vehicle.</p><div class="actions"><a class="pilule pilule--pleine" href="#demande">Book a visit</a><a class="lien-fantome" href="tel:+33492000000">Call us<svg class="ic" aria-hidden="true"><use href="#i-fleche"/></svg></a></div></article><article class="panneau" role="tabpanel" id="p-3" aria-labelledby="o-3" data-cache><svg class="ic-ligne" aria-hidden="true"><use href="#i-carrosserie"/></svg><h3>Bodywork</h3><p>Accident repair, paint, windscreen.</p><div class="actions"><a class="pilule pilule--pleine" href="#demande">Book a visit</a><a class="lien-fantome" href="tel:+33492000000">Call us<svg class="ic" aria-hidden="true"><use href="#i-fleche"/></svg></a></div></article></div>
   </section>
 
-  <section class="panne" id="panne" aria-labelledby="t-panne">
-    <div class="panne-texte" data-apparait>
-      <h2 id="t-panne" class="titre-section">Broken down on the road?</h2>
-      <p>Has your assistance company sent you to us? Call us: we take it from there, and you follow the repair online with the code we give you.</p>
-      <div class="actions">
-        <a class="bouton bouton--jaune" href="tel:+33492000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>04 92 00 00 00</a>
-        <a class="bouton bouton--clair" href="suivi.html">Track my repair<svg class="ic" aria-hidden="true"><use href="#i-fleche"/></svg></a>
-      </div>
-      <p class="note">Breakdown service hours: [À COMPLÉTER : horaires du dépannage]</p>
-    </div>
-    <figure class="photo"><img src="../images/atelier.jpg" width="1500" height="1125" loading="lazy" alt="A grey car raised on a lift with yellow arms; a mechanic inspects the underside, mountains in the distance."><figcaption>Illustration · fictional example</figcaption></figure>
+  <section class="chiffres" aria-label="At a glance"><div class="chiffre"><p class="chiffre-valeur">6 days</p><p class="chiffre-libelle">the workshop is open Monday to Saturday</p></div><div class="chiffre"><p class="chiffre-valeur">4</p><p class="chiffre-libelle">trades under one roof</p></div><div class="chiffre"><p class="chiffre-valeur">1 code</p><p class="chiffre-libelle">to track your repair online</p></div><div class="chiffre"><p class="chiffre-valeur">0 cookies</p><p class="chiffre-libelle">no tracking on this site</p></div></section>
+
+  <section class="publics" id="panne" aria-labelledby="t-publics">
+    <h2 id="t-publics" class="titre-section">You are…</h2>
+    <div class="publics-grille"><div class="public" data-apparait><svg class="ic-ligne" aria-hidden="true"><use href="#i-maison"/></svg><h3>Local</h3><p>Servicing, tyres or a check before the holidays: book a visit and we will call you back to confirm.</p><div class="actions"><a class="pilule pilule--pleine" href="#demande">Book a visit</a><a class="lien-fantome" href="tel:+33492000000">Call us<svg class="ic" aria-hidden="true"><use href="#i-fleche"/></svg></a></div></div><div class="public" data-apparait><svg class="ic-ligne" aria-hidden="true"><use href="#i-route"/></svg><h3>Broken down on the road</h3><p>We come and get you and your vehicle. Then you follow the repair online with the code we give you.</p><div class="actions"><a class="pilule pilule--pleine" href="tel:+33492000000">Call us</a><a class="lien-fantome" href="suivi.html">Track my repair<svg class="ic" aria-hidden="true"><use href="#i-fleche"/></svg></a></div></div><div class="public" data-apparait><svg class="ic-ligne" aria-hidden="true"><use href="#i-bouclier"/></svg><h3>Sent by your assistance company</h3><p>Has your assistance company sent you to us? Call us: we take it from there with them.</p><div class="actions"><a class="pilule pilule--pleine" href="tel:+33492000000">Call us</a><a class="lien-fantome" href="#infos">Find us<svg class="ic" aria-hidden="true"><use href="#i-fleche"/></svg></a></div></div></div>
+    <p class="note">Breakdown service hours: [À COMPLÉTER : horaires du dépannage]</p>
   </section>
 
   <section class="demande" id="demande" aria-labelledby="t-demande">
@@ -135,7 +104,7 @@
       <h2 id="t-demande" class="titre-section">Book or get a quote</h2>
       <p>Tell us what your car needs. We will call you back to confirm.</p>
     </div>
-    <form class="formulaire" name="demande" method="POST" action="merci.html" data-netlify="true" netlify-honeypot="adresse-web" data-formulaire>
+    <form class="formulaire carte" name="demande" method="POST" action="merci.html" data-netlify="true" netlify-honeypot="adresse-web" data-formulaire>
       <input type="hidden" name="form-name" value="demande">
       <input type="hidden" name="langue" value="en">
       <p class="piege"><label>Ne pas remplir <input name="adresse-web" tabindex="-1" autocomplete="off"></label></p>
@@ -155,37 +124,38 @@
         <label class="champ champ--large"><span>Your message</span><textarea name="message" rows="4"></textarea></label>
       </div>
       <p class="erreur" role="alert" hidden data-erreur></p>
-      <button class="bouton bouton--jaune" type="submit">Send my request</button>
+      <button class="pilule pilule--pleine" type="submit">Send my request</button>
       <p class="aide">Your details are only used to answer you. <a href="../confidentialite.html">Privacy (in French)</a></p>
     </form>
   </section>
 
   <section class="suivi-promo" aria-labelledby="t-suivi">
-    <div data-apparait>
+    <div>
       <h2 id="t-suivi" class="titre-section">Track your repair</h2>
       <p>The garage gives you a code when you drop off the car. Enter it to see where your car is.</p>
+      <a class="lien-fantome" href="suivi.html">Track my repair<svg class="ic" aria-hidden="true"><use href="#i-fleche"/></svg></a>
     </div>
-    <div class="promo-schema"><p class="exemple">Tracking example</p><ol class="etapes etapes--promo" aria-hidden="true"><li><span>Vehicle received</span></li><li><span>Diagnosis</span></li><li class="active"><span>Repair</span></li><li><span>Ready for pick-up</span></li></ol></div>
-    <a class="bouton bouton--jaune" href="suivi.html">Track my repair<svg class="ic" aria-hidden="true"><use href="#i-fleche"/></svg></a>
+    <div class="carte">
+      <p class="exemple">Tracking example</p>
+      <ol class="etapes" aria-hidden="true"><li class="faite"><span>Vehicle received</span></li><li class="faite"><span>Diagnosis</span></li><li class="active"><span>Repair</span></li><li><span>Ready for pick-up</span></li></ol>
+    </div>
   </section>
 
   <!-- HORAIRES : modifier aussi contenu/infos.json, le JSON-LD en haut et js/main.js -->
   <section class="infos" id="infos" aria-labelledby="t-infos">
-    <h2 id="t-infos" class="titre-section">Find us</h2>
-    <div class="infos-grille">
-      <div>
-        <p class="adresse">14 avenue d'Embrun<br>05000 Gap</p>
-        <p class="etat" data-etat></p>
-        <p class="annonce" data-annonce hidden></p>
-        <div class="actions">
-          <a class="bouton bouton--jaune" href="https://www.google.com/maps/search/?api=1&amp;query=Garage+Delorme+14+avenue+d%27Embrun+05000+Gap"><svg class="ic" aria-hidden="true"><use href="#i-lieu"/></svg>Directions</a>
-          <a class="bouton" href="tel:+33492000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>04 92 00 00 00</a>
-        </div>
+    <div>
+      <h2 id="t-infos" class="titre-section">Find us</h2>
+      <p class="adresse">14 avenue d'Embrun<br>05000 Gap</p>
+      <p class="etat" data-etat></p>
+      <p class="annonce" data-annonce hidden></p>
+      <div class="actions">
+        <a class="pilule pilule--pleine" href="https://www.google.com/maps/search/?api=1&amp;query=Garage+Delorme+14+avenue+d%27Embrun+05000+Gap"><svg class="ic" aria-hidden="true"><use href="#i-lieu"/></svg>Directions</a>
+        <a class="lien-fantome" href="tel:+33492000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>04 92 00 00 00</a>
       </div>
-      <div>
-        <table class="horaires"><caption>Workshop hours</caption><tbody><tr data-jour="1"><th scope="row">Monday</th><td>8 am – 12 pm · 2 – 6:30 pm</td></tr><tr data-jour="2"><th scope="row">Tuesday</th><td>8 am – 12 pm · 2 – 6:30 pm</td></tr><tr data-jour="3"><th scope="row">Wednesday</th><td>8 am – 12 pm · 2 – 6:30 pm</td></tr><tr data-jour="4"><th scope="row">Thursday</th><td>8 am – 12 pm · 2 – 6:30 pm</td></tr><tr data-jour="5"><th scope="row">Friday</th><td>8 am – 12 pm · 2 – 6:30 pm</td></tr><tr data-jour="6"><th scope="row">Saturday</th><td>8 am – 12 pm</td></tr><tr data-jour="0" class="ferme"><th scope="row">Sunday</th><td>Closed</td></tr></tbody></table>
-        <p class="note" data-conges>Annual closures: [À COMPLÉTER : dates de congés]</p>
-      </div>
+    </div>
+    <div class="carte">
+      <table class="horaires"><caption>Workshop hours</caption><tbody><tr data-jour="1"><th scope="row">Monday</th><td>8 am – 12 pm · 2 – 6:30 pm</td></tr><tr data-jour="2"><th scope="row">Tuesday</th><td>8 am – 12 pm · 2 – 6:30 pm</td></tr><tr data-jour="3"><th scope="row">Wednesday</th><td>8 am – 12 pm · 2 – 6:30 pm</td></tr><tr data-jour="4"><th scope="row">Thursday</th><td>8 am – 12 pm · 2 – 6:30 pm</td></tr><tr data-jour="5"><th scope="row">Friday</th><td>8 am – 12 pm · 2 – 6:30 pm</td></tr><tr data-jour="6"><th scope="row">Saturday</th><td>8 am – 12 pm</td></tr><tr data-jour="0" class="ferme"><th scope="row">Sunday</th><td>Closed</td></tr></tbody></table>
+      <p class="note" data-conges>Annual closures: [À COMPLÉTER : dates de congés]</p>
     </div>
   </section>
 </main>
@@ -196,7 +166,7 @@
   </a></div>
   <address>14 avenue d'Embrun, 05000 Gap · <a href="tel:+33492000000">04 92 00 00 00</a></address>
   <p class="pied-liens"><a href="../mentions-legales.html">Legal notice (in French)</a> <a href="../confidentialite.html">Privacy (in French)</a> <a href="../index.html" hreflang="fr">Version française</a></p>
-  <p class="pied-petit">This site sets no cookies. Fictional example: photos are AI-generated illustrations.</p>
+  <p class="pied-petit">This site sets no cookies. Fictional example.</p>
 </footer>
 <script src="../js/main.js" defer></script>
 </body>

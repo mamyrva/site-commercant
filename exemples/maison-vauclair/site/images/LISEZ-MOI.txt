@@ -1,7 +1,10 @@
-solitaire.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération zrsPr255FE6Q1HLADO3F
-atelier.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération TGFqo1QncjIl0lpRGjL1
-alliances.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération i5grRCYhrN2LittBw7sA
-collier.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération nksvUtIlaUUreelDCgV9
-montre.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération EynbNewsk7BSUNml9uqa
-montre-carre.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération EynbNewsk7BSUNml9uqa
-bague.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération 6kGn2flf32xmgjEAF3vG
+Illustrations générées par IA pour la démonstration (exemple fictif). À remplacer par les vraies photos de la maison.
+Images : ElevenLabs, bytedance-seedream-5-pro, 2026-11-07. Film : ElevenLabs, kling-2.5-turbo, depuis lampe.jpg.
+lampe.jpg, lampe-mobile.jpg, partage.jpg — génération sr3Lu3jYaoZg7OGNEzK0
+bague.jpg — génération jnkdF9sCyN4tqdYOEwpk
+atelier.jpg — génération 55MRKKJadZS0d675MLMZ
+alliances.jpg — génération I0tTMWOzrl3yIji6QSmc
+collier.jpg — génération AywQzCNdcMzGPytn5WPl
+montre-carte.jpg — génération yNO9gK2ynJDBt2rIRsq4
+montre.jpg — génération RERI5wGeWSyMK6OQkrHK
+../film/lampe.mp4 — génération 3dGSLrfpoaDcwZvGEdrE (5 s, sans son)

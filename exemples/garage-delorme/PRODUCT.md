@@ -46,6 +46,7 @@ Situations de stress (panne, vacances interrompues) ou de routine (entretien). V
 - **Exemple fictif :** un bandeau doit l'indiquer.
 
 ## Brand Commitments
+- **Style de référence imposé par l'utilisateur (2026-11-07)** : la fiche « Idle Finance » (styles.refero.design), traduite en terminal de diagnostic d'atelier : bleu nuit, un seul cyan (le voyant du diagnostic), halo bleu des phares, titres très gras avec un mot en cyan, pilules, cartes à filet noir, aucune ombre, services en onglets, grands chiffres vrais. Le pont élévateur reste la signature (au trait cyan). Le jaune et les photos de la version précédente sont retirés (version archivée).
 - Nom : « Garage Delorme ».
 - Ressenti voulu : « je suis entre de bonnes mains » et « c'est moderne et pointu ».
 - Niveau de finition de référence : les sites des constructeurs automobiles (grandes images, peu de texte, précision). On ne copie jamais leur identité, leurs logos ni leurs noms.

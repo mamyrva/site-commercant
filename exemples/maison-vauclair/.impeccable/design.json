@@ -1,299 +1,328 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-07T15:43:18+00:00",
+  "generatedAt": "2026-11-07T18:05:10+00:00",
   "title": "Design System: Maison Vauclair",
   "extensions": {
     "colorMeta": {
-      "fond": {
-        "role": "neutral",
-        "displayName": "Blanc vitrine",
-        "canonical": "oklch(100.0% 0.000 89.9)",
-        "tonalRamp": [
-          "#0B0B0B",
-          "#242424",
-          "#404040",
-          "#5D5D5D",
-          "#7D7D7D",
-          "#9E9E9E",
-          "#C4C4C4",
-          "#EEEEEE"
-        ]
-      },
-      "fond-doux": {
-        "role": "neutral",
-        "displayName": "Blanc cassé",
-        "canonical": "oklch(97.0% 0.003 106.4)",
-        "tonalRamp": [
-          "#0B0B0B",
-          "#242423",
-          "#40403F",
-          "#5E5E5C",
-          "#7D7D7C",
-          "#9E9E9D",
-          "#C4C4C3",
-          "#EEEEEE"
-        ]
-      },
-      "encre": {
-        "role": "neutral",
-        "displayName": "Encre",
-        "canonical": "oklch(19.1% 0.000 89.9)",
-        "tonalRamp": [
-          "#0B0B0B",
-          "#242424",
-          "#404040",
-          "#5D5D5D",
-          "#7D7D7D",
-          "#9E9E9E",
-          "#C4C4C4",
-          "#EEEEEE"
-        ]
-      },
-      "encre-douce": {
-        "role": "neutral",
-        "displayName": "Encre douce",
-        "canonical": "oklch(43.9% 0.010 84.6)",
-        "tonalRamp": [
-          "#0C0B0A",
-          "#252421",
-          "#413F3C",
-          "#605D58",
-          "#807D77",
-          "#A09E99",
-          "#C6C4C0",
-          "#EFEEEC"
-        ]
-      },
-      "filet": {
-        "role": "neutral",
-        "displayName": "Filet",
-        "canonical": "oklch(91.2% 0.005 95.1)",
-        "tonalRamp": [
-          "#0B0B0A",
-          "#242423",
-          "#40403E",
-          "#5E5E5B",
-          "#7E7D7A",
-          "#9F9E9C",
-          "#C4C4C2",
-          "#EFEEED"
-        ]
-      },
-      "photo": {
-        "role": "neutral",
-        "displayName": "Gris photo",
-        "canonical": "oklch(94.9% 0.004 91.4)",
-        "tonalRamp": [
-          "#0B0B0B",
-          "#242423",
-          "#40403E",
-          "#5E5D5B",
-          "#7E7D7B",
-          "#9F9E9C",
-          "#C4C4C2",
-          "#EFEEED"
-        ]
-      },
-      "jade": {
+      "lampe": {
         "role": "primary",
-        "displayName": "Vert jade",
-        "canonical": "oklch(38.5% 0.061 182.1)",
+        "displayName": "Crème de la lampe",
+        "canonical": "oklch(96.9% 0.007 106.5)",
         "tonalRamp": [
-          "#040D0C",
-          "#132925",
-          "#254741",
-          "#396860",
-          "#568980",
-          "#81A8A0",
-          "#AFCBC5",
-          "#E3F2EF"
+          "#1B1B18",
+          "#30302B",
+          "#4A4A44",
+          "#66665F",
+          "#83837C",
+          "#A2A29B",
+          "#C7C7C0",
+          "#F0F0EB"
+        ]
+      },
+      "vide": {
+        "role": "neutral",
+        "displayName": "Le vide",
+        "canonical": "oklch(0% 0 0)",
+        "tonalRamp": [
+          "#1A1A1A",
+          "#2E2E2E",
+          "#474747",
+          "#636363",
+          "#808080",
+          "#9E9E9E",
+          "#C2C2C2",
+          "#EDEDED"
+        ]
+      },
+      "blanc": {
+        "role": "neutral",
+        "displayName": "Blanc",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "#1A1A1A",
+          "#2E2E2E",
+          "#474747",
+          "#636363",
+          "#808080",
+          "#9E9E9E",
+          "#C2C2C2",
+          "#EDEDED"
+        ]
+      },
+      "texte-doux": {
+        "role": "neutral",
+        "displayName": "Blanc voilé",
+        "canonical": "rgba(255, 255, 255, 0.86)",
+        "tonalRamp": [
+          "#1A1A1A",
+          "#2E2E2E",
+          "#474747",
+          "#636363",
+          "#808080",
+          "#9E9E9E",
+          "#C2C2C2",
+          "#EDEDED"
+        ]
+      },
+      "fumee": {
+        "role": "neutral",
+        "displayName": "Fumée",
+        "canonical": "oklch(71.5% 0 0)",
+        "tonalRamp": [
+          "#1A1A1A",
+          "#2E2E2E",
+          "#474747",
+          "#636363",
+          "#808080",
+          "#9E9E9E",
+          "#C2C2C2",
+          "#EDEDED"
+        ]
+      },
+      "charbon": {
+        "role": "neutral",
+        "displayName": "Charbon",
+        "canonical": "oklch(24.4% 0 0)",
+        "tonalRamp": [
+          "#1A1A1A",
+          "#2E2E2E",
+          "#474747",
+          "#636363",
+          "#808080",
+          "#9E9E9E",
+          "#C2C2C2",
+          "#EDEDED"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(32.1% 0 0)",
+        "tonalRamp": [
+          "#1A1A1A",
+          "#2E2E2E",
+          "#474747",
+          "#636363",
+          "#808080",
+          "#9E9E9E",
+          "#C2C2C2",
+          "#EDEDED"
         ]
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Grand titre",
-        "purpose": "Le seul titre d'accueil, centré sous le visuel."
+        "displayName": "Display",
+        "purpose": "Titre d'ouverture et grand titre de clôture du pied (jusqu'à 7rem)."
       },
       "headline": {
-        "displayName": "Titre de section",
-        "purpose": "Titres de section et des pages légales."
+        "displayName": "Headline",
+        "purpose": "Un titre par section, une phrase avec un mot en italique sérif."
+      },
+      "accent": {
+        "displayName": "Accent italique",
+        "purpose": "Le seul mot en Instrument Serif italique d'un grand titre."
       },
       "title": {
-        "displayName": "Adresse en grand",
-        "purpose": "Adresse de la boutique dans la section visite ; même famille pour la promesse de la bande jade."
+        "displayName": "Title",
+        "purpose": "Nom de la pièce sur les cartes photo."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Chapeau et paragraphes de section, en blanc voilé, 32–36rem max."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texte courant, horaires en chiffres tabulaires."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Libellés en capitales espacées, en fumée."
+      },
+      "badge": {
+        "displayName": "Badge",
+        "purpose": "Capitales des pastilles en verre dépoli."
       },
       "logotype": {
         "displayName": "Logotype",
-        "purpose": "MAISON VAUCLAIR en capitales espacées, en-tête et pied de page."
-      },
-      "body": {
-        "displayName": "Texte",
-        "purpose": "Chapeaux et paragraphes, Jost 300."
-      },
-      "body-small": {
-        "displayName": "Texte petit",
-        "purpose": "Descriptions des tuiles, services, horaires."
-      },
-      "label": {
-        "displayName": "Libellé",
-        "purpose": "Menu, boutons, titres des tuiles, légendes : capitales Jost 500 espacées."
+        "purpose": "« MAISON VAUCLAIR » dans l'en-tête et le pied."
       }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "pilule-lampe",
+        "value": "0 4px 20px rgba(0, 0, 0, 0.15)",
+        "purpose": "Uniquement sous la pilule crème (héritée de la référence, quasi invisible sur noir)."
+      },
+      {
+        "name": "verre",
+        "value": "0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+        "purpose": "Uniquement sur les pastilles en verre dépoli, avec backdrop-filter: blur(20px) saturate(1.4)."
+      }
+    ],
     "motion": [
       {
-        "name": "devoiler",
-        "value": "clip-path inset(0 0 100% 0) → inset(0) 1600ms cubic-bezier(.16, 1, .3, 1)",
-        "purpose": "Unique mouvement : le visuel d'ouverture se dévoile au chargement. Supprimé si moins d'animations est demandé."
+        "name": "sortie-douce",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Courbe de la lampe qui s'allume, du zoom des cartes et du bouton du film."
       },
       {
-        "name": "fondu-survol",
-        "value": "300ms ease-out",
-        "purpose": "Couleurs des boutons et soulignement du menu au survol."
+        "name": "lampe-allume",
+        "value": "1600ms",
+        "purpose": "Photo de brightness(0.3) saturate(0.6) scale(1.04) à l'état normal, à l'entrée à l'écran (IntersectionObserver, une fois). Désactivé en ?capture et prefers-reduced-motion."
       },
       {
-        "name": "fondu-tuile",
-        "value": "400ms ease-out / 400ms cubic-bezier(.16, 1, .3, 1)",
-        "purpose": "Teinte de la photo et allongement du trait jade des tuiles."
+        "name": "zoom-carte",
+        "value": "1200ms",
+        "purpose": "Photo de carte à scale(1.03) au survol."
+      },
+      {
+        "name": "rond-film",
+        "value": "400ms",
+        "purpose": "Cercle du film à scale(1.06) au survol."
+      },
+      {
+        "name": "etat",
+        "value": "250ms",
+        "purpose": "Couleurs de fond et de contour des pilules ; 200ms pour l'opacité des liens de navigation."
       }
     ],
     "breakpoints": [
       {
-        "name": "tres-petit",
-        "value": "26rem (max-width)"
+        "name": "telephone",
+        "value": "40rem"
       },
       {
-        "name": "grand-ecran",
-        "value": "56rem (min-width)"
+        "name": "tablette",
+        "value": "48rem"
+      },
+      {
+        "name": "nav",
+        "value": "56rem"
+      },
+      {
+        "name": "large",
+        "value": "60rem"
       }
     ]
   },
   "components": [
     {
-      "name": "Bouton plein (jade)",
+      "name": "Pilule lampe",
       "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Action principale : venir en boutique, itinéraire. Un seul par groupe d'actions.",
-      "html": "<a class=\"ds-bouton-plein\" href=\"#\">Venir à la Maison</a>",
-      "css": ".ds-bouton-plein{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;min-width:13rem;padding:.8rem 1.75rem;border:1px solid var(--jade, #134E46);border-radius:0;background:var(--jade, #134E46);color:var(--fond, #FFFFFF);font-family:Jost,Futura,'Avenir Next',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:background-color 300ms ease-out,border-color 300ms ease-out}.ds-bouton-plein:hover{background:#0C3832;border-color:#0C3832}.ds-bouton-plein:focus-visible{outline:1px solid var(--encre, #141414);outline-offset:4px}"
+      "refersTo": "pilule-lampe",
+      "description": "Seul bouton plein du site : l'action « venir en boutique ».",
+      "html": "<div style=\"background:#000;padding:24px\"><a class=\"ds-pilule ds-pilule-lampe\" href=\"#\">Venir à la Maison</a></div>",
+      "css": ":host{--vide:#000000;--blanc:#FFFFFF;--charbon:#202020;--graphite:#333333;--lampe:#F5F5F0;--fumee:#A3A3A3;--sans:\"Jost\",\"Helvetica Neue\",Arial,sans-serif;--serif:\"Instrument Serif\",\"Iowan Old Style\",Georgia,serif;} .ds-pilule{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:3rem;padding:0 1.5rem;border-radius:9999px;font:500 1rem/1 var(--sans);text-decoration:none;white-space:nowrap;transition:background-color 250ms,color 250ms,border-color 250ms;} .ds-pilule:focus-visible{outline:1px solid var(--lampe);outline-offset:4px;} .ds-pilule-lampe{background:var(--lampe);color:var(--vide);box-shadow:0 4px 20px rgba(0,0,0,.15);} .ds-pilule-lampe:hover{background:var(--blanc);}"
     },
     {
-      "name": "Bouton filet",
+      "name": "Pilule fantôme",
       "kind": "button",
-      "refersTo": "button-secondary",
-      "description": "Action secondaire : appeler. Contour encre d'un pixel, se remplit d'encre au survol.",
-      "html": "<a class=\"ds-bouton\" href=\"#\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 3.5h3.2l1.6 4.2-2.1 1.5a11 11 0 0 0 7.1 7.1l1.5-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z\"/></svg>Appeler</a>",
-      "css": ".ds-bouton{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;min-width:13rem;padding:.8rem 1.75rem;border:1px solid var(--encre, #141414);border-radius:0;background:transparent;color:var(--encre, #141414);font-family:Jost,Futura,'Avenir Next',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:background-color 300ms ease-out,color 300ms ease-out}.ds-bouton:hover{background:var(--encre, #141414);color:var(--fond, #FFFFFF)}.ds-bouton:focus-visible{outline:1px solid var(--encre, #141414);outline-offset:4px}.ds-ic{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}"
+      "refersTo": "pilule-fantome",
+      "description": "Action secondaire (appeler), contour blanc sur noir.",
+      "html": "<div style=\"background:#000;padding:24px\"><a class=\"ds-pilule ds-pilule-fantome\" href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 3.5h3.2l1.6 4.2-2.1 1.5a11 11 0 0 0 7.1 7.1l1.5-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z\"/></svg>Appeler</a></div>",
+      "css": ":host{--vide:#000000;--blanc:#FFFFFF;--charbon:#202020;--graphite:#333333;--lampe:#F5F5F0;--fumee:#A3A3A3;--sans:\"Jost\",\"Helvetica Neue\",Arial,sans-serif;--serif:\"Instrument Serif\",\"Iowan Old Style\",Georgia,serif;} .ds-pilule{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:3rem;padding:0 1.5rem;border-radius:9999px;font:500 1rem/1 var(--sans);text-decoration:none;white-space:nowrap;transition:background-color 250ms,color 250ms,border-color 250ms;} .ds-pilule:focus-visible{outline:1px solid var(--lampe);outline-offset:4px;} .ds-pilule-fantome{border:1px solid rgba(255,255,255,.7);color:var(--blanc);padding:0 1.25rem;} .ds-pilule-fantome:hover{border-color:var(--blanc);background:rgba(255,255,255,.06);}"
     },
     {
-      "name": "En-tête",
-      "kind": "nav",
-      "refersTo": "header",
-      "description": "Logotype Italiana centré en capitales espacées, menu Jost en petites capitales, filet en bas.",
-      "html": "<header class=\"ds-entete\"><a class=\"ds-logotype\" href=\"#\">Maison Vauclair</a><nav class=\"ds-nav\"><a href=\"#\">Créations</a><a href=\"#\">L'atelier</a><a href=\"#\">Montres</a><a href=\"#\">La Maison</a></nav></header>",
-      "css": ".ds-entete{display:grid;justify-items:center;gap:.75rem;padding:1.5rem 1.25rem 0;background:var(--fond, #FFFFFF);border-bottom:1px solid var(--filet, #E3E2DE)}.ds-logotype{font-family:Italiana,Didot,serif;font-size:1.75rem;letter-spacing:.32em;margin-right:-.32em;text-transform:uppercase;text-decoration:none;line-height:1.1;color:var(--encre, #141414)}.ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:0 2rem}.ds-nav a{padding:.85rem 0 .95rem;font-family:Jost,Futura,sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--encre, #141414);border-bottom:1px solid transparent;transition:border-color 300ms ease-out}.ds-nav a:hover{border-bottom-color:var(--jade, #134E46);color:var(--jade, #134E46)}.ds-nav a:focus-visible{outline:1px solid var(--encre, #141414);outline-offset:4px}"
+      "name": "Pastille en verre",
+      "kind": "chip",
+      "refersTo": "verre",
+      "description": "Catégorie d'une carte photo ou état d'ouverture réel ; jamais une accroche décorative.",
+      "html": "<div style=\"background:linear-gradient(135deg,#3a3127,#000);padding:32px\"><span class=\"ds-verre\">Fiançailles</span></div>",
+      "css": ":host{--vide:#000000;--blanc:#FFFFFF;--charbon:#202020;--graphite:#333333;--lampe:#F5F5F0;--fumee:#A3A3A3;--sans:\"Jost\",\"Helvetica Neue\",Arial,sans-serif;--serif:\"Instrument Serif\",\"Iowan Old Style\",Georgia,serif;} .ds-verre{display:inline-flex;align-items:center;padding:.5rem 1rem;border-radius:9999px;background:rgba(200,200,200,.1);-webkit-backdrop-filter:blur(20px) saturate(1.4);backdrop-filter:blur(20px) saturate(1.4);box-shadow:0 10px 30px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.08);color:var(--blanc);font:500 .6875rem/1.2 var(--sans);letter-spacing:.05em;text-transform:uppercase;}"
     },
     {
-      "name": "Emplacement photo (dessin au trait)",
-      "kind": "custom",
-      "refersTo": "photo-placeholder",
-      "description": "Aplat gris photo, dessin d'atelier au trait et mention « Photo à venir », en attendant la photo du commerçant.",
-      "html": "<div class=\"ds-photo\" role=\"img\" aria-label=\"Emplacement photo : bague\"><svg class=\"ds-trait\" viewBox=\"0 0 200 200\" aria-hidden=\"true\"><ellipse cx=\"100\" cy=\"132\" rx=\"50\" ry=\"52\"/><ellipse cx=\"100\" cy=\"132\" rx=\"42\" ry=\"44\"/><path d=\"M84 84l6-12h20l6 12\"/><path d=\"M74 66L85.7 48H114.3L126 66ZM74 66L100 86L126 66\"/></svg><span class=\"ds-photo-mention\">Photo à venir</span></div>",
-      "css": ".ds-photo{position:relative;display:grid;place-items:center;aspect-ratio:3/2;width:22rem;background:var(--photo, #EFEEEB);overflow:hidden}.ds-trait{width:min(40%,14rem);aspect-ratio:1;margin-bottom:1.5rem;fill:none;stroke:#857E71;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}.ds-photo-mention{position:absolute;bottom:1.1rem;left:0;right:0;text-align:center;font-family:Jost,Futura,sans-serif;font-size:.6875rem;letter-spacing:.2em;text-transform:uppercase;color:#5F594F}"
-    },
-    {
-      "name": "Tuile de création",
+      "name": "Carte photo",
       "kind": "card",
-      "refersTo": "tile",
-      "description": "Photo carrée, titre en libellé capitales, court trait jade qui s'allonge au survol.",
-      "html": "<a class=\"ds-tuile\" href=\"#\"><div class=\"ds-tuile-photo\"></div><h3>Alliances</h3><p>Assorties, ou chacune la sienne.</p></a>",
-      "css": ".ds-tuile{display:block;width:14rem;text-decoration:none;color:var(--encre, #141414)}.ds-tuile-photo{aspect-ratio:1;background:var(--photo, #EFEEEB);transition:background-color 400ms ease-out}.ds-tuile h3{margin:1.1rem 0 .25rem;font-family:Jost,Futura,sans-serif;font-size:.8125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase}.ds-tuile h3::after{content:'';display:block;width:1.5rem;height:1px;margin-top:.5rem;background:var(--jade, #134E46);transition:width 400ms cubic-bezier(.16,1,.3,1)}.ds-tuile p{margin:.4rem 0 0;font-family:Jost,Futura,sans-serif;font-size:.9375rem;font-weight:300;color:var(--encre-douce, #55524C)}.ds-tuile:hover .ds-tuile-photo{background:#E6EEEB}.ds-tuile:hover h3{color:var(--jade, #134E46)}.ds-tuile:hover h3::after{width:3.5rem}.ds-tuile:focus-visible{outline:1px solid var(--encre, #141414);outline-offset:4px}"
+      "refersTo": "carte-media",
+      "description": "Photo à la lampe, voile noir en bas, nom en bas à gauche, pastille en haut à droite.",
+      "html": "<div style=\"background:#000;padding:24px;max-width:360px\"><a class=\"ds-carte-media\" href=\"#\"><span class=\"ds-photo\"></span><span class=\"ds-verre\">Mariage</span><span class=\"ds-carte-texte\"><strong>Alliances</strong><span>Assorties, ou chacune la sienne.</span></span></a></div>",
+      "css": ":host{--vide:#000000;--blanc:#FFFFFF;--charbon:#202020;--graphite:#333333;--lampe:#F5F5F0;--fumee:#A3A3A3;--sans:\"Jost\",\"Helvetica Neue\",Arial,sans-serif;--serif:\"Instrument Serif\",\"Iowan Old Style\",Georgia,serif;} .ds-carte-media{position:relative;display:block;overflow:hidden;border-radius:10px;aspect-ratio:1000/860;background:var(--charbon);color:var(--blanc);text-decoration:none;font-family:var(--sans);} .ds-photo{position:absolute;inset:0;background:radial-gradient(circle at 55% 40%,#8a6a3c 0,#2a2016 30%,#000 70%);transition:transform 1200ms cubic-bezier(.16,1,.3,1);} .ds-carte-media::after{content:\"\";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,rgba(0,0,0,0) 45%);} .ds-carte-media:hover .ds-photo{transform:scale(1.03);} .ds-carte-media:focus-visible{outline:1px solid var(--lampe);outline-offset:4px;} .ds-verre{position:absolute;top:1rem;right:1rem;z-index:1;padding:.5rem 1rem;border-radius:9999px;background:rgba(200,200,200,.1);backdrop-filter:blur(20px) saturate(1.4);font:500 .6875rem/1.2 var(--sans);letter-spacing:.05em;text-transform:uppercase;} .ds-carte-texte{position:absolute;left:1.25rem;right:1.25rem;bottom:1.25rem;z-index:1;display:grid;gap:.25rem;} .ds-carte-texte strong{font-size:1.3125rem;font-weight:400;letter-spacing:-.01em;} .ds-carte-texte span{color:rgba(255,255,255,.82);}"
     },
     {
-      "name": "Bande jade (atelier)",
-      "kind": "custom",
-      "refersTo": "jade-band",
-      "description": "Le seul aplat pleine largeur en couleur : titre, promesse Italiana, services séparés par des filets blancs translucides.",
-      "html": "<section class=\"ds-jade\"><h2>L'atelier est dans la boutique</h2><p class=\"ds-promesse\">On vient en parler, on revient les voir naître.</p><dl class=\"ds-services\"><div><dt>Mise à taille</dt><dd>Bagues et alliances.</dd></div><div><dt>Montres</dt><dd>Entretien et réparation.</dd></div></dl></section>",
-      "css": ".ds-jade{padding:3rem 2rem;background:var(--jade, #134E46);color:var(--fond, #FFFFFF)}.ds-jade h2{margin:0 0 1.5rem;font-family:Italiana,Didot,serif;font-weight:400;font-size:2.6rem;line-height:1.06}.ds-promesse{margin:0 0 2.5rem;font-family:Italiana,Didot,serif;font-size:2rem;line-height:1.12}.ds-services{margin:0;border-top:1px solid rgb(250 248 244 / .25)}.ds-services>div{padding:1.1rem 0;border-bottom:1px solid rgb(250 248 244 / .25)}.ds-services dt{font-family:Jost,Futura,sans-serif;font-size:.8125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase}.ds-services dd{margin:0;font-family:Jost,Futura,sans-serif;font-size:.9375rem;font-weight:300;color:#D6E4E0}"
+      "name": "Carte charbon",
+      "kind": "card",
+      "refersTo": "carte-charbon",
+      "description": "Une marche au-dessus du noir, liste à filets graphite, sans ombre.",
+      "html": "<div style=\"background:#000;padding:24px\"><div class=\"ds-carte-charbon\"><p class=\"ds-libelle\">Horaires</p><div class=\"ds-ligne\"><span>Mardi</span><span>10 h – 19 h</span></div><div class=\"ds-ligne ds-ferme\"><span>Dimanche</span><span>Fermé</span></div></div></div>",
+      "css": ":host{--vide:#000000;--blanc:#FFFFFF;--charbon:#202020;--graphite:#333333;--lampe:#F5F5F0;--fumee:#A3A3A3;--sans:\"Jost\",\"Helvetica Neue\",Arial,sans-serif;--serif:\"Instrument Serif\",\"Iowan Old Style\",Georgia,serif;} .ds-carte-charbon{padding:1.5rem 1.5rem 1.25rem;border-radius:10px;background:var(--charbon);color:var(--blanc);font:400 1rem/1.5 var(--sans);font-variant-numeric:tabular-nums;} .ds-libelle{margin:0 0 .75rem;font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--fumee);} .ds-ligne{display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--graphite);} .ds-ferme{color:var(--fumee);}"
     },
     {
-      "name": "Tableau des horaires",
-      "kind": "custom",
-      "refersTo": "hours-table",
-      "description": "Jours à gauche, heures à droite en chiffres à chasse fixe, filets entre les lignes, jour courant en jade.",
-      "html": "<table class=\"ds-horaires\"><caption>Horaires</caption><tbody><tr><th scope=\"row\">Mardi</th><td>10 h – 19 h</td></tr><tr class=\"ds-aujourdhui\"><th scope=\"row\">Mercredi</th><td>10 h – 19 h</td></tr><tr class=\"ds-ferme\"><th scope=\"row\">Dimanche</th><td>Fermé</td></tr></tbody></table>",
-      "css": ".ds-horaires{width:20rem;border-collapse:collapse;font-family:Jost,Futura,sans-serif;font-variant-numeric:tabular-nums;color:var(--encre, #141414)}.ds-horaires caption{margin:0 0 .75rem;text-align:left;font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--encre-douce, #55524C)}.ds-horaires th,.ds-horaires td{padding:.8rem 0;border-bottom:1px solid var(--filet, #E3E2DE);font-weight:300;text-align:left;font-size:.9375rem}.ds-horaires tr:first-child th,.ds-horaires tr:first-child td{border-top:1px solid var(--filet, #E3E2DE)}.ds-horaires td{text-align:right}.ds-ferme{color:#5F594F}.ds-aujourdhui th,.ds-aujourdhui td{font-weight:500;color:var(--jade, #134E46)}"
-    },
-    {
-      "name": "Pied de page",
+      "name": "Navigation",
       "kind": "nav",
-      "refersTo": "footer",
-      "description": "Tout centré : logotype réduit, adresse, liens en capitales espacées, filet en haut.",
-      "html": "<footer class=\"ds-pied\"><p class=\"ds-pied-logo\">Maison Vauclair</p><address>18 cours de l'Intendance, 33000 Bordeaux</address><p class=\"ds-pied-liens\"><a href=\"#\">Mentions légales</a><a href=\"#\">Confidentialité</a></p></footer>",
-      "css": ".ds-pied{display:grid;justify-items:center;gap:.9rem;text-align:center;padding:4rem 1.25rem 3rem;background:var(--fond, #FFFFFF);border-top:1px solid var(--filet, #E3E2DE);font-family:Jost,Futura,sans-serif;font-size:.8125rem;color:var(--encre-douce, #55524C)}.ds-pied-logo{margin:0;font-family:Italiana,Didot,serif;font-size:1.5rem;letter-spacing:.32em;text-transform:uppercase;color:var(--encre, #141414)}.ds-pied address{font-style:normal}.ds-pied-liens{margin:0;display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 2rem}.ds-pied-liens a{padding:.4rem 0;letter-spacing:.1em;text-transform:uppercase;font-size:.75rem;color:var(--encre, #141414);text-underline-offset:.3em}.ds-pied-liens a:hover{color:var(--jade, #134E46)}.ds-pied-liens a:focus-visible{outline:1px solid var(--encre, #141414);outline-offset:4px}"
+      "description": "En-tête collant noir : logotype, trois liens centrés, petite pilule lampe.",
+      "html": "<header class=\"ds-entete\"><a class=\"ds-logotype\" href=\"#\">Maison Vauclair</a><nav class=\"ds-nav\"><a href=\"#\">Créations</a><a href=\"#\">L'atelier</a><a href=\"#\">Montres</a></nav><a class=\"ds-petite\" href=\"#\">Venir à la Maison</a></header>",
+      "css": ":host{--vide:#000000;--blanc:#FFFFFF;--charbon:#202020;--graphite:#333333;--lampe:#F5F5F0;--fumee:#A3A3A3;--sans:\"Jost\",\"Helvetica Neue\",Arial,sans-serif;--serif:\"Instrument Serif\",\"Iowan Old Style\",Georgia,serif;} .ds-entete{height:4.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 1.25rem;background:var(--vide);color:var(--blanc);font-family:var(--sans);} .ds-logotype{font-size:.875rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:inherit;white-space:nowrap;} .ds-nav{display:flex;gap:2rem;} .ds-nav a{font-size:.9375rem;font-weight:500;text-decoration:none;color:var(--blanc);opacity:.8;transition:opacity 200ms;} .ds-nav a:hover{opacity:1;} .ds-nav a:focus-visible,.ds-petite:focus-visible{outline:1px solid var(--lampe);outline-offset:4px;} .ds-petite{display:inline-flex;align-items:center;min-height:2.5rem;padding:0 1.1rem;border-radius:9999px;background:var(--lampe);color:var(--vide);font:500 .875rem/1 var(--sans);text-decoration:none;white-space:nowrap;} .ds-petite:hover{background:var(--blanc);}"
+    },
+    {
+      "name": "Bouton du film",
+      "kind": "custom",
+      "refersTo": "film-rond",
+      "description": "Cercle en verre avec l'icône lecture, en bas à droite de la photo d'ouverture ; ouvre le film IA en fenêtre.",
+      "html": "<div style=\"background:radial-gradient(circle at 40% 40%,#5a4528,#000 70%);padding:40px\"><button class=\"ds-film\" type=\"button\"><span class=\"ds-rond\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M9 6.5v11l9-5.5z\"/></svg></span><span>Regarder le film</span></button></div>",
+      "css": ":host{--vide:#000000;--blanc:#FFFFFF;--charbon:#202020;--graphite:#333333;--lampe:#F5F5F0;--fumee:#A3A3A3;--sans:\"Jost\",\"Helvetica Neue\",Arial,sans-serif;--serif:\"Instrument Serif\",\"Iowan Old Style\",Georgia,serif;} .ds-film{display:flex;align-items:center;gap:.75rem;padding:0;border:0;background:none;color:var(--blanc);cursor:pointer;font:400 .8125rem/1 var(--sans);letter-spacing:.03em;text-transform:uppercase;} .ds-rond{display:grid;place-items:center;width:3.5rem;height:3.5rem;border-radius:50%;border:1px solid rgba(255,255,255,.85);background:rgba(255,255,255,.08);backdrop-filter:blur(12px);transition:background-color 250ms,transform 400ms cubic-bezier(.16,1,.3,1);} .ds-film:hover .ds-rond{background:rgba(255,255,255,.16);transform:scale(1.06);} .ds-film:focus-visible{outline:1px solid var(--lampe);outline-offset:4px;border-radius:4px;}"
+    },
+    {
+      "name": "Grand titre",
+      "kind": "custom",
+      "description": "Jost 300 serré avec un seul mot en Instrument Serif italique.",
+      "html": "<div style=\"background:#000;padding:32px\"><h1 class=\"ds-titre\">Vos bijoux naissent <em>ici</em>.</h1></div>",
+      "css": ":host{--vide:#000000;--blanc:#FFFFFF;--charbon:#202020;--graphite:#333333;--lampe:#F5F5F0;--fumee:#A3A3A3;--sans:\"Jost\",\"Helvetica Neue\",Arial,sans-serif;--serif:\"Instrument Serif\",\"Iowan Old Style\",Georgia,serif;} .ds-titre{margin:0;font:300 clamp(2.75rem,1.4rem + 5.6vw,6.5rem)/1 var(--sans);letter-spacing:-.05em;color:var(--blanc);} .ds-titre em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;}"
     }
   ],
   "narrative": {
-    "northStar": "La vitrine claire",
-    "overview": "Maison Vauclair joue franchement la catégorie de la grande joaillerie moderne : beaucoup de blanc, de la lumière, une typographie très fine, et une seule couleur signature, le vert jade. Rien n'est ironique ni décalé : le visiteur doit reconnaître en une seconde une maison sérieuse, puis trouver l'adresse et les horaires. Le niveau de finition vise celui des grandes maisons (Tiffany, Messika servent de référence de finition seulement : on ne reprend ni leurs couleurs, ni leurs noms, ni leur identité).\n\nLa page respire. Les sections sont séparées par de grands espaces verticaux et par des filets d'un pixel, jamais par des ombres ou des cadres arrondis. Les titres sont en Italiana, une capitale de vitrine très déliée ; tout le reste (texte, boutons, menus, libellés) est en Jost, avec des libellés en petites capitales très espacées. Le jade apparaît en aplat pleine largeur une fois (la bande de l'atelier) et sur l'action principale ; ailleurs il ne sert qu'aux états (survol, jour du jour, « Ouvert »).\n\nTant que le commerçant n'a pas fourni ses photos, chaque emplacement photo est un aplat gris clair avec un dessin d'atelier au trait et la mention « Photo à venir ». Ces dessins sont provisoires par nature : ils tiennent la place de la photo, ils ne la remplacent pas.",
+    "northStar": "L'écrin après la fermeture",
+    "overview": "La boutique est fermée, la rue est noire, une seule lampe reste allumée sur l'établi de l'atelier. Tout le système découle de cette image : un fond noir pur partout, du texte blanc, une seule chaleur (le crème de la lampe) réservée au bouton principal, et des photographies cinématographiques où les bijoux sortent de l'ombre sous la lumière de l'établi. C'est la traduction joaillière de la référence « Sequel » imposée par l'utilisateur (voir PRODUCT.md, Brand Commitments) : on en garde la grammaire (noir, pilules, cartes charbon, verre dépoli, bouton rond du film, grand titre de clôture), jamais le nom, le logo, les textes ni les polices propriétaires.\n\nLa densité est faible et la page respire : de grandes photos à bords doucement arrondis, des titres très fins à interlettrage serré, un seul mot en italique sérif par grand titre pour porter l'émotion (« ici », « choisir », « boutique »). Le mouvement appartient au monde : les photos « s'allument » quand on y arrive, comme si la lampe se rallumait au-dessus de chaque pièce. Le premier écran est une photo plein cadre de la bague sous la lampe, avec un bouton rond « Regarder le film » qui ouvre un court film.\n\nToutes les photographies et le film sont des illustrations générées par IA, signalées comme telles dans le pied de page et sous le film. Ce système remplace la version « canon » (blanc et jade, Italiana), archivée dans `.impeccable/archive-canon/`.",
     "keyCharacteristics": [
-      "Fond blanc pur, encre presque noire, filets fins couleur pierre claire.",
-      "Une seule couleur signature, le vert jade, en aplat et sur l'action principale.",
-      "Titres Italiana fins ; texte et libellés Jost, petites capitales espacées.",
-      "Angles droits partout, aucune ombre, profondeur par aplats et filets.",
-      "Emplacements photo dessinés au trait, prêts à recevoir les vraies photos.",
-      "Un seul mouvement : le grand visuel du haut se dévoile au chargement."
+      "Noir pur (#000) comme seul fond, blanc pour le texte, charbon pour les cartes.",
+      "Une seule chaleur : le crème de la lampe, uniquement sur la pilule pleine principale (et le point du jour courant dans les horaires).",
+      "Jost en 300 aux grandes tailles, interlettrage négatif ; un mot en Instrument Serif italique par grand titre.",
+      "Pilules entièrement arrondies, cartes à 10 px, pastilles en verre dépoli.",
+      "Photos à la lampe, qui passent de l'ombre à la lumière au défilement.",
+      "Presque aucune ombre : la profondeur vient du noir, du charbon et des voiles dégradés."
     ],
     "rules": [
       {
-        "name": "La règle de la voix unique",
-        "body": "Le jade est la seule couleur vive du site. Une seule bande pleine largeur en jade par page ; sinon il se limite à l'action principale et aux états. On n'ajoute jamais une deuxième couleur d'accent.",
+        "name": "The Une Seule Lampe Rule",
+        "body": "Le crème n'apparaît que sur la pilule pleine principale, le focus clavier et le repère du jour courant. Jamais en fond de section, jamais en texte, jamais sur un deuxième bouton plein dans le même bloc.",
         "section": "colors"
       },
       {
-        "name": "La règle des teintes dérivées",
-        "body": "Les quelques tons hors palette (jade profond #0C3832 au survol, fond sombre des photos sur jade #0F3F39, textes clairs sur jade #E3ECE9 et #D6E4E0) sont des déclinaisons du jade ou de la pierre. Toute nouvelle teinte doit en être une aussi.",
+        "name": "The Noir Absolu Rule",
+        "body": "Le fond est #000, sans dégradé ni teinte. La profondeur se lit par paliers : vide, puis charbon, puis photo.",
         "section": "colors"
       },
       {
-        "name": "La règle des deux voix",
-        "body": "Italiana pour ce qui se regarde (titres, logotype, promesse), Jost pour ce qui se lit ou se clique. Jamais Italiana dans un bouton, un menu ou un paragraphe ; jamais Jost en grand titre.",
+        "name": "The Un Seul Mot Rule",
+        "body": "Chaque grand titre contient exactement un mot en Instrument Serif italique, le mot qui porte l'émotion. Jamais deux, jamais une phrase entière, jamais dans le texte courant ni dans les libellés (l'italique du bandeau fictif et des mentions reste en Jost).",
         "section": "typography"
       },
       {
-        "name": "La règle du poids léger",
-        "body": "Le texte courant est en Jost 300 ; le 500 est réservé aux libellés en capitales et au jour courant. Pas de gras dans les titres : Italiana n'existe qu'en 400.",
+        "name": "The Murmure Rule",
+        "body": "Au-dessus de 2rem, Jost est en 300 avec un interlettrage négatif (-0.035em à -0.05em). Le gras n'existe pas dans les titres ; l'insistance passe par la taille et l'italique.",
         "section": "typography"
       },
       {
-        "name": "La règle du papier à plat",
-        "body": "Aucune ombre, nulle part. Pour séparer, on change d'aplat ou on trace un filet.",
-        "section": "elevation"
-      },
-      {
-        "name": "La règle du mouvement unique",
-        "body": "Un seul moment animé par page, le dévoilement du visuel d'ouverture. Les survols sont de simples fondus (300 à 400 ms) ; rien ne bouge au défilement.",
+        "name": "The Cartes Sans Ombre Rule",
+        "body": "Les cartes charbon et les cartes photo ne portent jamais d'ombre ni de bordure ; elles se détachent du noir par leur seule valeur.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** garder le fond blanc pur (fond) et réserver le blanc cassé (fond-doux) à la section visite.",
-      "**Do** utiliser le jade pour une seule bande pleine largeur, l'action principale et les états, rien d'autre.",
-      "**Do** composer les titres en Italiana 400 et tout le reste en Jost, texte courant en 300.",
-      "**Do** séparer par des filets d'un pixel (filet) et par l'espace de section, jamais par une ombre.",
-      "**Do** garder les angles droits (0 px) sur les boutons, photos et tuiles.",
-      "**Do** respecter les proportions des emplacements photo (carré, 4/5, 3/2, 16/7) quand on y place les photos du commerçant.",
-      "**Do** décrire chaque emplacement photo et chaque photo pour les lecteurs d'écran."
+      "Do garder le fond en noir pur et poser chaque contenant en charbon à coins de 10px, sans ombre.",
+      "Do réserver le crème de la lampe à une seule pilule pleine par groupe d'actions, toujours l'action « venir en boutique ».",
+      "Do écrire chaque grand titre en Jost 300 à interlettrage négatif avec exactement un mot en Instrument Serif italique.",
+      "Do éclairer les photos comme sous une seule lampe d'établi, dans le noir, et les faire « s'allumer » au défilement, avec l'état final immédiat en mouvement réduit et en `?capture`.",
+      "Do signaler toute photo ou vidéo générée par IA, dans le pied de page et sous le film.",
+      "Do placer le texte sur photo uniquement au-dessus d'un voile noir dégradé."
     ],
     "donts": [
-      "**Don't** ajouter une deuxième couleur vive ni un dégradé.",
-      "**Don't** utiliser d'ombre portée, d'arrondi ou d'effet de verre.",
-      "**Don't** écrire un titre en Jost gras ou un bouton en Italiana.",
-      "**Don't** animer autre chose que le dévoilement du visuel d'ouverture.",
-      "**Don't** remplacer un dessin au trait par une photo de banque d'images ou un visuel de marque : seule une vraie photo de la maison prend sa place.",
-      "**Don't** reprendre les couleurs, les noms ou l'identité de Tiffany ou de Messika : elles servent de référence de finition, pas de modèle."
+      "Don't ajouter une deuxième couleur chaude, un fond crème ou un texte crème.",
+      "Don't ajouter d'ombre en dehors de la pilule crème et des pastilles en verre.",
+      "Don't mettre plus d'un mot en italique sérif par titre, ni d'italique sérif dans le texte courant.",
+      "Don't utiliser de gras dans les titres ni de capitales dans les titres ; les capitales sont pour les libellés, les pastilles et le logotype.",
+      "Don't reprendre le nom, le logo, les textes ou les polices propriétaires de la référence « Sequel ».",
+      "Don't utiliser une pastille en verre comme accroche décorative au-dessus d'un titre : elle porte une catégorie ou l'état d'ouverture réel."
     ]
   }
 }

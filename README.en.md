@@ -11,7 +11,7 @@ Run a bakery, a garage, a hair salon, a restaurant, a jewellery shop, a boutique
 | Bakery | Jewellery shop | Garage |
 |---|---|---|
 | ![Au Pain Doré, fictional bakery](docs/captures/boulangerie.jpg) | ![Maison Vauclair, fictional jeweller](docs/captures/bijouterie.jpg) | ![Garage Delorme, fictional garage](docs/captures/garage.jpg) |
-| Gold-on-brown poster, built from a reference style sheet | Understated luxury, jeweller's line drawings in place of photos | Animated car lift, repair tracking, FR/EN |
+| Gold-on-brown poster, built from a reference style sheet | “The jewel case after closing”: pure black, one lamp, a short film | A real car rising on the lift as you scroll, repair tracking, FR/EN |
 
 *All three are fictional examples built with this skill, and you can try them online. Photos are AI-generated illustrations. Sources are in [`exemples/`](exemples/).*
 

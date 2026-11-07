@@ -38,6 +38,7 @@ Achat réfléchi, à forte charge émotionnelle, qui se conclut en boutique. Le 
 - **Exemple fictif** : ce site sert de démonstration du skill. Un bandeau discret doit l'indiquer.
 
 ## Brand Commitments
+- **Style de référence imposé par l'utilisateur (2026-11-07)** : la fiche « Sequel » (styles.refero.design), traduite pour la joaillerie : « l'écrin après la fermeture ». Fond noir pur, une seule chaleur (le crème de la lampe, réservé au bouton principal), titres en sans très fin avec un seul mot en italique sérif, photographies cinématographiques à la lampe, pilules, cartes #202020 sans ombre, bouton rond « Regarder le film ». Le nom, le logo, les textes et les polices propriétaires de la marque de référence ne sont pas repris. Ce style remplace la version « canon » (blanc et jade), archivée.
 - Nom : « Maison Vauclair ».
 - Style demandé : « audacieux, luxe affirmé avec une vraie personnalité ».
 - Préférence confirmée (2026-11-07), après avoir vu une piste « façade de pierre » : l'allure d'une vraie maison de luxe moderne. Niveau de finition de référence : Tiffany et Messika (sans reprendre leur identité, leurs couleurs ni leurs noms).
@@ -45,7 +46,7 @@ Achat réfléchi, à forte charge émotionnelle, qui se conclut en boutique. Le 
 - Logo : aucun (un logotype typographique est acceptable).
 
 ## Evidence on Hand
-- Photos : aucune. Pas de photos de banque d'images présentées comme celles de la maison, ni de visuels de marques. Les pièces peuvent être évoquées par des dessins ou des illustrations signalés comme tels, et des emplacements photo sont à prévoir.
+- Photos : aucune de la maison. Pour la démonstration, des illustrations générées par IA, signalées comme telles. Pas de photos de banque d'images présentées comme celles de la maison, ni de visuels de marques. Les pièces peuvent être évoquées par des dessins ou des illustrations signalés comme tels, et des emplacements photo sont à prévoir.
 - Avis clients : aucun.
 
 ## Product Principles

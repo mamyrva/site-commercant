@@ -40,3 +40,8 @@ Donne au commerçant :
 - le fichier vidéo du site ;
 - la version pour les réseaux, si elle a été faite ;
 - une phrase pour expliquer comment remplacer la vidéo plus tard : même nom de fichier, même durée conseillée.
+
+## Séquence filmée pilotée par le défilement
+
+Pour un objet réel qui bouge (voiture sur un pont, bijou sous la lampe…), préfère une vraie séquence filmée à un dessin animé : voir « Un objet réel qui bouge » dans `excellence.md`. Exemples : le pont du Garage Delorme (`exemples/garage-delorme/site/js/main.js`) et le film de Maison Vauclair.
+

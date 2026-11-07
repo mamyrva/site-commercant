@@ -11,7 +11,7 @@ Vous tenez une boulangerie, un garage, un salon de coiffure, un restaurant, une 
 | Boulangerie | Bijouterie | Garage |
 |---|---|---|
 | ![Au Pain Doré, boulangerie fictive](docs/captures/boulangerie.jpg) | ![Maison Vauclair, bijouterie fictive](docs/captures/bijouterie.jpg) | ![Garage Delorme, garage fictif](docs/captures/garage.jpg) |
-| Affiche dorée sur brun, à partir d'une fiche de style de référence | Luxe sobre, dessins de bijoutier à la place des photos | Pont élévateur animé, suivi de réparation, FR/EN |
+| Affiche dorée sur brun, à partir d'une fiche de style de référence | « L'écrin après la fermeture » : noir pur, une lampe, un court film | Une vraie voiture qui monte sur le pont au défilement, suivi de réparation, FR/EN |
 
 *Ces trois sites sont des exemples fictifs, créés avec ce skill, et on peut les essayer en ligne. Les photos sont des illustrations générées par IA. Les sources sont dans [`exemples/`](exemples/).*
 

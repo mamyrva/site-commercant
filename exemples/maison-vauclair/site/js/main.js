@@ -1,7 +1,13 @@
-/* Maison Vauclair : « ouvert maintenant ? »
+/* Maison Vauclair : « ouvert maintenant ? », la lampe qui s'allume, le film.
    HORAIRES : modifier ici. Jours : 0 = dimanche … 6 = samedi. Heures en minutes depuis minuit. */
 (function () {
   "use strict";
+
+  /* ?capture : état final statique, pour les captures d'écran */
+  var capture = /[?&]capture\b/.test(location.search);
+  var calme = capture || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  if (capture) document.documentElement.classList.add("capture");
+  else document.documentElement.classList.add("js");
 
   var HORAIRES = {
     0: [], 1: [],
@@ -60,4 +66,32 @@
   }
   var ligne = document.querySelector('.horaires tr[data-jour="' + t.jour + '"]');
   if (ligne) ligne.classList.add("aujourdhui");
+
+  /* La lampe s'allume : chaque photo sort de l'ombre quand elle arrive à l'écran */
+  var photos = document.querySelectorAll("[data-lampe]");
+  if (!calme && "IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("allume"); obs.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -18% 0px", threshold: 0.15 });
+    photos.forEach(function (p) { obs.observe(p); });
+  } else photos.forEach(function (p) { p.classList.add("allume"); });
+
+  /* Le film : s'ouvre dans une fenêtre, se lit sans son, s'arrête à la fermeture */
+  var film = document.querySelector("dialog.film");
+  var ouvrir = document.querySelector("[data-film]");
+  if (film && ouvrir) {
+    var video = film.querySelector("video");
+    if (typeof film.showModal !== "function") { ouvrir.hidden = true; }
+    else {
+      ouvrir.addEventListener("click", function () {
+        film.showModal();
+        video.preload = "auto";
+        if (!calme) { var lecture = video.play(); if (lecture && lecture.catch) lecture.catch(function () {}); }
+        video.controls = calme;
+      });
+      film.querySelector("[data-film-fermer]").addEventListener("click", function () { film.close(); });
+      film.addEventListener("click", function (e) { if (e.target === film) film.close(); });
+      film.addEventListener("close", function () { video.pause(); ouvrir.focus(); });
+    }
+  }
 })();

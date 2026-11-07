@@ -33,6 +33,14 @@ Le critère des jurés : un site exceptionnel réunit **une direction artistique
 - **N'anime que `transform` et `opacity`** (ainsi que `clip-path` et `filter` s'ils restent fluides).
 - **Pas d'écran de chargement**, pas de défilement détourné, pas de contenu caché tant qu'une animation n'a pas tourné.
 - **Toujours** prévoir un chemin `prefers-reduced-motion` où tout reste visible et compréhensible.
+- **Un objet réel qui bouge : filme-le, ne le dessine pas.** Une voiture qui monte, une bague sous la lampe, un pain qui sort du four : un dessin animé paraît faux (leçon du test du garage : « ça ne fait pas naturel »). Méthode des pages produit d'Apple :
+  1. une image fixe de départ (photo du commerçant, ou illustration IA signalée), caméra **fixe** ;
+  2. une courte vidéo de 4 à 6 s tirée de cette image (une seule action continue, « caméra immobile » écrit dans la demande) ;
+  3. 50 à 80 images extraites avec ffmpeg, en WebP d'environ 20 ko chacune ;
+  4. un `<canvas>` qui dessine l'image correspondant à la position du défilement, avec **lissage** (`actuel += (cible - actuel) * 0.12` à chaque image) : le mouvement démarre et s'arrête en douceur, comme un vrai mécanisme ;
+  5. chargement de la première image d'abord, puis des autres en sautant (1 sur 8, puis 1 sur 4…) ; défilement natif, jamais détourné ;
+  6. en mouvement réduit, sans JavaScript ou en capture : l'image finale, fixe.
+- **Un court film** (5 s, sans son, en boucle, quelques centaines de ko) peut aussi s'ouvrir depuis un bouton rond « Regarder le film » : jamais en lecture automatique avec du son.
 
 ## Les détails qui font « pro »
 

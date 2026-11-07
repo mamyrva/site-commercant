@@ -11,7 +11,7 @@
     {
       "name": "site-commercant",
       "description": "Crée avec le commerçant, de A à Z, le site de son commerce : entretien, design sur mesure (impeccable), animations, motion design, fonctions dynamiques, référencement Google, mentions légales françaises, mise en ligne gratuite. · Builds a small business website end to end with the owner.",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "source": "./plugin",
       "category": "design",
       "tags": [

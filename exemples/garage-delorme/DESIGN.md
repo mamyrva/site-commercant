@@ -1,271 +1,279 @@
 ---
 name: Garage Delorme
-description: Garage automobile à Gap ; la page est un pont élévateur, rien n'est caché.
+description: Le terminal de diagnostic de l'atelier, bleu nuit avec un seul voyant cyan.
 colors:
-  nuit: "#111418"
-  nuit-2: "#1A1F25"
-  clair: "#E9ECEF"
+  nuit: "#17202E"
+  carte: "#202A3E"
+  signal: "#6AE4FF"
   blanc: "#FFFFFF"
-  jaune: "#F2C230"
-  jaune-vif: "#FFD24D"
-  acier: "#5B6573"
-  acier-clair: "#A3ACB8"
-  texte: "#111418"
-  texte-doux: "#4A525D"
-  filet: "#C9CED4"
-  erreur: "#B3261E"
-  erreur-fond: "#FBEAEA"
-  erreur-texte: "#5C1410"
+  brume: "#CDD0D6"
+  filet: "#000000"
+  trait: "#34405A"
+  positif-depart: "#34EDB3"
+  positif-arrivee: "#00D1FF"
 typography:
   display:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(2.1rem, 1.1rem + 3.4vw, 4.25rem)"
-    fontWeight: 800
-    lineHeight: 0.98
-    letterSpacing: "-0.02em"
-    fontVariation: "'wdth' 118"
+    fontSize: "clamp(2.6rem, 1.2rem + 5.6vw, 6.25rem)"
+    fontWeight: 700
+    lineHeight: 1.02
+    letterSpacing: "-0.036em"
+  chiffre:
+    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(2.6rem, 1.6rem + 4vw, 5.5rem)"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "-0.036em"
+    fontFeature: "tnum"
   headline:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(1.9rem, 1.2rem + 2.8vw, 3.4rem)"
-    fontWeight: 800
-    lineHeight: 1.02
-    letterSpacing: "-0.015em"
-    fontVariation: "'wdth' 112"
+    fontSize: "clamp(2rem, 1.3rem + 2.6vw, 3.5rem)"
+    fontWeight: 700
+    lineHeight: 1.1
+    letterSpacing: "-0.036em"
   title:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(1.3rem, 1rem + 1.2vw, 1.85rem)"
+    fontSize: "clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem)"
     fontWeight: 700
-    fontVariation: "'wdth' 112"
-  logotype:
+    lineHeight: 1.15
+    letterSpacing: "-0.036em"
+  title-sm:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
-    fontSize: "1.05rem"
-    fontWeight: 800
-    letterSpacing: "0.04em"
-    fontVariation: "'wdth' 125"
+    fontSize: "1.375rem"
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: "-0.02em"
   lead:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
-    fontSize: "1.0625rem"
+    fontSize: "clamp(1.05rem, 1rem + 0.3vw, 1.2rem)"
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.5
   body:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.5
   label:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
-    fontSize: "0.8125rem"
-    fontWeight: 700
-  pin-label:
-    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
     fontSize: "0.875rem"
-    fontWeight: 700
-    fontVariation: "'wdth' 110"
+    fontWeight: 600
+    lineHeight: 1.5
+  small:
+    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
+    fontSize: "0.8125rem"
+    fontWeight: 400
+    lineHeight: 1.5
 rounded:
-  outil: "3px"
-  rond: "50%"
+  champ: "4px"
+  alerte: "8px"
+  carte: "15px"
+  panneau: "24px"
+  pilule: "80px"
 spacing:
-  marge: "clamp(1.25rem, 5vw, 5rem)"
-  section: "clamp(4.5rem, 9vw, 8rem)"
-  entete: "4.25rem"
+  xs: "0.4rem"
+  sm: "0.75rem"
+  md: "1rem"
+  lg: "1.5rem"
+  xl: "2rem"
+  colonne: "4rem"
+  section: "5rem"
+  marge: "clamp(1.25rem, 5vw, 4rem)"
+  large: "75rem"
 components:
-  button-primary:
-    backgroundColor: "{colors.jaune}"
-    textColor: "{colors.nuit}"
-    rounded: "{rounded.outil}"
-    padding: "0.8rem 1.4rem"
-    height: "3.25rem"
-  button-primary-hover:
-    backgroundColor: "{colors.jaune-vif}"
-    textColor: "{colors.nuit}"
-  button-outline:
-    backgroundColor: "transparent"
-    textColor: "{colors.clair}"
-    rounded: "{rounded.outil}"
-    padding: "0.8rem 1.4rem"
-    height: "3.25rem"
-  input-field:
+  pilule-pleine:
     backgroundColor: "{colors.blanc}"
-    textColor: "{colors.texte}"
-    rounded: "{rounded.outil}"
-    padding: "0.7rem 0.85rem"
+    textColor: "{colors.filet}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pilule}"
+    padding: "0.75rem 1.4rem"
     height: "3rem"
-  choice-chip:
-    backgroundColor: "{colors.blanc}"
-    textColor: "{colors.texte}"
-    rounded: "{rounded.outil}"
-    padding: "0.5rem 1.1rem"
+  pilule-pleine-hover:
+    backgroundColor: "#E6F9FF"
+    textColor: "{colors.filet}"
+  lien-fantome:
+    backgroundColor: "transparent"
+    textColor: "{colors.signal}"
+    rounded: "{rounded.pilule}"
+    padding: "0.7rem 1.1rem"
+    height: "3rem"
+  puce:
+    backgroundColor: "transparent"
+    textColor: "{colors.signal}"
+    rounded: "{rounded.pilule}"
+    padding: "0.35rem 0.9rem"
+  onglet:
+    backgroundColor: "transparent"
+    textColor: "{colors.brume}"
+    rounded: "{rounded.pilule}"
+    padding: "0.6rem 1.2rem"
     height: "2.75rem"
-  choice-chip-selected:
+  onglet-actif:
+    backgroundColor: "{colors.blanc}"
+    textColor: "{colors.filet}"
+    rounded: "{rounded.pilule}"
+  carte:
+    backgroundColor: "{colors.carte}"
+    rounded: "{rounded.carte}"
+    padding: "1.5rem"
+  panneau:
+    backgroundColor: "{colors.carte}"
+    rounded: "{rounded.panneau}"
+    padding: "clamp(1.5rem, 4vw, 2.5rem)"
+  champ:
     backgroundColor: "{colors.nuit}"
     textColor: "{colors.blanc}"
-  tracking-step-active:
-    backgroundColor: "{colors.jaune}"
-    textColor: "{colors.nuit}"
-    rounded: "{rounded.rond}"
-    size: "2rem"
-  header:
-    backgroundColor: "{colors.nuit}"
-    textColor: "{colors.clair}"
-    padding: "0.75rem clamp(1.25rem, 5vw, 5rem)"
+    rounded: "{rounded.champ}"
+    padding: "0.7rem 0.9rem"
+    height: "3rem"
+  releve-item:
+    backgroundColor: "transparent"
+    textColor: "{colors.blanc}"
+    rounded: "{rounded.carte}"
+    padding: "0.7rem 0.9rem"
 ---
 
 # Design System: Garage Delorme
 
 ## Overview
 
-**Creative North Star: "Le pont élévateur"**
+**Creative North Star: "Le terminal de diagnostic de l'atelier"**
 
-Le site se comporte comme le pont élévateur de l'atelier : au défilement, la voiture dessinée au trait monte, son dessous apparaît, et les quatre services s'épinglent sur les pièces concernées. Tout le système découle de cette image de transparence technique : un sol d'atelier anthracite et un blanc d'atelier en grandes zones, un jaune sécurité rare, et un dessin acier précis comme une notice.
+Le site se lit comme l'écran de diagnostic d'un garage moderne : un fond bleu nuit uniforme, un seul voyant cyan qui s'allume là où il se passe quelque chose, et du blanc pour lire et pour agir. Le système est la traduction, imposée par l'utilisateur, d'une référence de style de terminal financier (« Idle Finance ») : le cyan devient le voyant du diagnostic, le halo bleu radial devient la lumière des phares derrière le haut de page.
 
-La densité est faible et l'échelle grande, au niveau de finition d'un site constructeur : titres étendus, peu de texte, actions évidentes. Les sections alternent fond sombre (scène, « En panne », suivi, pied de page) et fond clair (services, formulaire, infos). Les surfaces sont plates, avec des filets d'un pixel ; la profondeur vient du mouvement du pont, pas d'ombres.
+La densité est faible et la hiérarchie brutale : titres très gras et serrés (Archivo 700, interlettrage -0,036 em), un mot du titre en cyan, de grands chiffres vrais, des pilules pour tout ce qui se touche, des cartes plates à filet noir. Aucune ombre portée : la profondeur vient du seul écart entre le fond nuit et les cartes.
 
-Le site refuse la photo d'atelier générique accompagnée de « Votre garage de confiance ». Il n'y a pas d'illustration décorative : chaque trait dessine une pièce réelle.
+La signature est le pont élévateur, en vraie séquence filmée : 60 images WebP d'une voiture que le pont soulève, dessinées sur un canvas et pilotées par le défilement, avec un relevé de quatre services qui s'allume en cyan à mesure qu'elle monte. Rien n'est caché, on voit le dessous.
 
 **Key Characteristics:**
-- Deux grands fonds en alternance, anthracite (nuit) et blanc atelier (clair).
-- Un seul accent, le jaune sécurité, pour les bras du pont, l'action principale et l'état actif.
-- Archivo variable : étendu (110 à 125 %) pour les titres et le logotype, largeur normale pour le texte.
-- Dessin technique au trait (acier et clair), pas d'aplats illustratifs.
-- Une seule signature animée : la voiture qui monte avec le défilement.
+- Fond bleu nuit unique sur toutes les pages, cartes un cran plus claires.
+- Un seul accent, le cyan voyant, réservé aux signaux et aux contours d'action.
+- Action principale en pilule blanche pleine, action secondaire en contour cyan.
+- Archivo 700 très serré pour les titres, chiffres en chasse fixe.
+- Plat : filet noir de 1 px, aucune ombre portée.
+- Le pont élévateur filmé comme pièce maîtresse, avec repli en image fixe.
 
 ## Colors
 
-Une palette d'atelier presque monochrome et froide, avec un unique jaune de sécurité.
+Une nuit bleue presque monochrome, un voyant cyan, du blanc pour lire.
 
 ### Primary
-- **Jaune sécurité** (jaune) : bras du pont (traits et patins), bouton d'action principale, étape active du suivi, pastilles et tiges des étiquettes épinglées, point « aujourd'hui » des horaires, anneau de focus et sélection de texte. Le numéro de téléphone de l'en-tête est en jaune, car appeler est l'action principale.
-- **Jaune vif** (jaune-vif) : survol du bouton principal uniquement.
+- **Cyan voyant** (signal) : le seul accent. Mot final du titre, contours du téléphone et des liens fantômes, puces d'état, icônes au trait, pastilles du relevé, anneau de focus, sélection de texte, curseur des champs, flèche des listes déroulantes, jour courant des horaires. Il sert aussi d'état d'erreur des champs (bordure 2 px) : le système n'a pas de rouge.
 
 ### Neutral
-- **Sol d'atelier** (nuit) : fond de la scène, de l'en-tête (à 94 % d'opacité avec flou), des sections sombres et du pied de page ; fond des cases cochées et des étapes faites.
-- **Panneau anthracite** (nuit-2) : emplacements de photo sur fond sombre.
-- **Blanc atelier** (clair) : fond des sections claires ; carrosserie et roues dessinées sur la scène ; texte sur fond sombre.
-- **Blanc** (blanc) : titres sur fond sombre, fond des champs, des choix et du résultat de suivi.
-- **Acier** (acier) : dessin technique (colonnes du pont, sol du logotype), flèche des listes déroulantes, barre de défilement.
-- **Acier clair** (acier-clair) : texte secondaire sur fond sombre (chapeau, liens de navigation, sous-titres d'étiquettes, pied de page).
-- **Encre** (texte) : texte courant sur fond clair. Même valeur que nuit, nommée par rôle.
-- **Encre douce** (texte-doux) : paragraphes secondaires, notes et aides sur fond clair.
-- **Filet** (filet) : bordures de champ au repos, séparateurs de liste et du tableau des horaires.
+- **Bleu nuit d'atelier** (nuit) : fond de toutes les pages, fond des champs et des choix non cochés. Aussi la `theme-color`.
+- **Ardoise de carte** (carte) : cartes, panneau des services, pastille de langue, résultat du suivi.
+- **Blanc de lecture** (blanc) : texte principal, pilule pleine, onglet et choix actifs.
+- **Brume** (brume) : texte secondaire, descriptions, libellés de chiffres, état fermé.
+- **Filet noir** (filet) : bordure 1 px des cartes, panneaux, champs et image du pont ; aussi le texte posé sur blanc.
+- **Trait discret** (trait) : sol du logotype, éléments éteints du relevé, rail de l'indicateur de défilement.
 
-### Status
-- **Erreur** (erreur, erreur-fond, erreur-texte) : bordure des champs invalides et message d'erreur du formulaire, rien d'autre.
+### Tertiary
+- **Dégradé positif** (positif-depart vers positif-arrivee, `linear-gradient(73.6deg, …)`) : uniquement le rond des étapes faites du suivi de réparation.
 
 ### Named Rules
-**The Yellow Rule.** Le jaune sert seulement aux bras du pont, à l'action principale et à l'état actif (étape en cours, jour en cours, focus, sélection). Les pastilles et tiges des étiquettes en font partie, car elles appartiennent au pont. Sur un écran, une seule action est en jaune par groupe d'actions ; la seconde est en filet. Le jaune n'est jamais une décoration ni une couleur de titre.
+**La règle du voyant unique.** Le cyan est le seul accent. Il marque un signal, un état ou un contour d'action ; il ne remplit jamais une grande surface ni un bouton plein.
 
-**The Two Floors Rule.** Une section est soit sur le sol d'atelier (nuit), soit sur le blanc atelier (clair). Pas de dégradés, pas de troisième fond de section.
+**La règle des phares.** Le halo radial bleu (`radial-gradient(ellipse 60% 55% at 50% 0%, …)`) vit seulement derrière l'ouverture du haut de page. Ailleurs, le fond est nuit uni.
+
+**La règle du positif réservé.** Le dégradé turquoise-cyan ne sert qu'à l'avancement réel du suivi. Pas de dégradé décoratif.
 
 ## Typography
 
-**Display Font:** Archivo variable (graisses 100 à 900, largeur 62 à 125 %), auto-hébergée, avec Helvetica Neue et Arial en secours.
-**Body Font:** la même Archivo, en largeur normale.
+**Display Font:** Archivo, fonte variable auto-hébergée (`fonts/archivo.woff2`, graisses 100 à 900, chasse 62 à 125 %), avec Helvetica Neue puis Arial.
+**Body Font:** Archivo, même fichier.
 
-**Character:** une seule famille, dont l'axe de largeur porte la hiérarchie : étendue et grasse, elle sonne comme une plaque de constructeur ; normale, elle reste lisible en plein soleil sur téléphone.
+**Character:** Une seule famille, poussée aux extrêmes : 700 très serré pour affirmer, 400 aéré pour expliquer. Le ton est celui d'un instrument précis, pas d'une affiche.
 
 ### Hierarchy
-- **Display** (800, largeur 118 %, de 2,1 à 4,25 rem, interlignage 0,98) : le titre de la scène et le titre de la page de suivi. Équilibré (`text-wrap: balance`).
-- **Headline** (800, largeur 112 %, de 1,9 à 3,4 rem, interlignage 1,02) : titres de section et titre des pages légales.
-- **Title** (700, largeur 112 %, de 1,3 à 1,85 rem) : noms des services. L'adresse reprend cette voix en 800 (de 1,5 à 2,1 rem, interlignage 1,15).
-- **Logotype** (800, largeur 125 %, 1,05 rem, capitales, espacement 0,04 em) : « Garage » en 400 acier clair, « Delorme » en blanc. 0,875 rem et 112 % sur téléphone.
-- **Lead** (400, 1,0625 rem, 40 à 46 caractères par ligne) : chapeaux sous les titres.
-- **Body** (400, 1 rem, interlignage 1,55, 44 à 68 caractères par ligne).
-- **Label** (700, 0,8125 rem, casse normale) : intitulés de champ, légendes de groupe de choix, légende du tableau des horaires.
-- **Pin label** (700, largeur 110 %, 0,875 rem) : nom du service sur une étiquette du pont, avec un sous-titre en 0,75 rem acier clair.
+- **Display** (700, clamp jusqu'à 6,25 rem, 1,02) : titre d'ouverture, 16 ch max, centré, équilibré (`text-wrap: balance`), un mot en cyan.
+- **Chiffre** (700, clamp jusqu'à 5,5 rem, 1, chiffres tabulaires) : les quatre grands chiffres vrais.
+- **Headline** (700, clamp 2 à 3,5 rem, 1,1) : titres de section.
+- **Title** (700, clamp 1,6 à 2,25 rem, 1,15) : titre du panneau de service, adresse.
+- **Title-sm** (700, 1,375 rem, 1,2) : titres des trois colonnes « Vous êtes… ».
+- **Lead** (400, 1,05 à 1,2 rem) : chapeau d'ouverture, 44 ch max.
+- **Body** (400, 1 rem, 1,5) : texte courant, souvent en brume, 44 à 52 ch.
+- **Label** (600, 0,875 rem) : libellés de champs, légendes, téléphone de l'en-tête.
+- **Small** (400, 0,8125 rem) : bandeau « exemple fictif », pied, puces.
 
 ### Named Rules
-**The Width Carries Rank Rule.** La hiérarchie passe par la largeur et la graisse d'Archivo (110 à 125 % pour les titres et le logotype), jamais par une seconde famille.
+**La règle du titre serré.** Tout titre de 1,6 rem et plus est en 700 à -0,036 em. Pas de titre maigre, pas de titre espacé.
 
-**The Tabular Figures Rule.** Les téléphones, horaires, numéros d'étape et codes de suivi sont en chiffres tabulaires.
+**La règle des chiffres alignés.** Téléphones, horaires, chiffres et codes de suivi passent en chiffres tabulaires.
 
 ## Layout
 
-Une colonne pleine largeur avec une marge latérale fluide (marge) et un rythme vertical de section fluide (section). L'en-tête est collant ; sa hauteur réelle est mesurée par le script et écrite dans entete, pour que la scène collante se cale exactement dessous.
+Une colonne centrée de 75 rem maximum (`large`) avec une marge latérale fluide (`clamp(1.25rem, 5vw, 4rem)`) et 5 rem de respiration verticale entre sections. L'ouverture est centrée sous le halo ; le reste est aligné à gauche. L'en-tête est collant (4,5 rem), sur fond nuit à 86 % avec flou.
 
-- **Points de rupture :** 40 rem (téléphone ou plus large) et 60 rem (bureau).
-- **Moins de 40 rem :** le numéro de l'en-tête se réduit à l'icône téléphone ; la voiture déborde à 116 % de la largeur et les quatre étiquettes s'étagent sur quatre lignes sous elle ; les sous-titres d'étiquette sont masqués.
-- **60 rem et plus :** navigation visible ; scène en deux colonnes (5fr texte, 7fr pont) ; les sections passent en deux colonnes (services 1fr 1fr, « En panne » 1fr 1fr, formulaire 1fr 2fr, suivi 1fr 1fr, infos 1fr 1fr) avec un écart de 4 à 5 rem ; les étapes du suivi s'alignent en quatre colonnes surmontées d'un filet de 2 px.
-- **Largeurs de lecture :** formulaire et étapes limités à 52 rem ; pages légales à 52 rem.
-- **Cibles tactiles :** 2,75 rem minimum (choix, bouton de langue), 3 rem pour les champs, 3,25 rem pour les boutons.
+À partir de 60 rem : navigation visible, trois colonnes pour les publics, formulaire et suivi en deux colonnes avec 4 rem de gouttière, panneau de service avec l'icône à gauche. À partir de 40 rem : chiffres sur quatre colonnes (deux en dessous). Sous 40 rem, les onglets défilent horizontalement de bord à bord et le relevé passe sur deux colonnes.
+
+La scène du pont fait 260 vh ; son contenu reste collé sous l'en-tête, l'image au format 16/9 (5/4 sur téléphone) dimensionnée pour tenir avec le relevé dans la hauteur visible.
+
+Pages courtes (suivi, mentions) : colonne de 52 rem.
 
 ## Elevation & Depth
 
-Le système est plat. Aucune ombre portée : la séparation vient de l'alternance des deux fonds et de filets d'un pixel. La seule profondeur est celle du pont : la voiture monte réellement dans la scène. Deux anneaux d'état existent : le halo jaune à 60 % autour d'un champ en focus et le cerne nuit d'un pixel autour du point « aujourd'hui ». L'en-tête est translucide (94 %) avec un flou de 8 px.
+Système entièrement plat. Aucune ombre portée nulle part : la profondeur vient du contraste tonal entre le fond nuit et l'ardoise des cartes, renforcé par un filet noir de 1 px. Seul relief lumineux : le halo des phares derrière l'ouverture. L'étape active du suivi porte un anneau intérieur de 1 px en cyan (`box-shadow: inset 0 0 0 1px`), qui double un contour et ne crée aucune élévation.
 
 ### Named Rules
-**The Lift Is The Depth Rule.** Aucune carte flottante ni ombre décorative : si quelque chose doit sembler en relief, c'est la voiture sur le pont.
+**La règle du filet noir.** Une surface se détache par sa teinte et son filet noir de 1 px, jamais par une ombre.
 
 ## Shapes
 
-Des angles d'outillage : un rayon de 3 px (outil) sur les boutons, les champs, les choix et le bouton de langue. Le cercle complet (rond) est réservé aux pastilles des étiquettes, aux numéros d'étape et au point « aujourd'hui ». Les sections, panneaux et emplacements photo ont des angles vifs. Bordures d'un pixel pour les séparateurs, 1,5 px pour les contrôles et les numéros d'étape. Le dessin est au trait, extrémités arrondies : 1,4 à 1,7 pour les pièces, 5 pour les bras jaunes.
+Trois familles de rayons. Pilule (80 px) pour tout ce qui se touche ou s'étiquette : boutons, liens fantômes, onglets, choix, puces, pastille de langue, numéros d'étapes. Carte (15 px) pour les cartes et les éléments du relevé ; panneau (24 px) pour le grand panneau de service et l'image du pont (15 px sur téléphone). Les champs de saisie restent presque droits (4 px) et les encadrés d'alerte à 8 px. Les icônes sont au trait (1,6 à 1,8), bouts et angles arrondis, jamais pleines.
 
 ## Components
 
+### Buttons
+Francs et lisibles au soleil.
+- **Shape:** pilule (80 px), hauteur minimale 3 rem.
+- **Primary (pilule pleine):** fond blanc, texte noir, 600 à 0,9375 rem. Survol : fond bleu glacier très pâle et montée de 1 px (200 ms, `cubic-bezier(.16,1,.3,1)`).
+- **Lien fantôme (secondaire):** contour cyan 1 px, texte cyan, transparent ; survol : voile cyan à 8 % et flèche qui avance de 3 px.
+- **Téléphone d'en-tête:** même contour cyan, hauteur 2,75 rem, numéro masqué sous 40 rem (icône seule).
+- **Focus:** contour cyan 2 px décalé de 3 px, partout.
+
+### Chips
+- **Puce d'état:** contour cyan, texte cyan 600 à 0,8125 rem, point cyan devant ; en brume quand l'atelier est fermé.
+- **Choix (radio):** pilule nuit, texte brume ; cochée, blanc plein et texte noir.
+
+### Cards / Containers
+- **Corner Style:** 15 px (carte), 24 px (panneau).
+- **Background:** ardoise de carte.
+- **Shadow Strategy:** aucune (voir Elevation & Depth).
+- **Border:** filet noir 1 px.
+- **Internal Padding:** 1,5 rem (carte), 1,5 à 2,5 rem (panneau).
+
+### Inputs / Fields
+- **Style:** fond nuit, filet noir 1 px, rayon 4 px, hauteur 3 rem, texte blanc 1 rem ; libellé au-dessus en 600 à 0,875 rem.
+- **Focus:** la bordure passe au cyan, sans halo.
+- **Error:** bordure cyan 2 px et message dans un encadré à contour cyan (8 px).
+
+### Navigation
+- **En-tête:** logotype à gauche, liens 0,875 rem blancs au centre (cyan au survol), téléphone en contour cyan et pastille « EN » à droite. Sous 60 rem, les liens disparaissent.
+- **Onglets des services:** pilules transparentes en brume ; l'onglet actif est blanc plein, texte noir 600. Un seul panneau visible, qui entre en glissant de 8 px (450 ms). Sans JS, tous les panneaux s'affichent.
+
 ### Logotype animé
-Deux colonnes de pont en acier clair, un sol en acier et une traverse jaune. Au chargement, la traverse monte (1,6 s, courbe d'entrée-sortie, avec un léger dépassement), puis le nom « Garage Delorme » se dévoile de gauche à droite par découpe (900 ms, 0,9 s de délai). En mouvement réduit et en mode capture : traverse en position haute, nom visible, sans animation.
+Un pont à deux colonnes en brume, un sol en trait discret et un bras cyan qui monte au chargement (1,6 s, léger dépassement puis retour), suivi de « Garage » en 400 brume et « Delorme » en 700 blanc.
 
-### Scène du pont (signature)
-- **Structure :** section anthracite haute de 230 vh avec un contenu collant sous l'en-tête : titre, chapeau, deux actions, indication « Faites monter la voiture », puis le dessin.
-- **Dessin :** colonnes et sol en acier, carrosserie et roues en blanc atelier, bras et patins en jaune, dessous (carter, réservoir, bras de suspension) en gris clair qui apparaît à mesure que la voiture monte.
-- **Mouvement :** la position du défilement donne une progression de 0 à 1 ; la voiture monte de 34 % de la hauteur du dessin. L'indication de défilement s'efface dès le premier quart.
-- **Étiquettes épinglées :** une pastille jaune sur la pièce, une tige jaune d'un pixel qui descend dans l'espace libéré sous la voiture, puis le nom du service. Chaque étiquette apparaît à son seuil (0,2, 0,4, 0,6, 0,8) : fondu de 450 ms, puis la tige se déroule en 500 ms. Les étiquettes de droite s'alignent à droite de leur point.
+### Le pont élévateur (signature)
+Séquence filmée de 60 images WebP (`img/pont/`), caméra fixe, dessinée sur un canvas dans un cadre 16/9 à rayon 24 px et filet noir, sur fond `#0B1220`. La position suit le défilement avec un lissage (lerp de 0,12 par image) pour démarrer et s'arrêter comme un vrai pont hydraulique. Sous l'image, le relevé : quatre éléments à rayon 15 px, éteints (opacité 0,35, trait discret), qui s'allument tour à tour en cyan (bordure et pastille qui se remplit) aux seuils 0,15 / 0,35 / 0,55 / 0,75. Un indicateur « Faites monter la voiture » s'efface dès les premiers pas. Mention « Illustration générée par IA » en bas à droite. En mouvement réduit, sans JS ou en mode `?capture`, on affiche l'image fixe `fin.webp` (voiture levée) avec le relevé entièrement allumé.
 
-### Boutons
-- **Shape :** angles d'outil (3 px), hauteur minimale 3,25 rem, graisse 700, icône au trait de 1,15 em possible avant ou après le texte.
-- **Primary :** fond jaune, texte nuit, bordure jaune. Un seul par groupe d'actions.
-- **Outline :** fond transparent, bordure de 1,5 px dans la couleur du texte (clair sur fond sombre, encre sur fond clair).
-- **Hover / Focus :** survol en jaune vif pour le principal, voile gris à 12 % pour le filet ; enfoncement d'un pixel au clic ; transitions de 200 ms ; anneau de focus jaune de 2 px, décalé de 3 px.
-
-### Contrôles de formulaire
-- **Champs :** fond blanc, bordure filet de 1,5 px, angles d'outil, hauteur 3 rem, intitulé en Label au-dessus.
-- **Focus :** bordure nuit et halo jaune de 3 px à 60 %.
-- **Listes déroulantes :** apparence native retirée, chevron acier au trait.
-- **Choix (rendez-vous ou devis) :** pastilles rectangulaires blanches à bordure filet ; l'option cochée passe en fond nuit et texte blanc.
-- **Erreur :** bordure rouge sur le champ, message en encadré rose pâle avec un filet rouge à gauche.
-
-### Étapes du suivi
-Quatre étapes numérotées dans des cercles de 2 rem (Véhicule reçu, Diagnostic, Réparation, Prête à récupérer). Étape faite : cercle nuit avec une coche jaune au trait. Étape active : cercle jaune, chiffre nuit. Étape à venir : acier clair. Sur bureau, chaque étape est surmontée d'un filet de 2 px, jaune pour les étapes faites et active. La même composition sert d'aperçu sur l'accueil (fond sombre) et de résultat sur la page de suivi (fond blanc dans un cadre filet). Le champ de code est en capitales espacées et chiffres tabulaires.
-
-### Tableau des horaires
-Lignes séparées par des filets, jour à gauche, heures à droite en chiffres tabulaires, jours fermés en encre douce. La ligne du jour en cours passe en 800 et reçoit un point jaune cerné de nuit. Au-dessus, une phrase d'état (« Ouvert jusqu'à… » ou « Fermé pour le moment… ») calculée à l'heure de Paris.
-
-### En-tête et navigation
-En-tête collant anthracite translucide, filet inférieur sombre. Liens de navigation en 500, 0,875 rem, acier clair, blancs au survol, visibles à partir de 60 rem. Le téléphone reste toujours visible (icône seule sur téléphone). Bouton de langue carré de 2,75 rem à bordure fine.
-
-### Pied de page
-Fond nuit, texte acier clair en 0,9375 rem, liens en blanc atelier soulignés, mention légale finale en 0,8125 rem.
-
-### Mouvement
-- **Une signature :** seule la scène du pont est pilotée par le défilement. Le logotype ne s'anime qu'une fois, au chargement.
-- **Apparitions au défilement :** les blocs marqués montent de 18 px en fondu (600 ms d'opacité, 700 ms de déplacement), une seule fois, et seulement si JavaScript est actif.
-- **Mouvement réduit :** la scène perd sa hauteur de défilement et s'affiche dans son état final (voiture levée, étiquettes visibles), le logotype est statique, les apparitions sont immédiates, le défilement doux est coupé.
-- **Mode capture (?capture) :** mêmes états statiques que le mouvement réduit, avec une scène de hauteur fixe (780 px minimum) pour les captures pleine page.
+### Suivi de réparation
+Liste d'étapes numérotées dans des ronds pilule : à venir en contour gris, faites en dégradé positif plein, active en contour et chiffre cyan.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** réserver le jaune (jaune) aux bras du pont, à l'action principale et à l'état actif, selon The Yellow Rule.
-- **Do** composer chaque section sur l'un des deux fonds, nuit ou clair.
-- **Do** porter la hiérarchie par la largeur d'Archivo : 118 % pour le titre de scène, 112 % pour les titres de section et de service, 125 % pour le logotype.
-- **Do** dessiner au trait avec des extrémités arrondies, en acier pour la structure et en blanc atelier pour la voiture.
-- **Do** utiliser les chiffres tabulaires pour les téléphones, horaires, étapes et codes.
-- **Do** fournir un état final statique pour toute animation, en mouvement réduit comme en mode capture.
-- **Do** garder des cibles tactiles d'au moins 2,75 rem.
+- **Do** garder le fond bleu nuit sur toutes les pages et poser les blocs sur l'ardoise de carte avec un filet noir de 1 px.
+- **Do** réserver le cyan aux signaux : un mot du titre, contours d'action, icônes, états, focus.
+- **Do** utiliser la pilule blanche pleine pour l'action principale et le contour cyan pour l'action secondaire, côte à côte.
+- **Do** composer les titres en Archivo 700 à -0,036 em et les chiffres en tabulaires.
+- **Do** donner à toute animation un état final statique en mouvement réduit et en `?capture`.
+- **Do** n'afficher que des chiffres vrais dans les grands chiffres.
 
 ### Don't:
-- **Don't** ajouter une seconde animation pilotée par le défilement : le pont est la seule signature.
-- **Don't** utiliser de photo d'atelier générique ni d'illustration décorative ; les emplacements photo restent des panneaux nuit-2 jusqu'à l'arrivée des vraies photos.
-- **Don't** ajouter d'ombres portées ni de cartes flottantes.
-- **Don't** mettre deux boutons jaunes côte à côte.
-- **Don't** introduire une seconde famille de caractères.
-- **Don't** reprendre la petite capitale espacée (comme « Exemple de suivi ») comme style de surtitre : c'est un défaut ouvert, pas une règle.
-
-## Known open items
-
-Le site a été livré à la demande du propriétaire alors que la dernière revue concluait encore « à corriger ». Ces points restent ouverts ; ils ne sont pas des règles et ne doivent pas être reproduits.
-
-- Les pièces du dessous (carter, réservoir, bras de suspension) se lisent mal quand la voiture est levée.
-- Sur le pont en version bureau, l'étiquette « Dépannage » croise la colonne droite et « Entretien » croise la roue avant.
-- Sur téléphone, « Dépannage » va jusqu'au bord droit, et une bande vide d'environ 200 px reste sous la scène.
-- L'icône native du sélecteur de date n'est pas mise aux couleurs du site.
-- La légende « Exemple de suivi » est en petites capitales espacées, à la manière d'un surtitre.
+- **Don't** ajouter d'ombre portée : la profondeur vient de la teinte et du filet.
+- **Don't** introduire un second accent (le jaune de la version précédente est retiré) ni un rouge d'erreur.
+- **Don't** remplir un bouton ou une grande surface en cyan.
+- **Don't** étendre le halo des phares au-delà de l'ouverture, ni le dégradé positif au-delà du suivi.
+- **Don't** utiliser d'icônes pleines ni de caractères en guise d'icônes : trait arrondi uniquement.
+- **Don't** reprendre l'identité, les logos ou les noms de constructeurs automobiles.
