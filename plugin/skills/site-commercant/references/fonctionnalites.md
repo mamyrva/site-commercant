@@ -79,7 +79,8 @@ Le niveau choisi pendant l'entretien est transmis à impeccable, qui les dessine
 
 - **Sobre** : un seul moment animé, par exemple l'apparition du haut de page.
 - **Animé** : apparitions au défilement (IntersectionObserver), réactions au survol, transitions entre les pages (View Transitions API).
-- **Spectaculaire** : animations liées au défilement (`animation-timeline: scroll()`, avec une solution de repli), canvas ou SVG animé, vidéo en motion design.
+- **Spectaculaire** : un effet interactif en haut de page qui raconte le métier (par exemple un réseau de points qui réagit à la souris pour une agence, la vapeur d'un four, des épis qui bougent au passage), en `<canvas>` léger, arrêté hors de l'écran et désactivé en mouvement réduit ;
+   animations liées au défilement (`animation-timeline: scroll()`, avec une solution de repli), canvas ou SVG animé, vidéo en motion design.
 - **Toujours** :
   - le contenu reste visible sans animation ;
   - `prefers-reduced-motion` désactive tout mouvement non essentiel ;

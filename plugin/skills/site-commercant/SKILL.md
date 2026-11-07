@@ -33,6 +33,8 @@ Ne pose que les questions dont la réponse manque, et termine par une phrase qui
 
 ## Étape 3 : le design avec impeccable
 
+**Partir d'une référence de style.** Si la personne cite un site qu'elle aime, ou colle une fiche de style, suis [references/reference-style.md](references/reference-style.md) : trouve son `DESIGN.md` (par exemple sur styles.refero.design), traduis-le dans l'univers du commerce, puis transmets-le à impeccable comme direction imposée.
+
 **Vise l'exceptionnel, pas le correct.** Avant de construire, lis [references/excellence.md](references/excellence.md) : le test de l'image fixe, les images, le mouvement mis en scène et la performance. Repasse sa liste de contrôle avant de livrer. Un site sans images paraît inachevé : règle la question des photos avec la personne dès l'entretien.
 
 Charge le skill `impeccable` (outil Skill, nom `impeccable:impeccable`) et fais une demande de nouvelle surface (new-work) : la page d'accueil du commerce, en mode **Persuade**. Donne-lui :

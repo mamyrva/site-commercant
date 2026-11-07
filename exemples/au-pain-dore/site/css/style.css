@@ -1,597 +1,214 @@
-/* Au Pain Doré : le carnet de commandes.
-   Deux encres (carbone, rouge numérotation) sur feuillets autocopiants jaune et rose,
-   reliés dans une couverture bleu carbone. */
+/* Au Pain Doré : l'affiche de boulangerie.
+   Système adapté d'une référence de style (affiche d'épicerie, or sur brun de four), traduit pour le pain :
+   un seul brun « four » pour toute la page, un seul or « croûte » pour l'accent, des titres énormes,
+   des produits posés à même le fond, des pilules, des filets en pointillés, aucune ombre. */
 
-@font-face {
-  font-family: "Bricolage";
-  src: url("../fonts/bricolage-grotesque.woff2") format("woff2");
-  font-weight: 200 800;
-  font-stretch: 75% 100%;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Caveat";
-  src: url("../fonts/caveat.woff2") format("woff2");
-  font-weight: 400 700;
-  font-display: swap;
-}
+@font-face { font-family: "Antonio"; src: url("../fonts/antonio.woff2") format("woff2"); font-weight: 100 700; font-display: swap; }
+@font-face { font-family: "Hanken Grotesk"; src: url("../fonts/hanken-grotesk.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 
 :root {
   /* Couleurs : modifier ici pour changer l'ambiance */
-  --couverture: #2F3A9E;
-  --couverture-sombre: #232C7E;
-  --jaune: #F4D23C;
-  --rose: #F5C3CF;
-  --carbone: #1E2156;
-  --carbone-doux: #3C3F78;
-  --rouge: #A8150F;
-  --sur-couverture: #F4D23C;
+  --four: #78300F;        /* brun de four : le fond de toutes les pages (accordé au fond des photos) */
+  --croute: #FAAE33;      /* or de croûte : le seul accent (boutons, titres, filets) */
+  --miel: #ECAE68;        /* or atténué : textes secondaires (contraste AA sur le fond et les cartes) */
+  --mie-brune: #402011;   /* cartes, champs, badges secondaires */
+  --charbon: #281006;     /* le plus sombre : texte sur l'or */
+  --seigle: #6B2E12;      /* bordures discrètes */
+  --framboise: #D1255C;   /* réservé : état « fermé » */
+  --texte: #F7DDB0;       /* texte courant : une mie claire, jamais de blanc */
 
-  --texte: "Bricolage", "Avenir Next Condensed", "Arial Narrow", sans-serif;
-  --main: "Caveat", "Bradley Hand", cursive;
+  --affiche: "Antonio", "Arial Narrow", Impact, sans-serif;
+  --utile: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --marge: clamp(1rem, 4vw, 3.5rem);
+  --section: clamp(4.5rem, 9vw, 7.5rem);
 
-  --pas: clamp(1rem, 0.8rem + 1vw, 1.5rem);
-  --large: min(100% - 1.5rem, 46rem);
-  --souche: 2.75rem;
-  --trous: radial-gradient(circle at 50% 50%, var(--couverture) 0 3.5px, transparent 4px);
+  /* Épis de blé en filigrane */
+  --epis: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='260' viewBox='0 0 220 260'%3E%3Cg fill='none' stroke='%23FAAE33' stroke-width='1.2' stroke-linecap='round' opacity='.09'%3E%3Cpath d='M60 240C62 180 66 120 80 40'/%3E%3Cpath d='M80 40c-8 8-10 18-6 26 8-6 10-16 6-26zM77 62c-8 8-10 18-6 26 8-6 10-16 6-26zM74 84c-8 8-10 18-6 26 8-6 10-16 6-26zM71 106c-8 8-10 18-6 26 8-6 10-16 6-26zM80 40c8 8 10 18 6 26-8-6-10-16-6-26zM78 62c8 8 10 18 6 26-8-6-10-16-6-26zM75 84c8 8 10 18 6 26-8-6-10-16-6-26zM72 106c8 8 10 18 6 26-8-6-10-16-6-26z'/%3E%3Cpath d='M80 40l4-22M78 62l12-16'/%3E%3Cpath d='M170 250c-2-50-10-100-28-150'/%3E%3Cpath d='M142 100c-9 6-12 16-9 24 9-5 12-15 9-24zM148 120c-9 6-12 16-9 24 9-5 12-15 9-24zM142 100c7 8 8 18 3 26-7-7-8-17-3-26zM149 120c7 8 8 18 3 26-7-7-8-17-3-26z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-
+* { box-sizing: border-box; }
 html {
-  background: var(--couverture);
-  color: var(--carbone);
-  font-family: var(--texte);
-  font-size: 106.25%;
+  background: var(--four);
+  color: var(--texte);
+  font-family: var(--utile);
+  font-size: 100%;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  scrollbar-color: var(--jaune) var(--couverture-sombre);
-  scroll-padding-top: 1rem;
+  scrollbar-color: var(--croute) var(--charbon);
 }
-body { margin: 0; font-variation-settings: "opsz" 14; overflow-x: clip; }
-
-::selection { background: var(--carbone); color: var(--jaune); }
-:focus-visible { outline: 2px dashed currentColor; outline-offset: 3px; }
-input, select, textarea { caret-color: var(--rouge); }
-
-a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-a:hover { text-decoration-thickness: 2px; }
-
+body { margin: 0; background: var(--epis) 0 0 / 220px 260px, var(--four); overflow-x: hidden; }
+::selection { background: var(--croute); color: var(--charbon); }
+:focus-visible { outline: 2px solid var(--croute); outline-offset: 3px; }
+input, select, textarea { caret-color: var(--croute); accent-color: var(--croute); }
+a { color: inherit; text-underline-offset: 0.2em; }
 .defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-.visually-hidden {
-  position: absolute; width: 1px; height: 1px; overflow: hidden;
-  clip: rect(0 0 0 0); white-space: nowrap;
-}
+.visuellement-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ic { width: 1.05em; height: 1.05em; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 
-/* Bandeau « exemple fictif » */
-.fictif {
-  margin: 0;
-  padding: 0.5rem 1rem;
-  background: var(--couverture-sombre);
-  color: #DCE0FF;
-  font-size: 0.8125rem;
-  text-align: center;
-}
+.fictif { margin: 0; padding: 0.45rem 1rem; background: var(--charbon); color: var(--miel); font-size: 0.75rem; text-align: center; }
 
-/* ---------- Couverture ---------- */
-.couverture {
-  width: var(--large);
-  margin-inline: auto;
-  padding: 1.25rem 0 2.75rem;
-  color: var(--sur-couverture);
+/* ---------- Pilules et badges ---------- */
+.pilule {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+  min-height: 2.75rem; padding: 0.55rem 1.15rem;
+  border: 1px solid var(--croute); border-radius: 9999px;
+  background: transparent; color: var(--croute);
+  font: 500 0.875rem/1 var(--affiche); letter-spacing: 0.04em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer;
+  transition: background-color 200ms ease-out, color 200ms ease-out, transform 250ms cubic-bezier(.16,1,.3,1);
 }
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1.25rem;
-  font-stretch: 80%;
-  font-weight: 600;
-  font-size: 0.9375rem;
-  letter-spacing: 0.02em;
+.pilule:hover { background: var(--mie-brune); }
+.pilule:active { transform: scale(0.97); }
+.pilule--pleine { background: var(--croute); color: var(--charbon); }
+.pilule--pleine:hover { background: #FFC35A; }
+.badges { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.badge {
+  display: inline-flex; align-items: center; margin: 0;
+  padding: 0.3rem 0.8rem; border-radius: 9999px;
+  background: var(--croute); color: var(--charbon);
+  font: 500 0.75rem/1.1 var(--affiche); letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;
 }
-.nav a { text-decoration: none; padding: 0.5rem 0; }
-.nav a:hover { text-decoration: underline; }
+.badge--creux { background: var(--mie-brune); color: var(--croute); }
+.badge--etat.ferme { background: var(--framboise); color: #FFF4E6; }
 
-.tampon {
-  display: inline-grid;
-  gap: 0.35rem;
-  margin: clamp(2rem, 6vw, 3.5rem) 0 1.25rem;
-  padding: 0.9rem 1.15rem 1rem;
-  border: 3px solid currentColor;
-  border-radius: 0.6rem;
-  outline: 1.5px solid currentColor;
-  outline-offset: 4px;
-  transform: rotate(-2.5deg);
-  filter: url(#encre);
-  font-weight: 400;
-}
-.tampon-nom {
-  font-size: clamp(2.6rem, 1.6rem + 6vw, 4.75rem);
-  font-weight: 800;
-  font-stretch: 75%;
-  line-height: 0.92;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-}
-.tampon-sous {
-  font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.1rem);
-  font-weight: 600;
-  font-stretch: 80%;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  line-height: 1.25;
-}
-.tampon-sous sup { font-size: 0.65em; }
-.couverture-ligne {
-  margin: 0;
-  max-width: 24ch;
-  text-wrap: balance;
-  font-size: clamp(1.15rem, 1rem + 0.8vw, 1.45rem);
-  font-weight: 500;
-  line-height: 1.3;
-  color: #F7F1D2;
-}
+/* ---------- Barre du haut ---------- */
+.barre { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0.75rem; padding: 0.9rem var(--marge); }
+.nav { display: none; gap: 0.4rem; }
+.marque { font: 700 1.25rem/1 var(--affiche); letter-spacing: 0.02em; text-transform: uppercase; color: var(--croute); text-decoration: none; grid-column: 1; }
+.barre-droite { grid-column: 3; justify-self: end; display: flex; align-items: center; gap: 0.5rem; }
+.barre-droite .badge { display: none; }
 
-/* ---------- Carnet et bons ---------- */
-.carnet {
-  width: var(--large);
-  margin-inline: auto;
-  display: grid;
-  gap: 1.75rem;
-  padding-bottom: 3rem;
+/* ---------- L'affiche ---------- */
+.affiche { position: relative; padding: clamp(1rem, 3vw, 2rem) var(--marge) var(--section); display: grid; }
+.affiche-titre {
+  margin: 0; grid-area: 1 / 1; position: relative; z-index: 2;
+  font: 700 clamp(4.6rem, 18vw, 14rem)/1.16 var(--affiche);
+  letter-spacing: -0.02em; text-transform: uppercase; color: var(--croute);
 }
+.ligne { display: block; overflow: hidden; padding: 0.12em 0 0.02em; margin-top: -0.12em; }
+.ligne > span { display: block; }
+.affiche-pain {
+  grid-area: 1 / 1; justify-self: end; align-self: end;
+  width: min(44vw, 32rem); height: auto; margin: 0 -1rem -2% 0;
+  position: relative; z-index: 1;
+  translate: 0 calc(var(--defile, 0) * -60px);
+  rotate: calc(var(--defile, 0) * 8deg);
+}
+.affiche-pied .badge--etat { justify-self: start; }
+.affiche-pied { display: grid; gap: 1.1rem; margin-top: clamp(1.5rem, 4vw, 3rem); max-width: 34rem; position: relative; z-index: 2; }
+.affiche-texte { margin: 0; font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem); line-height: 1.5; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 
-.bon {
-  --papier: var(--jaune);
-  position: relative;
-  display: grid;
-  grid-template-columns: var(--souche) 1fr;
-  background: var(--papier);
-  border-radius: 3px;
-  box-shadow: 0 1px 1px rgb(0 0 0 / 0.22), 0 14px 28px -14px rgb(0 0 0 / 0.5);
-}
-.bon--rose { --papier: var(--rose); }
+/* Entrée de l'affiche : les deux lignes montent, la boule se pose */
+.js .ligne > span { animation: monter 1100ms cubic-bezier(.16,1,.3,1) both; }
+.js .ligne:nth-child(2) > span { animation-delay: 120ms; }
+.js .affiche-pain { animation: poser 1300ms cubic-bezier(.16,1,.3,1) 250ms both; }
+@keyframes monter { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes poser { from { opacity: 0; transform: translateY(40px) scale(0.94); } to { opacity: 1; transform: none; } }
 
-/* La souche : bande de gauche, séparée par une ligne de perforations */
-.souche {
-  position: relative;
-  display: grid;
-  place-items: center;
-  border-right: 1px dashed rgb(30 33 86 / 0.35);
-}
-.souche::after {
-  content: "";
-  position: absolute;
-  inset: 0 -4px 0 auto;
-  width: 8px;
-  background: var(--trous) 0 0 / 8px 14px repeat-y;
-}
-.numero {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  color: var(--rouge);
-  font-weight: 700;
-  font-stretch: 75%;
-  font-size: 1.15rem;
-  letter-spacing: 0.12em;
-  font-variant-numeric: tabular-nums;
-}
+/* ---------- Filets et titres ---------- */
+.pointilles { margin: 0 var(--marge); border: 0; border-top: 1px dotted var(--croute); opacity: 0.8; }
+.titre-xl { margin: 0 0 2rem; font: 700 clamp(3.4rem, 11vw, 9rem)/0.95 var(--affiche); letter-spacing: -0.015em; text-transform: uppercase; color: var(--croute); }
+.titre-m { margin: 0 0 0.75rem; font: 700 clamp(1.8rem, 1.2rem + 2.4vw, 2.8rem)/0.95 var(--affiche); letter-spacing: -0.005em; text-transform: uppercase; color: var(--croute); }
+.titre-geant { margin: 0; font: 700 clamp(7rem, 34vw, 26rem)/0.78 var(--affiche); letter-spacing: -0.02em; text-transform: uppercase; color: var(--croute); }
+.intro { margin: 0 0 2.5rem; max-width: 40ch; font-size: 1.0625rem; }
+.aide { margin: 0.75rem 0 0; font-size: 0.8125rem; color: var(--miel); }
 
-.feuillet {
-  padding: calc(var(--pas) * 1.25) var(--pas) calc(var(--pas) * 1.4);
-  min-width: 0;
+/* ---------- Le pain ---------- */
+.pain, .gateaux, .horaires, .venir { padding: var(--section) var(--marge); }
+.produit { display: grid; align-items: center; gap: 0.5rem 2rem; margin-bottom: 1rem; }
+.produit img {
+  width: min(100%, 30rem); height: auto; justify-self: center;
+  transition: transform 900ms cubic-bezier(.16,1,.3,1);
 }
+.produit:hover img { transform: scale(1.04) rotate(-2deg); }
+.produit-texte .titre-m { font-size: clamp(2.6rem, 1.4rem + 5vw, 5.5rem); line-height: 0.95; margin-bottom: 1rem; }
+.titre-liste { margin-top: 3rem; }
+.liste { list-style: none; margin: 1rem 0 0; padding: 0; }
+.liste li { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px dotted var(--seigle); font: 500 clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem)/1.15 var(--affiche); text-transform: uppercase; letter-spacing: 0.02em; color: var(--croute); }
 
-.titre-bon {
-  margin: 0 0 0.85rem;
-  font-size: clamp(1.75rem, 1.3rem + 2.2vw, 2.6rem);
-  font-weight: 800;
-  font-stretch: 78%;
-  line-height: 1;
-  letter-spacing: -0.015em;
-  text-wrap: balance;
+/* ---------- Gâteaux ---------- */
+.gateaux { display: grid; gap: 2rem; }
+.gateaux-tete { display: grid; justify-items: start; }
+/* Le gâteau se pose au pied des chiffres, sans les cacher */
+.gateaux-tete img { margin-top: -12%; }
+.gateaux-tete img {
+  justify-self: end; width: min(70vw, 24rem); height: auto; position: relative; z-index: 1;
 }
-.chapeau {
-  margin: 0 0 1.5rem;
-  max-width: 60ch;
-  font-size: 1.0625rem;
-}
-
-/* L'état « ouvert / fermé », écrit à la main sur le bon */
-.etat {
-  margin: 0 0 1.25rem;
-  font-family: var(--main);
-  font-size: clamp(1.7rem, 1.4rem + 1.4vw, 2.2rem);
-  font-weight: 600;
-  line-height: 1.1;
-}
-.etat strong { font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
-
-/* Champs de formulaire imprimés : libellé + filet, valeur manuscrite */
-.champs { margin: 0 0 1.5rem; display: grid; gap: 0.9rem; }
-.champ dt, .champ label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  font-stretch: 80%;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--carbone-doux);
-}
-.champ dd { margin: 0; border-bottom: 1px solid var(--carbone); padding: 0.1rem 0 0.25rem; }
-.rempli {
-  font-family: var(--main);
-  font-size: 1.55rem;
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--carbone);
-}
-.rempli a { text-decoration: none; }
-
-/* Horaires : tableau imprimé, jour courant entouré au stylo */
-.horaires {
-  width: 100%;
-  border-collapse: collapse;
-  font-variant-numeric: tabular-nums;
-  margin-bottom: 0.75rem;
-}
-.horaires caption {
-  text-align: left;
-  font-size: 0.75rem;
-  font-weight: 700;
-  font-stretch: 80%;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--carbone-doux);
-  padding-bottom: 0.35rem;
-}
-.horaires th, .horaires td {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgb(30 33 86 / 0.3);
-  text-align: left;
-  font-weight: 500;
-}
-.horaires th { width: 40%; font-weight: 600; }
-.horaires td { text-align: right; white-space: nowrap; }
-.horaires tr[data-jour="6"] td { white-space: normal; }
-.horaires .plage { white-space: nowrap; }
-.horaires .et { font-size: 0.85em; color: var(--carbone-doux); }
-.horaires .ferme td {
-  background: repeating-linear-gradient(-45deg, transparent 0 5px, rgb(30 33 86 / 0.18) 5px 6px);
-  padding-right: 0.5rem;
-}
-.horaires tr.aujourdhui th,
-.horaires tr.aujourdhui td { font-weight: 800; }
-.horaires tr.aujourdhui th { position: relative; }
-.horaires tr.aujourdhui th::before {
-  content: "";
-  position: absolute;
-  inset: 0.15rem auto 0.15rem -0.6rem;
-  width: 6.2em;
-  border: 2px solid var(--carbone);
-  border-radius: 50% 45% 55% 48% / 60% 50% 55% 45%;
-  transform: rotate(-3deg);
-  pointer-events: none;
-}
-
-.note { margin: 0 0 1.5rem; font-size: 0.9375rem; color: var(--carbone-doux); }
-
-/* Boutons : tampons encreurs */
-.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-.bouton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.55rem;
-  min-height: 3rem;
-  padding: 0.7rem 1.25rem;
-  position: relative;
-  isolation: isolate;
-  border: 0;
-  background: transparent;
-  color: var(--carbone);
-  font: inherit;
-  font-weight: 800;
-  font-stretch: 75%;
-  font-size: 1.0625rem;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 160ms cubic-bezier(.2,.8,.2,1);
-}
-/* Le cadre du tampon : double filet, encre irrégulière. Le texte reste net. */
-.bouton::before {
-  content: "";
-  position: absolute;
-  inset: 3px;
-  z-index: -1;
-  border: 2px solid var(--carbone);
-  border-radius: 0.4rem;
-  outline: 1.5px solid var(--carbone);
-  outline-offset: 2px;
-  filter: url(#encre);
-  transition: background-color 160ms;
-}
-.bouton:hover::before { background: rgb(30 33 86 / 0.1); }
-.bouton:active { transform: translateY(1px) rotate(-0.4deg); }
-.bouton--plein { color: var(--jaune); }
-.bouton--plein::before { background: var(--carbone); }
-.bon--rose .bouton--plein { color: var(--rose); }
-.bouton--plein:hover::before { background: #2B2F72; }
-.bouton:focus-visible { outline: 2px dashed var(--carbone); outline-offset: 4px; }
-.ic {
-  width: 1.15em; height: 1.15em;
-  fill: none; stroke: currentColor; stroke-width: 1.75;
-  stroke-linecap: round; stroke-linejoin: round;
-  flex: none;
-}
-.actions .bouton { flex: 1 1 9rem; }
-
-/* Lignes de produits : comme un bon de commande */
-.lignes { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; }
-.lignes thead th {
-  font-size: 0.75rem;
-  font-weight: 700;
-  font-stretch: 80%;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--carbone-doux);
-  text-align: left;
-  padding: 0 0 0.4rem;
-  border-bottom: 2px solid var(--carbone);
-}
-.lignes thead th:last-child { text-align: right; }
-.lignes tbody th, .lignes tbody td {
-  padding: 0.85rem 0;
-  border-bottom: 1px solid rgb(30 33 86 / 0.3);
-  vertical-align: middle;
-}
-.lignes tbody th {
-  text-align: left;
-  font-size: clamp(1.1rem, 1rem + 0.6vw, 1.35rem);
-  font-weight: 700;
-  font-stretch: 85%;
-  line-height: 1.15;
-  padding-right: 0.75rem;
-}
-.lignes tbody td { text-align: right; }
-@media (max-width: 32rem) {
-  .lignes thead { display: none; }
-  .lignes tbody tr { display: grid; gap: 0.35rem; padding: 0.75rem 0; border-bottom: 1px solid rgb(30 33 86 / 0.3); }
-  .lignes tbody th, .lignes tbody td { padding: 0; border: 0; text-align: left; }
-}
-
-/* Le petit ticket épinglé à chaque produit */
-.ticket {
-  display: inline-block;
-  padding: 0.2rem 0.55rem 0.15rem;
-  background: #FFFDF2;
-  color: var(--carbone);
-  font-family: var(--main);
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.1;
-  white-space: nowrap;
-  transform: rotate(-1.5deg);
-  box-shadow: 0 1px 2px rgb(30 33 86 / 0.25);
-  border-left: 1px dashed rgb(30 33 86 / 0.4);
-}
-.lignes tr:nth-child(even) .ticket { transform: rotate(1.2deg); }
-.ticket { white-space: normal; text-align: left; }
-.ticket-heure, .ticket-note { display: block; }
-.ticket-heure { font-family: var(--texte); font-size: 0.75rem; font-weight: 700; font-stretch: 80%; letter-spacing: 0.04em; color: var(--carbone-doux); }
-
-/* Emplacement photo agrafé */
-.agrafe { margin: 0; position: relative; }
-.agrafe img, .tirage img { display: block; width: 100%; height: auto; }
-.agrafe img { aspect-ratio: 1; object-fit: cover; padding: 7px; background: #FFFDF2; box-shadow: 0 1px 2px rgb(30 33 86 / 0.25), 0 10px 22px -12px rgb(30 33 86 / 0.45); transform: rotate(0.8deg); }
-.agrafe--gateau img { aspect-ratio: 4 / 5; transform: rotate(-1deg); }
-.agrafe figcaption, .tirage figcaption { margin-top: 0.6rem; font-family: var(--main); font-size: 1.3rem; font-weight: 600; line-height: 1.2; color: var(--carbone); }
-.illus { font-family: var(--texte); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; color: var(--carbone-doux); margin-left: 0.35rem; }
-.agrafe--gateau { margin: 0 0 1.5rem; max-width: 22rem; }
-
-/* Le tirage photo scotché sur la couverture du carnet */
-.tirage { display: none; margin: 0; position: relative; padding: 9px 9px 0.7rem; background: #FFFDF2; transform: rotate(2.2deg); box-shadow: 0 2px 3px rgb(0 0 0 / 0.25), 0 24px 40px -18px rgb(0 0 0 / 0.6); }
-.tirage::before { content: ""; position: absolute; top: -0.9rem; left: 50%; width: 7.5rem; height: 1.9rem; translate: -50% 0; rotate: -4deg; background: rgb(244 210 60 / 0.82); box-shadow: 0 1px 2px rgb(0 0 0 / 0.15); }
-.tirage img { aspect-ratio: 16 / 10; object-fit: cover; }
-.tirage figcaption { padding-inline: 0.2rem; }
-.agrafe::before {
-  content: "";
-  position: absolute;
-  top: -0.45rem; left: 1.5rem;
-  width: 2.2rem; height: 0.4rem;
-  border: 2px solid #8C90A8;
-  border-bottom: 0;
-  border-radius: 2px 2px 0 0;
-  z-index: 1;
-}
-.photo-vide {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 4 / 3;
-  padding: 1.5rem;
-  background:
-    repeating-linear-gradient(45deg, transparent 0 9px, rgb(30 33 86 / 0.14) 9px 10px),
-    #FFFDF2;
-  border: 1px solid rgb(30 33 86 / 0.35);
-  transform: rotate(0.8deg);
-  text-align: center;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: var(--carbone-doux);
-}
-
-/* ---------- Bon de commande ---------- */
-.commande { display: grid; gap: 1.1rem; }
-.commande[hidden] { display: none; }
-.champ--saisie input, .champ--saisie select {
-  display: block;
-  width: 100%;
-  min-height: 2.9rem;
-  margin-top: 0.2rem;
-  padding: 0.25rem 0;
-  border: 0;
-  border-bottom: 1.5px solid var(--carbone);
-  border-radius: 0;
-  background: transparent;
-  color: var(--carbone);
-  font-family: var(--main);
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1.2;
+.carte { background: var(--mie-brune); border-radius: 6px; padding: 1.5rem; max-width: 40rem; position: relative; z-index: 1; }
+.carte > p { margin: 0 0 1.5rem; }
+.commande { display: grid; gap: 0.9rem; }
+.champ { display: grid; gap: 0.35rem; }
+.champ > span { font: 500 0.75rem/1 var(--affiche); letter-spacing: 0.08em; text-transform: uppercase; color: var(--croute); }
+.champ input, .champ select {
+  width: 100%; min-height: 3rem; padding: 0.7rem 1.1rem;
+  border: 1px solid var(--seigle); border-radius: 9999px;
+  background: var(--charbon); color: var(--texte); font: 500 1rem var(--utile);
   appearance: none;
 }
-.champ--saisie select {
-  background-image: linear-gradient(45deg, transparent 50%, var(--carbone) 50%), linear-gradient(-45deg, transparent 50%, var(--carbone) 50%);
-  background-position: calc(100% - 12px) 55%, calc(100% - 6px) 55%;
-  background-size: 6px 6px;
-  background-repeat: no-repeat;
-}
-.champ--saisie input::placeholder { color: rgb(30 33 86 / 0.55); }
-.champ--saisie input:focus, .champ--saisie select:focus {
-  outline: none;
-  border-bottom: 3px solid var(--rouge);
-}
-.champ--saisie [aria-invalid="true"] { border-bottom-color: var(--rouge); }
-.aide { margin: 0.3rem 0 0; font-size: 0.875rem; color: var(--carbone-doux); }
-.erreur {
-  margin: 0;
-  padding: 0.6rem 0.8rem;
-  border: 2px solid var(--rouge);
-  border-radius: 0.4rem;
-  color: var(--carbone);
-  font-weight: 600;
-}
-.commande .bouton { justify-self: start; min-width: 14rem; }
-
-/* La signature : le bon s'arrache le long des perforations, la souche reste au carnet */
-.bon.detache { background: transparent; box-shadow: none; }
-.bon.detache .souche {
-  background: var(--papier);
-  border-radius: 3px 0 0 3px;
-  box-shadow: 0 1px 1px rgb(0 0 0 / 0.22), 0 14px 28px -14px rgb(0 0 0 / 0.5);
-}
-.bon.detache .feuillet {
-  background: var(--papier);
-  border-radius: 0 3px 3px 0;
-  box-shadow: 0 1px 1px rgb(0 0 0 / 0.22), 0 18px 32px -14px rgb(0 0 0 / 0.55);
-  -webkit-mask: radial-gradient(circle at 0 7px, transparent 3.5px, #000 4px) 0 0 / 100% 14px repeat-y;
-          mask: radial-gradient(circle at 0 7px, transparent 3.5px, #000 4px) 0 0 / 100% 14px repeat-y;
-  animation: arracher 800ms cubic-bezier(.3,.7,.2,1) forwards;
-}
-@keyframes arracher {
-  0%   { transform: none; }
-  30%  { transform: translateX(2px) rotate(-0.5deg); }
-  100% { transform: translate(var(--arrache, 8px), 8px) rotate(1.5deg); }
-}
-.recu { display: grid; gap: 0.6rem; outline: none; }
+.champ select { background: var(--charbon) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%23FAAE33' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") right 1rem center / 1.1rem no-repeat; padding-right: 2.6rem; }
+.champ input::placeholder { color: #A9773F; }
+.champ input:focus, .champ select:focus { outline: none; border-color: var(--croute); }
+.champ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(73%) sepia(62%) saturate(800%) hue-rotate(340deg); cursor: pointer; }
+.champ [aria-invalid="true"] { border-color: var(--croute); border-width: 2px; }
+.erreur { margin: 0; padding: 0.6rem 1rem; border-radius: 9999px; background: var(--charbon); color: var(--croute); font-weight: 600; font-size: 0.875rem; }
+.commande .pilule { justify-self: start; }
+.recu { display: grid; gap: 0.9rem; outline: none; }
 .recu[hidden] { display: none; }
-.recu-titre {
-  justify-self: start;
-  margin: 0 0 0.25rem;
-  padding: 0.2rem 0.6rem;
-  border: 2px solid var(--carbone);
-  border-radius: 0.3rem;
-  transform: rotate(-3deg);
-  filter: url(#encre);
-  font-weight: 800;
-  font-stretch: 75%;
-  font-size: 1.35rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--carbone);
-}
-.recu-texte { margin: 0; padding: 0.4rem 0 0.6rem; border-bottom: 1px solid var(--carbone); }
-.recu p { margin: 0; }
-.recu .actions { margin-top: 0.5rem; }
-.bon.detache .recu { animation: apparaitre 500ms 250ms cubic-bezier(.2,.8,.2,1) both; }
-@keyframes apparaitre { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.recu .badge { justify-self: start; }
+.recu-texte { margin: 0; font: 700 clamp(1.5rem, 1.1rem + 1.6vw, 2.2rem)/1.05 var(--affiche); text-transform: uppercase; color: var(--croute); }
+.js .recu:not([hidden]) { animation: poser 600ms cubic-bezier(.16,1,.3,1) both; }
 
-/* ---------- Dos du carnet ---------- */
-.dos {
-  width: var(--large);
-  margin: 0 auto;
-  padding: 2rem 0 3rem;
-  border-top: 1px dashed rgb(244 210 60 / 0.4);
-  color: #F7F1D2;
-  font-size: 0.9375rem;
-  display: grid;
-  gap: 0.6rem;
-}
-.dos-nom {
-  margin: 0;
-  color: var(--jaune);
-  font-weight: 800;
-  font-stretch: 75%;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-}
-.dos address { font-style: normal; }
-.dos-liens { margin: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
-.dos-liens a { padding: 0.35rem 0; display: inline-block; }
-.dos-petit { margin: 0; color: #B9BEE8; font-size: 0.8125rem; }
+/* ---------- Horaires ---------- */
+.titre-etat { margin-bottom: 0.35em; }
+.horaires-grille { display: grid; gap: 1.5rem; }
+.etat { margin: 0; font-size: 1.0625rem; }
+.etat strong { color: var(--croute); }
+.table-horaires { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.table-horaires th, .table-horaires td { padding: 0.8rem 0; border-bottom: 1px dotted var(--seigle); text-align: left; font: 500 1.05rem/1.2 var(--affiche); letter-spacing: 0.03em; text-transform: uppercase; }
+.table-horaires td { text-align: right; color: var(--croute); }
+.table-horaires .ferme td { color: var(--miel); }
+.table-horaires tr.aujourdhui th, .table-horaires tr.aujourdhui td { color: var(--charbon); background: var(--croute); }
+.table-horaires tr.aujourdhui th { padding-left: 0.9rem; border-radius: 9999px 0 0 9999px; }
+.table-horaires tr.aujourdhui td { padding-right: 0.9rem; border-radius: 0 9999px 9999px 0; }
+
+/* ---------- Pied ---------- */
+.pied { padding: 2.5rem var(--marge) 3rem; border-top: 1px dotted var(--croute); display: grid; gap: 0.5rem; font-size: 0.875rem; }
+.pied p { margin: 0; }
+.pied .marque { font-size: 2.2rem; }
+.pied-liens { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+.pied-liens a { padding: 0.35rem 0; display: inline-block; color: var(--croute); }
 
 /* ---------- Pages légales ---------- */
-.legal .feuillet h2 {
-  margin: 1.75rem 0 0.5rem;
-  font-size: 1.3rem;
-  font-weight: 800;
-  font-stretch: 82%;
-}
-.legal .feuillet p, .legal .feuillet li { max-width: 68ch; }
-.legal .feuillet ul { padding-left: 1.1rem; }
-.retour { display: inline-block; margin-top: 1.5rem; font-weight: 700; }
+.legal main { padding: var(--section) var(--marge); max-width: 52rem; }
+.legal h1 { margin: 0 0 2rem; font: 700 clamp(3rem, 9vw, 6rem)/0.85 var(--affiche); text-transform: uppercase; color: var(--croute); }
+.legal h2 { margin: 2rem 0 0.4rem; font: 700 1.4rem/1 var(--affiche); text-transform: uppercase; color: var(--croute); }
+.legal p, .legal li { max-width: 68ch; line-height: 1.5; }
 
-/* ---------- Téléphone : les actions dans le premier écran ---------- */
-@media (max-width: 51.99rem) {
-  .couverture { padding: 0.75rem 0 1.5rem; }
-  .tampon { margin: 1rem 0 0.9rem; padding: 0.7rem 0.95rem 0.8rem; }
-  #aujourdhui .feuillet { display: flex; flex-direction: column; }
-  #aujourdhui .titre-bon { margin-bottom: 0.6rem; }
-  #aujourdhui .etat { margin-bottom: 0.9rem; }
-  #aujourdhui .champs { margin-bottom: 1.1rem; gap: 0.6rem; }
-  #aujourdhui .actions { order: 1; margin-bottom: 1.75rem; }
-  #aujourdhui .horaires { order: 2; }
-  #aujourdhui .note { order: 3; margin-bottom: 0; }
-}
+/* ---------- Apparitions au défilement ---------- */
+.js [data-apparait] { opacity: 0; transform: translateY(24px); transition: opacity 700ms ease-out, transform 900ms cubic-bezier(.16,1,.3,1); }
+.js [data-apparait].vu { opacity: 1; transform: none; }
 
 /* ---------- Écrans larges ---------- */
 @media (min-width: 52rem) {
-  :root { --souche: 3.5rem; --arrache: 18px; --large: min(100% - 4rem, 60rem); }
-  .couverture { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 27rem); grid-template-rows: auto auto 1fr; align-items: start; column-gap: 3rem; }
-  .nav { grid-column: 1 / -1; }
-  .tampon { grid-column: 1; }
-  .couverture-ligne { grid-column: 1; margin-top: 0.5rem; }
-  .tirage { display: block; grid-column: 2; grid-row: 2 / span 2; margin-top: 2.5rem; }
-  #gateaux .feuillet { display: grid; grid-template-columns: 1.5fr 1fr; column-gap: 2.5rem; align-items: start; }
-  #gateaux .titre-bon, #gateaux .chapeau, #gateaux .commande, #gateaux .recu, #gateaux noscript { grid-column: 1; }
-  #gateaux .agrafe--gateau { grid-column: 2; grid-row: 1 / span 4; margin-top: 0.75rem; }
-  #aujourdhui .feuillet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2.5rem;
-    align-items: start;
-  }
-  #aujourdhui .titre-bon, #aujourdhui .etat, #aujourdhui .actions { grid-column: 1; }
-  #aujourdhui .horaires { grid-column: 2; grid-row: 1 / span 4; }
-  #aujourdhui .note { grid-column: 2; }
-  #aujourdhui .champs { grid-column: 1; }
-  #le-pain .feuillet {
-    display: grid;
-    grid-template-columns: 1.35fr 1fr;
-    column-gap: 2.5rem;
-    align-items: start;
-  }
-  #le-pain .titre-bon, #le-pain .chapeau, #le-pain .lignes { grid-column: 1; }
-  #le-pain .agrafe { grid-column: 2; grid-row: 1 / span 3; margin-top: 0.75rem; }
-  .commande { grid-template-columns: 1fr 1fr; column-gap: 2rem; }
-  .commande .erreur, .commande .bouton, .commande > .aide { grid-column: 1 / -1; }
+  .nav { display: flex; }
+  .barre .marque { grid-column: 2; }
+  .affiche-pied .badge--etat { display: none; }
+  .barre-droite .badge { display: inline-flex; }
+  .affiche-pain { width: min(44vw, 40rem); margin: 0 0 -6% 0; }
+  .produit { grid-template-columns: 1fr 1fr; }
+  .produit--inverse img { order: 2; }
+  .gateaux { grid-template-columns: 1.1fr 1fr; align-items: center; column-gap: 3rem; }
+  .carte { padding: 2rem; }
+  .gateaux-tete img { width: min(26vw, 24rem); margin-top: -9%; }
+  .horaires-grille { grid-template-columns: 1fr 1.3fr; column-gap: 4rem; align-items: start; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; }
+  .js .ligne > span, .js .affiche-pain, .js .recu:not([hidden]) { animation: none; }
+  .affiche-pain { translate: none; rotate: none; }
+  .produit:hover img { transform: none; }
+  .js [data-apparait] { opacity: 1; transform: none; transition: none; }
 }

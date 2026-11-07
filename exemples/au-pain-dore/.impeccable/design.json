@@ -1,247 +1,331 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-07T16:11:46",
+  "generatedAt": "2026-11-07T18:30:00+01:00",
   "title": "Design System: Au Pain Doré",
   "extensions": {
     "colorMeta": {
-      "couverture": {
+      "four": {
+        "role": "neutral",
+        "displayName": "Brun de four",
+        "canonical": "oklch(40.6% 0.110 42.1)",
+        "tonalRamp": [
+          "#170602",
+          "#3C1809",
+          "#652D16",
+          "#904527",
+          "#B36546",
+          "#D88767",
+          "#F7B196",
+          "#FFE2D0"
+        ]
+      },
+      "croute": {
         "role": "primary",
-        "displayName": "Bleu couverture",
-        "canonical": "#2F3A9E",
+        "displayName": "Or de croûte",
+        "canonical": "oklch(80.5% 0.156 74.0)",
         "tonalRamp": [
-          "#10143A",
-          "#1A2160",
-          "#232C7E",
-          "#2F3A9E",
-          "#4A55B8",
-          "#7179CC",
-          "#A3A9E2",
-          "#D6D9F4"
+          "#170700",
+          "#3C1A00",
+          "#653000",
+          "#8F4A00",
+          "#B26B00",
+          "#D78D00",
+          "#F5B75E",
+          "#FFE7B0"
         ]
       },
-      "jaune-autocopiant": {
+      "miel": {
+        "role": "neutral",
+        "displayName": "Miel",
+        "canonical": "oklch(79.5% 0.113 68.3)",
+        "tonalRamp": [
+          "#150800",
+          "#381D00",
+          "#5E3400",
+          "#864F00",
+          "#A96F25",
+          "#CD904A",
+          "#ECB981",
+          "#FFE8C3"
+        ]
+      },
+      "mie-brune": {
+        "role": "neutral",
+        "displayName": "Mie brune",
+        "canonical": "oklch(28.4% 0.055 45.0)",
+        "tonalRamp": [
+          "#120906",
+          "#311F17",
+          "#54382C",
+          "#785443",
+          "#9A7362",
+          "#BD9482",
+          "#DFBCAC",
+          "#FFE9DE"
+        ]
+      },
+      "charbon": {
+        "role": "neutral",
+        "displayName": "Charbon",
+        "canonical": "oklch(20.7% 0.044 43.5)",
+        "tonalRamp": [
+          "#100907",
+          "#2F201A",
+          "#503A31",
+          "#745649",
+          "#957568",
+          "#B79689",
+          "#DABDB2",
+          "#FDEAE2"
+        ]
+      },
+      "seigle": {
+        "role": "neutral",
+        "displayName": "Seigle",
+        "canonical": "oklch(38.1% 0.096 43.0)",
+        "tonalRamp": [
+          "#160703",
+          "#391A0D",
+          "#61311C",
+          "#8A4A2F",
+          "#AD694E",
+          "#D18B6E",
+          "#F1B49C",
+          "#FFE4D3"
+        ]
+      },
+      "framboise": {
         "role": "secondary",
-        "displayName": "Jaune autocopiant",
-        "canonical": "#F4D23C",
+        "displayName": "Framboise",
+        "canonical": "oklch(56.5% 0.205 9.1)",
         "tonalRamp": [
-          "#4A3D06",
-          "#7A650C",
-          "#AE9214",
-          "#DDBB22",
-          "#F4D23C",
-          "#F7DE6E",
-          "#FAEAA2",
-          "#FDF6D6"
+          "#200006",
+          "#4D0018",
+          "#7F002D",
+          "#B20044",
+          "#DA3063",
+          "#FF5983",
+          "#FF91AD",
+          "#FFCFDF"
         ]
       },
-      "rose-autocopiant": {
-        "role": "secondary",
-        "displayName": "Rose autocopiant",
-        "canonical": "#F5C3CF",
-        "tonalRamp": [
-          "#4D1F2B",
-          "#7A3446",
-          "#A84D63",
-          "#D47E93",
-          "#F5C3CF",
-          "#F8D3DC",
-          "#FBE3E9",
-          "#FDF2F5"
-        ]
-      },
-      "rouge-numerotation": {
-        "role": "tertiary",
-        "displayName": "Rouge numérotation",
-        "canonical": "#A8150F",
-        "tonalRamp": [
-          "#3A0705",
-          "#5E0B08",
-          "#83100C",
-          "#A8150F",
-          "#CC3A33",
-          "#E06D67",
-          "#EFA29E",
-          "#F9D6D4"
-        ]
-      },
-      "carbone": {
+      "texte": {
         "role": "neutral",
-        "displayName": "Encre carbone",
-        "canonical": "#1E2156",
+        "displayName": "Mie claire",
+        "canonical": "oklch(90.8% 0.065 81.3)",
         "tonalRamp": [
-          "#0B0C22",
-          "#14163B",
-          "#1E2156",
-          "#3C3F78",
-          "#5F6297",
-          "#878AB5",
-          "#B3B5D3",
-          "#DEDFEE"
+          "#100A03",
+          "#2D220E",
+          "#4E3D1E",
+          "#705A31",
+          "#917A50",
+          "#B39B70",
+          "#D6C19D",
+          "#FBEDD5"
         ]
-      },
-      "ticket": {
-        "role": "neutral",
-        "displayName": "Papier ticket",
-        "canonical": "#FFFDF2"
-      },
-      "creme-couverture": {
-        "role": "neutral",
-        "displayName": "Crème couverture",
-        "canonical": "#F7F1D2"
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Tampon",
-        "purpose": "Le nom au tampon sur la couverture, uniquement."
+        "displayName": "Affiche",
+        "purpose": "Le nom de la boutique dans la première vue, sur deux lignes qui montent."
+      },
+      "display-geant": {
+        "displayName": "Titre géant",
+        "purpose": "Un chiffre ou un mot décoratif masqué aux lecteurs d'écran (48 h, OUVERT/FERMÉ)."
       },
       "headline": {
-        "displayName": "Titre de bon",
-        "purpose": "Titre de chaque bon numéroté."
+        "displayName": "Titre XL",
+        "purpose": "Titres de section."
+      },
+      "title": {
+        "displayName": "Titre M",
+        "purpose": "Sous-titres, titre de carte, nom de produit (jusqu'à 5,5 rem)."
       },
       "body": {
-        "displayName": "Texte",
-        "purpose": "Chapeaux et pages légales, 60–68ch au maximum."
+        "displayName": "Texte courant",
+        "purpose": "Hanken, phrases et paragraphes ; 40 ch pour l'intro, 68 ch en pages légales."
+      },
+      "body-small": {
+        "displayName": "Aide",
+        "purpose": "Aides et mentions, en miel."
       },
       "label": {
-        "displayName": "Libellé imprimé",
-        "purpose": "Libellés de champs et légendes, en capitales étroites."
+        "displayName": "Libellé de pilule",
+        "purpose": "Boutons en pilule."
       },
-      "manuscrit": {
-        "displayName": "Manuscrit",
-        "purpose": "Valeurs remplies à la main : champs, état ouvert/fermé, tickets."
+      "label-badge": {
+        "displayName": "Libellé de badge",
+        "purpose": "Badges ; les étiquettes de champ passent à +0,08 em en or."
       }
     },
-    "shadows": [
-      {
-        "name": "feuillet-pose",
-        "value": "0 1px 1px rgb(0 0 0 / 0.22), 0 14px 28px -14px rgb(0 0 0 / 0.5)",
-        "purpose": "Chaque bon posé sur la couverture."
-      },
-      {
-        "name": "feuillet-arrache",
-        "value": "0 1px 1px rgb(0 0 0 / 0.22), 0 18px 32px -14px rgb(0 0 0 / 0.55)",
-        "purpose": "Le bon détaché, soulevé."
-      },
-      {
-        "name": "ticket",
-        "value": "0 1px 2px rgb(30 33 86 / 0.25)",
-        "purpose": "Petits papiers épinglés."
-      }
-    ],
+    "shadows": [],
     "motion": [
       {
-        "name": "arracher",
-        "value": "800ms cubic-bezier(.3,.7,.2,1)",
-        "purpose": "Le bon de commande s'arrache le long des perforations."
+        "name": "ease-pose",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Courbe unique des entrées, apparitions, survol des produits et appui des pilules."
       },
       {
-        "name": "tampon-appui",
-        "value": "160ms cubic-bezier(.2,.8,.2,1)",
-        "purpose": "Appui sur un bouton tampon."
+        "name": "titre-monte",
+        "value": "1100ms ease-pose, 2e ligne +120ms ; translateY(105%) vers 0",
+        "purpose": "Les deux lignes du titre d'affiche montent dans leur fenêtre à l'ouverture."
+      },
+      {
+        "name": "pain-pose",
+        "value": "1300ms ease-pose, délai 250ms ; opacity 0, translateY(40px) scale(.94) vers repos",
+        "purpose": "La boule de pain se pose ; reprise en 600ms pour le reçu de commande."
+      },
+      {
+        "name": "pain-defile",
+        "value": "translate 0 → -60px, rotate 0 → 8deg sur la première hauteur d'écran (rAF)",
+        "purpose": "La boule remonte et tourne légèrement au défilement."
+      },
+      {
+        "name": "apparition",
+        "value": "opacity 700ms ease-out, translateY(24px) 900ms ease-pose ; une fois, rootMargin -8 %",
+        "purpose": "Apparition des blocs au défilement."
+      },
+      {
+        "name": "produit-survol",
+        "value": "scale(1.04) rotate(-2deg), 900ms ease-pose",
+        "purpose": "Le produit détouré bouge au survol de sa ligne."
+      },
+      {
+        "name": "pilule-etat",
+        "value": "background-color et color 200ms ease-out ; appui scale(.97) 250ms",
+        "purpose": "Survol et appui des pilules."
+      },
+      {
+        "name": "mouvement-reduit",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Aucune animation d'entrée, boule immobile, pas de survol produit, contenu visible d'emblée, défilement doux coupé."
       }
     ],
     "breakpoints": [
       {
-        "name": "produits-empiles",
-        "value": "32rem"
-      },
-      {
-        "name": "deux-colonnes",
+        "name": "large",
         "value": "52rem"
       }
     ]
   },
   "components": [
     {
-      "name": "Bouton tampon plein",
+      "name": "Pilule pleine",
       "kind": "button",
-      "refersTo": "bouton-plein",
-      "description": "Action principale : Itinéraire, Détacher mon bon.",
-      "html": "<a class=\"ds-tampon ds-tampon--plein\" href=\"#\">Itinéraire</a>",
-      "css": ".ds-tampon{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.7rem 1.25rem;color:var(--carbone,#1E2156);font-family:Bricolage,'Arial Narrow',sans-serif;font-weight:800;font-stretch:75%;letter-spacing:.07em;text-transform:uppercase;text-decoration:none}.ds-tampon::before{content:'';position:absolute;inset:3px;z-index:-1;border:2px solid #1E2156;border-radius:.4rem;outline:1.5px solid #1E2156;outline-offset:2px}.ds-tampon--plein{color:#F4D23C}.ds-tampon--plein::before{background:#1E2156}.ds-tampon:hover::before{background:rgb(30 33 86 / .1)}.ds-tampon--plein:hover::before{background:#2B2F72}.ds-tampon:focus-visible{outline:2px dashed #1E2156;outline-offset:4px}"
+      "refersTo": "pilule-pleine",
+      "description": "L'action principale d'un groupe : or plein, texte charbon.",
+      "html": "<div class=\"ds-fond\"><a class=\"ds-pilule ds-pilule--pleine\" href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z\"/><circle cx=\"12\" cy=\"10\" r=\"2.4\"/></svg>Itinéraire</a></div>",
+      "css": ":host{--four:#78300F;--croute:#FAAE33;--miel:#ECAE68;--mie-brune:#402011;--charbon:#281006;--seigle:#6B2E12;--framboise:#D1255C;--texte:#F7DDB0;} .ds-fond{padding:1.5rem;background:var(--four);} .ds-pilule{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:2.75rem;padding:.55rem 1.15rem;border:1px solid var(--croute);border-radius:9999px;background:transparent;color:var(--croute);font-family:\"Antonio\",\"Arial Narrow\",Impact,sans-serif;font-weight:500;font-size:.875rem;line-height:1;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 200ms ease-out,color 200ms ease-out,transform 250ms cubic-bezier(.16,1,.3,1);} .ds-pilule:active{transform:scale(.97);} .ds-pilule:focus-visible{outline:2px solid var(--croute);outline-offset:3px;} .ds-pilule--pleine{background:var(--croute);color:var(--charbon);} .ds-pilule--pleine:hover{background:#FFC35A;}"
     },
     {
-      "name": "Bouton tampon contour",
+      "name": "Pilule fantôme",
       "kind": "button",
-      "refersTo": "bouton-contour",
-      "description": "Action secondaire : Appeler, Instagram.",
-      "html": "<a class=\"ds-tampon\" href=\"#\">Appeler</a>",
-      "css": ".ds-tampon{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.7rem 1.25rem;color:#1E2156;font-family:Bricolage,'Arial Narrow',sans-serif;font-weight:800;font-stretch:75%;letter-spacing:.07em;text-transform:uppercase;text-decoration:none}.ds-tampon::before{content:'';position:absolute;inset:3px;z-index:-1;border:2px solid #1E2156;border-radius:.4rem;outline:1.5px solid #1E2156;outline-offset:2px}.ds-tampon:hover::before{background:rgb(30 33 86 / .1)}.ds-tampon:focus-visible{outline:2px dashed #1E2156;outline-offset:4px}"
+      "refersTo": "pilule-fantome",
+      "description": "Navigation et actions secondaires : contour et texte or sur le brun.",
+      "html": "<div class=\"ds-fond\"><a class=\"ds-pilule\" href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 3.5h3.2l1.6 4.2-2.1 1.5a11 11 0 0 0 7.1 7.1l1.5-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z\"/></svg>04 78 00 00 00</a></div>",
+      "css": ":host{--four:#78300F;--croute:#FAAE33;--miel:#ECAE68;--mie-brune:#402011;--charbon:#281006;--seigle:#6B2E12;--framboise:#D1255C;--texte:#F7DDB0;} .ds-fond{padding:1.5rem;background:var(--four);} .ds-pilule{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:2.75rem;padding:.55rem 1.15rem;border:1px solid var(--croute);border-radius:9999px;background:transparent;color:var(--croute);font-family:\"Antonio\",\"Arial Narrow\",Impact,sans-serif;font-weight:500;font-size:.875rem;line-height:1;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 200ms ease-out,color 200ms ease-out,transform 250ms cubic-bezier(.16,1,.3,1);} .ds-pilule:active{transform:scale(.97);} .ds-pilule:focus-visible{outline:2px solid var(--croute);outline-offset:3px;} .ds-pilule:hover{background:var(--mie-brune);}"
     },
     {
-      "name": "Champ de formulaire",
-      "kind": "input",
-      "description": "Libellé imprimé, filet, saisie manuscrite.",
-      "html": "<label class=\"ds-champ\"><span>Pour quel jour ?</span><input placeholder=\"votre prénom\"></label>",
-      "css": ".ds-champ{display:block;background:#F4D23C;padding:1rem;color:#1E2156}.ds-champ span{display:block;font:700 .75rem/1.4 Bricolage,'Arial Narrow',sans-serif;font-stretch:80%;letter-spacing:.08em;text-transform:uppercase;color:#3C3F78}.ds-champ input{display:block;width:100%;border:0;border-bottom:1.5px solid #1E2156;background:transparent;font:600 1.6rem/1.2 Caveat,cursive;color:#1E2156;caret-color:#A8150F}.ds-champ input:focus{outline:none;border-bottom:3px solid #A8150F}"
-    },
-    {
-      "name": "Bon numéroté",
-      "kind": "card",
-      "refersTo": "bon-jaune",
-      "description": "Section type : souche numérotée + feuillet.",
-      "html": "<div class=\"ds-bon\"><div class=\"ds-souche\"><span>N° 0001</span></div><div class=\"ds-feuillet\"><h3>On passe aujourd'hui ?</h3></div></div>",
-      "css": ".ds-bon{display:grid;grid-template-columns:2.75rem 1fr;background:#F4D23C;border-radius:3px;box-shadow:0 1px 1px rgb(0 0 0 / .22),0 14px 28px -14px rgb(0 0 0 / .5);color:#1E2156}.ds-souche{position:relative;display:grid;place-items:center;border-right:1px dashed rgb(30 33 86 / .35)}.ds-souche::after{content:'';position:absolute;inset:0 -4px 0 auto;width:8px;background:radial-gradient(circle,#2F3A9E 0 3.5px,transparent 4px) 0 0/8px 14px repeat-y}.ds-souche span{writing-mode:vertical-rl;transform:rotate(180deg);color:#A8150F;font:700 1.15rem Bricolage,sans-serif;font-stretch:75%;letter-spacing:.12em}.ds-feuillet{padding:1.5rem 1.25rem}.ds-feuillet h3{margin:0;font:800 2rem/1 Bricolage,sans-serif;font-stretch:78%}"
-    },
-    {
-      "name": "Ticket",
+      "name": "Badges",
       "kind": "chip",
-      "refersTo": "ticket",
-      "description": "Petit papier épinglé à un produit.",
-      "html": "<span class=\"ds-ticket\"><small>sorti du four à 4 h</small>levain maison</span>",
-      "css": ".ds-ticket{display:inline-block;padding:.2rem .55rem;background:#FFFDF2;color:#1E2156;font:600 1.2rem/1.1 Caveat,cursive;transform:rotate(-1.5deg);box-shadow:0 1px 2px rgb(30 33 86 / .25);border-left:1px dashed rgb(30 33 86 / .4)}.ds-ticket small{display:block;font:700 .75rem Bricolage,sans-serif;font-stretch:80%;color:#3C3F78}"
+      "refersTo": "badge-plein",
+      "description": "Plein (faits), creux (conditions), état fermé en framboise.",
+      "html": "<div class=\"ds-fond\"><span class=\"ds-badge\">Levain maison</span><span class=\"ds-badge ds-badge--creux\">Sur commande, 48 h</span><span class=\"ds-badge ds-badge--ferme\">Fermé · demain 7 h</span></div>",
+      "css": ":host{--four:#78300F;--croute:#FAAE33;--miel:#ECAE68;--mie-brune:#402011;--charbon:#281006;--seigle:#6B2E12;--framboise:#D1255C;--texte:#F7DDB0;} .ds-fond{padding:1.5rem;background:var(--four);display:flex;flex-wrap:wrap;gap:.4rem;} .ds-badge{display:inline-flex;align-items:center;padding:.3rem .8rem;border-radius:9999px;background:var(--croute);color:var(--charbon);font-family:\"Antonio\",\"Arial Narrow\",Impact,sans-serif;font-weight:500;font-size:.75rem;line-height:1.1;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;} .ds-badge--creux{background:var(--mie-brune);color:var(--croute);} .ds-badge--ferme{background:var(--framboise);color:#FFF4E6;}"
     },
     {
-      "name": "Navigation de couverture",
+      "name": "Carte et champ pilule",
+      "kind": "input",
+      "refersTo": "champ",
+      "description": "La carte mie brune à 6 px qui porte des champs en pilule charbon.",
+      "html": "<div class=\"ds-fond\"><div class=\"ds-carte\"><label class=\"ds-champ\"><span>Pour quel jour ?</span><input placeholder=\"votre prénom\"></label></div></div>",
+      "css": ":host{--four:#78300F;--croute:#FAAE33;--miel:#ECAE68;--mie-brune:#402011;--charbon:#281006;--seigle:#6B2E12;--framboise:#D1255C;--texte:#F7DDB0;} .ds-fond{padding:1.5rem;background:var(--four);} .ds-carte{background:var(--mie-brune);border-radius:6px;padding:1.5rem;color:var(--texte);} .ds-champ{display:grid;gap:.35rem;} .ds-champ span{font-family:\"Antonio\",\"Arial Narrow\",Impact,sans-serif;font-weight:500;font-size:.75rem;line-height:1;letter-spacing:.08em;text-transform:uppercase;color:var(--croute);} .ds-champ input{min-height:3rem;padding:.7rem 1.1rem;border:1px solid var(--seigle);border-radius:9999px;background:var(--charbon);color:var(--texte);font-family:\"Hanken Grotesk\",\"Hanken\",\"Helvetica Neue\",Arial,sans-serif;font-weight:500;font-size:1rem;caret-color:var(--croute);} .ds-champ input::placeholder{color:#A9773F;} .ds-champ input:focus{outline:none;border-color:var(--croute);}"
+    },
+    {
+      "name": "Barre de navigation",
       "kind": "nav",
-      "description": "Liens jaunes sur la couverture bleue.",
-      "html": "<nav class=\"ds-nav\"><a href=\"#\">Horaires</a><a href=\"#\">Le pain</a><a href=\"#\">Gâteaux</a></nav>",
-      "css": ".ds-nav{display:flex;gap:1.25rem;background:#2F3A9E;padding:1rem;font:600 .9375rem Bricolage,sans-serif;font-stretch:80%;letter-spacing:.02em}.ds-nav a{color:#F4D23C;text-decoration:none}.ds-nav a:hover{text-decoration:underline}.ds-nav a:focus-visible{outline:2px dashed #F4D23C;outline-offset:3px}"
+      "refersTo": "pilule-fantome",
+      "description": "Pilules de section, logotype or au centre, état et Appeler à droite.",
+      "html": "<header class=\"ds-barre\"><nav class=\"ds-nav\"><a class=\"ds-pilule\" href=\"#\">Le pain</a><a class=\"ds-pilule\" href=\"#\">Horaires</a></nav><a class=\"ds-marque\" href=\"#\">Au Pain Doré</a><div class=\"ds-droite\"><span class=\"ds-badge\">Ouvert jusqu'à 19 h 30</span><a class=\"ds-pilule\" href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 3.5h3.2l1.6 4.2-2.1 1.5a11 11 0 0 0 7.1 7.1l1.5-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z\"/></svg>Appeler</a></div></header>",
+      "css": ":host{--four:#78300F;--croute:#FAAE33;--miel:#ECAE68;--mie-brune:#402011;--charbon:#281006;--seigle:#6B2E12;--framboise:#D1255C;--texte:#F7DDB0;} .ds-barre{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:.75rem;padding:.9rem 1.5rem;background:var(--four);} .ds-nav{display:flex;gap:.4rem;} .ds-droite{justify-self:end;display:flex;align-items:center;gap:.5rem;} .ds-marque{font-family:\"Antonio\",\"Arial Narrow\",Impact,sans-serif;font-weight:700;font-size:1.25rem;line-height:1;letter-spacing:.02em;text-transform:uppercase;color:var(--croute);text-decoration:none;} .ds-pilule{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:2.75rem;padding:.55rem 1.15rem;border:1px solid var(--croute);border-radius:9999px;background:transparent;color:var(--croute);font-family:\"Antonio\",\"Arial Narrow\",Impact,sans-serif;font-weight:500;font-size:.875rem;line-height:1;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 200ms ease-out,color 200ms ease-out,transform 250ms cubic-bezier(.16,1,.3,1);} .ds-pilule:active{transform:scale(.97);} .ds-pilule:focus-visible{outline:2px solid var(--croute);outline-offset:3px;} .ds-badge{display:inline-flex;align-items:center;padding:.3rem .8rem;border-radius:9999px;background:var(--croute);color:var(--charbon);font-family:\"Antonio\",\"Arial Narrow\",Impact,sans-serif;font-weight:500;font-size:.75rem;line-height:1.1;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;} .ds-pilule:hover{background:var(--mie-brune);}"
+    },
+    {
+      "name": "Typographie géante et filet en pointillés",
+      "kind": "custom",
+      "refersTo": "display-geant",
+      "description": "Titres d'affiche or en capitales Antonio, séparés par un filet pointillé or.",
+      "html": "<div class=\"ds-fond\"><p class=\"ds-geant\">48 h</p><hr class=\"ds-filet\"><h2 class=\"ds-xl\">Ce qui sort<br>du four</h2></div>",
+      "css": ":host{--four:#78300F;--croute:#FAAE33;--miel:#ECAE68;--mie-brune:#402011;--charbon:#281006;--seigle:#6B2E12;--framboise:#D1255C;--texte:#F7DDB0;} .ds-fond{padding:1.5rem;background:var(--four);} .ds-geant,.ds-xl{margin:0;font-family:\"Antonio\",\"Arial Narrow\",Impact,sans-serif;font-weight:700;text-transform:uppercase;color:var(--croute);} .ds-geant{font-size:9rem;line-height:.78;letter-spacing:-.02em;} .ds-xl{font-size:4rem;line-height:.95;letter-spacing:-.015em;} .ds-filet{margin:1.5rem 0;border:0;border-top:1px dotted var(--croute);opacity:.8;}"
+    },
+    {
+      "name": "Ligne d'horaires du jour",
+      "kind": "custom",
+      "refersTo": "pilule-pleine",
+      "description": "Le jour courant devient une pilule or ; les autres lignes sont séparées en pointillés seigle.",
+      "html": "<div class=\"ds-fond\"><table class=\"ds-h\"><tr><th>Lundi</th><td class=\"ds-f\">Fermé</td></tr><tr class=\"ds-auj\"><th>Mardi</th><td>7 h – 19 h 30</td></tr></table></div>",
+      "css": ":host{--four:#78300F;--croute:#FAAE33;--miel:#ECAE68;--mie-brune:#402011;--charbon:#281006;--seigle:#6B2E12;--framboise:#D1255C;--texte:#F7DDB0;} .ds-fond{padding:1.5rem;background:var(--four);} .ds-h{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;} .ds-h th,.ds-h td{padding:.8rem 0;border-bottom:1px dotted var(--seigle);text-align:left;font-family:\"Antonio\",\"Arial Narrow\",Impact,sans-serif;font-weight:500;font-size:1.05rem;line-height:1.2;letter-spacing:.03em;text-transform:uppercase;color:var(--texte);} .ds-h td{text-align:right;color:var(--croute);} .ds-h td.ds-f{color:var(--miel);} .ds-auj th,.ds-auj td{background:var(--croute);color:var(--charbon);} .ds-auj th{padding-left:.9rem;border-radius:9999px 0 0 9999px;} .ds-auj td{padding-right:.9rem;border-radius:0 9999px 9999px 0;color:var(--charbon);}"
     }
   ],
   "narrative": {
-    "northStar": "Le carnet de commandes",
-    "overview": "Le site est le carnet à souches de la boutique : une couverture bleu carbone qui tient une liasse de bons autocopiants jaunes et roses. Chaque section est un bon numéroté. On le lit comme un formulaire imprimé, avec des libellés étroits et des filets, les valeurs sont remplies à la main, et le bon de commande se détache vraiment le long de ses perforations.\n\nTout est dessiné en deux encres : le carbone (bleu-noir) porte le texte, les filets et les tampons, et le rouge de numérotation porte les numéros de série. Les nuances viennent de hachures, jamais de dégradés. L'ambiance est chaleureuse par la couleur du papier et l'écriture, mais pas vieillotte : la typographie est une grotesque étroite et contemporaine, pas une serif d'antan.",
+    "northStar": "L'affiche de marché",
+    "overview": "La boulangerie se lit comme une affiche collée au mur du marché : le nom en capitales étroites énormes, un seul or « croûte » sur un brun « four » qui couvre toutes les pages, et le pain posé directement sur ce fond, sans cadre ni table. La page est faite d'environ 90 % de typographie et 10 % de produit ; le produit n'a de place que parce qu'il est détouré et repose sur la même couleur que la page.\n\nLe système est traduit d'une fiche de style de référence imposée par l'utilisateur (une affiche d'épicerie, or sur brun-rouille), puis adapté au pain : Antonio et Hanken Grotesk remplacent les polices propriétaires, les épis de blé remplacent le feuillage en filigrane, la framboise devient la couleur de l'état « fermé ». Le nom, les textes et la police de la marque de référence ne sont pas repris. Un écart est assumé : le texte courant garde un interlignage de 1,5 (la référence plafonnait à 1,4) pour rester lisible.\n\nTout est plat : pas d'ombre, pas de halo, pas de bande de couleur pour séparer les sections. La hiérarchie vient de la taille des titres, de l'or, des pilules et des filets en pointillés.",
     "keyCharacteristics": [
-      "Couverture bleue pleine page, bons en papier coloré posés dessus.",
-      "Souche verticale à gauche de chaque bon : numéro de série rouge, colonne de trous qui laisse voir la couverture.",
-      "Libellés imprimés en petites capitales étroites au-dessus de filets, valeurs en écriture manuscrite.",
-      "Tampons encreurs (contours irréguliers par filtre SVG) pour le nom et les boutons."
+      "Un fond unique brun de four sur toutes les pages, avec un filigrane d'épis de blé.",
+      "Un seul accent, l'or de croûte, pour les titres, les boutons, les filets et les chiffres.",
+      "Des titres d'affiche en Antonio capitales, de 2,8 rem à 26 rem.",
+      "Des pilules partout (boutons, badges, champs, ligne du jour), des cartes à 6 px.",
+      "Des produits en vrais détourages alpha, posés à même le fond.",
+      "Aucune ombre ; profondeur par superposition des titres et du pain."
     ],
     "rules": [
       {
-        "name": "La règle des deux encres",
-        "body": "Sur le papier, on n'imprime qu'en carbone et en rouge. Toute nuance supplémentaire se fait par hachure (lignes de 1 px) ou par transparence du carbone, jamais par une nouvelle couleur ni par un dégradé.",
+        "name": "The One Gold Rule",
+        "body": "L'or de croûte est le seul accent. Pas de deuxième couleur vive, pas de couleur froide ; un nouvel élément qui veut attirer l'œil prend l'or ou grossit.",
         "section": "colors"
       },
       {
-        "name": "La règle du rouge de série",
-        "body": "Le rouge est réservé aux numéros de série et aux signaux de saisie ou d'erreur. Il ne sert jamais à mettre un mot en valeur : l'emphase passe par la graisse et le soulignement carbone.",
+        "name": "The Raspberry Reserve Rule",
+        "body": "La framboise ne signale qu'une chose : « fermé », sur la pilule d'état. Elle ne sert ni à la décoration, ni aux erreurs, ni aux promotions.",
         "section": "colors"
       },
       {
-        "name": "La règle du formulaire rempli",
-        "body": "L'écriture manuscrite n'apparaît que pour une valeur écrite dans un champ ou sur un ticket, jamais pour un titre ou un paragraphe.",
+        "name": "The No Band Rule",
+        "body": "Le brun de four couvre la page d'un bout à l'autre. Aucune section ne reçoit un fond de couleur unie pleine largeur ; les sections se séparent par un filet en pointillés or. Le mince bandeau « exemple fictif » en haut est une obligation du produit, pas un motif à réutiliser.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Poster Face Rule",
+        "body": "Antonio est la seule police d'affiche. Pas de deuxième police de titre, pas de police système pour l'affichage.",
         "section": "typography"
       },
       {
-        "name": "La règle de l'ombre noire",
-        "body": "Les ombres sont neutres (noir transparent), décalées vers le bas et floues. Jamais de halo coloré sur le fond bleu.",
+        "name": "The Small Text Rule",
+        "body": "Hanken reste petite et posée : 0,8125 à 1,125 rem, interlignage 1,5. Tout ce qui doit frapper passe en Antonio capitales, pas en Hanken grossie.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Oven Rule",
+        "body": "Pas de `box-shadow`, pas de `text-shadow`, pas de halo ni de flou. Un élément qui doit se détacher change de palier tonal ou passe à l'or.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do poser chaque nouvelle section comme un bon numéroté (souche + feuillet), en alternant jaune et rose.",
-      "Do écrire les libellés en petites capitales étroites (0.75rem, 0.08em) au-dessus d'un filet, et les valeurs à la main.",
-      "Do ombrer par hachures de 1px (repeating-linear-gradient à 45°) quand une case est vide ou fermée.",
-      "Do thémer les surfaces du navigateur : sélection carbone sur jaune, curseur rouge, barre de défilement jaune sur bleu sombre."
+      "**Do** garder le brun de four (`four`) comme fond unique de chaque page, avec le filigrane d'épis.",
+      "**Do** réserver l'or de croûte (`croute`) à l'accent et poser le texte en charbon sur l'or.",
+      "**Do** utiliser la pilule (9999 px) pour boutons, badges et champs, et la carte à 6 px pour le seul conteneur.",
+      "**Do** séparer les sections par un filet en pointillés or de 1 px, jamais par un fond.",
+      "**Do** montrer les produits en vrais détourages alpha, posés à même le fond, et accorder le fond des photos au brun de four avant détourage.",
+      "**Do** faire frapper les titres par la taille : Antonio 700 capitales, interlettrage négatif.",
+      "**Do** prévoir le chemin de mouvement réduit pour toute nouvelle animation : contenu visible, rien qui bouge."
     ],
     "donts": [
-      "Don't ajouter une troisième encre ni un dégradé de couleur sur le papier.",
-      "Don't utiliser le rouge pour mettre un mot en valeur.",
-      "Don't employer l'écriture manuscrite pour un titre ou un paragraphe.",
-      "Don't utiliser de photo de banque d'images présentée comme celle de la boutique : l'emplacement photo agrafé attend les vraies photos."
+      "**Don't** ajouter d'ombre, de halo ou de flou, ni sur les boutons, ni sur les cartes, ni sur les produits.",
+      "**Don't** utiliser la framboise ailleurs que sur l'état « fermé ».",
+      "**Don't** introduire une deuxième couleur d'accent, une couleur froide ou du blanc pur.",
+      "**Don't** poser une section sur une bande de couleur unie pleine largeur.",
+      "**Don't** simuler un détourage avec un masque CSS, un mode de fusion (`mix-blend-mode`) ou une image à fond rectangulaire : le produit doit être une vraie image à transparence.",
+      "**Don't** ajouter une deuxième police d'affiche, ni passer le texte courant au-dessus de 1,125 rem."
     ]
   }
 }

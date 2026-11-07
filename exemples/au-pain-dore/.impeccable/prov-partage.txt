@@ -1,0 +1,1 @@
+Share card composed in HTML from boule.webp (an AI illustration), rendered with headless Chrome, 2026-11-07. Fictional demo site.

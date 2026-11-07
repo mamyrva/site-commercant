@@ -4,8 +4,8 @@ Les exemples utilisent des polices libres, hébergées dans chaque site (`site/f
 
 | Police | Auteurs | Utilisée dans |
 |---|---|---|
-| Bricolage Grotesque | Ateliertriay | Au Pain Doré |
-| Caveat | Impallari Type | Au Pain Doré |
+| Antonio | Vernon Adams | Au Pain Doré |
+| Hanken Grotesk | Hanken Design Co. | Au Pain Doré |
 | Italiana | Santiago Orozco | Maison Vauclair |
 | Jost | indestructible type* | Maison Vauclair |
 | Archivo | Omnibus-Type | Garage Delorme |

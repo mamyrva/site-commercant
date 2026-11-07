@@ -9,12 +9,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Au Pain Doré · Boulangerie à la Croix-Rousse">
 <meta property="og:description" content="Pain au levain, baguette tradition, brioche aux pralines et gâteaux sur commande, faits sur place la nuit, 12 rue d'Austerlitz, Lyon 4e.">
-<meta property="og:image" content="[À COMPLÉTER : adresse du site]/images/partage.png">
+<meta property="og:image" content="[À COMPLÉTER : adresse du site]/images/partage.jpg">
 <meta property="og:locale" content="fr_FR">
-<meta name="theme-color" content="#2F3A9E">
+<meta name="theme-color" content="#78300F">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/antonio.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -22,13 +22,7 @@
   "@type": "Bakery",
   "name": "Au Pain Doré",
   "telephone": "+33478000000",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "12 rue d'Austerlitz",
-    "postalCode": "69004",
-    "addressLocality": "Lyon",
-    "addressCountry": "FR"
-  },
+  "address": { "@type": "PostalAddress", "streetAddress": "12 rue d'Austerlitz", "postalCode": "69004", "addressLocality": "Lyon", "addressCountry": "FR" },
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "19:30" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:00", "closes": "13:00" },
@@ -41,182 +35,162 @@
 </head>
 <body>
 <svg class="defs" aria-hidden="true" focusable="false">
-  <filter id="encre" x="-5%" y="-10%" width="110%" height="120%">
-    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="bruit"/>
-    <feDisplacementMap in="SourceGraphic" in2="bruit" scale="2.2"/>
-  </filter>
   <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.5a11 11 0 0 0 7.1 7.1l1.5-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z"/></symbol>
   <symbol id="i-lieu" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10" r="2.4"/></symbol>
   <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".6"/></symbol>
 </svg>
 
-<p class="fictif">Exemple fictif : ce site démontre le skill <em>site-commercant</em>. Cette boulangerie n'existe pas.</p>
+<p class="fictif">Exemple fictif : ce site démontre le skill <em>site-commercant</em>. Cette boulangerie n'existe pas, et les photos sont des illustrations générées par IA.</p>
 
-<header class="couverture">
+<header class="barre">
   <nav class="nav" aria-label="Sections">
-    <a href="#aujourdhui">Horaires</a>
-    <a href="#le-pain">Le pain</a>
-    <a href="#gateaux">Gâteaux</a>
-    <a href="#venir">Venir</a>
+    <a class="pilule" href="#pain">Le pain</a>
+    <a class="pilule" href="#gateaux">Gâteaux</a>
+    <a class="pilule" href="#horaires">Horaires</a>
   </nav>
-  <h1 class="tampon">
-    <span class="tampon-nom">Au Pain Doré</span>
-    <span class="tampon-sous">Boulangerie · Pâtisserie<br>Croix-Rousse, Lyon 4<sup>e</sup></span>
-  </h1>
-  <p class="couverture-ligne">Tout est façonné et cuit ici, la&nbsp;nuit.</p>
-  <figure class="tirage">
-    <img src="images/fournil.jpg" width="1800" height="1012" alt="Un boulanger sort du four une plaque de pains au levain et de baguettes, la nuit, dans la lumière du four." fetchpriority="high">
-    <figcaption>Le fournil, la nuit. <span class="illus">Illustration</span></figcaption>
-  </figure>
+  <a class="marque" href="index.html" aria-label="Au Pain Doré, accueil">Au Pain Doré</a>
+  <div class="barre-droite">
+    <span class="badge badge--etat" data-etat-court hidden></span>
+    <a class="pilule" href="tel:+33478000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+  </div>
 </header>
 
-<main class="carnet">
+<main>
+  <!-- L'affiche : le nom en très grand, la boule de pain posée devant -->
+  <section class="affiche" aria-labelledby="t-titre">
+    <h1 id="t-titre" class="affiche-titre">
+      <span class="ligne"><span>Au pain</span></span>
+      <span class="ligne"><span>doré</span></span>
+    </h1>
+    <img class="affiche-pain" src="images/boule.webp" width="793" height="540" alt="Une boule de pain au levain, croûte dorée et farinée." fetchpriority="high">
+    <div class="affiche-pied">
+      <span class="badge badge--etat" data-etat-court hidden></span>
+      <p class="affiche-texte">Boulangerie-pâtisserie au 12 rue d'Austerlitz, Croix-Rousse, Lyon 4<sup>e</sup>. Tout est façonné et cuit ici, la&nbsp;nuit.</p>
+      <ul class="badges" aria-label="En bref">
+        <li class="badge">Levain maison</li>
+        <li class="badge">Fait sur place</li>
+        <li class="badge badge--creux">Brioche aux pralines</li>
+      </ul>
+      <div class="actions">
+        <a class="pilule pilule--pleine" href="https://www.google.com/maps/search/?api=1&amp;query=Au+Pain+Dor%C3%A9+12+rue+d%27Austerlitz+69004+Lyon"><svg class="ic" aria-hidden="true"><use href="#i-lieu"/></svg>Itinéraire</a>
+        <a class="pilule" href="tel:+33478000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>04 78 00 00 00</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- HORAIRES : modifier ici (et dans le bloc JSON-LD en haut, et dans js/main.js) -->
-  <section class="bon bon--jaune" id="aujourdhui" aria-labelledby="t-aujourdhui">
-    <div class="souche" aria-hidden="true"><span class="numero">N° 0001</span></div>
-    <div class="feuillet">
-      <h2 id="t-aujourdhui" class="titre-bon">On passe aujourd'hui&nbsp;?</h2>
-      <p class="etat" data-etat hidden></p>
+  <hr class="pointilles">
 
-      <dl class="champs">
-        <div class="champ">
-          <dt>Adresse</dt>
-          <dd class="rempli">12 rue d'Austerlitz, 69004 Lyon</dd>
+  <section class="pain" id="pain" aria-labelledby="t-pain">
+    <h2 id="t-pain" class="titre-xl" data-apparait>Ce qui sort<br>du four</h2>
+    <p class="intro" data-apparait>Chaque nuit, le fournil façonne et cuit sur place tout ce qui est en vitrine le matin. Notre levain est entretenu depuis l'ouverture de la boutique.</p>
+
+    <div class="produit" data-apparait>
+      <img src="images/baguettes.webp" width="1300" height="991" loading="lazy" alt="Trois baguettes tradition croisées, croûte dorée.">
+      <div class="produit-texte">
+        <h3 class="titre-m">Baguette tradition</h3>
+        <ul class="badges"><li class="badge">Façonnée ici</li></ul>
+      </div>
+    </div>
+    <div class="produit produit--inverse" data-apparait>
+      <img src="images/croissant.webp" width="900" height="497" loading="lazy" alt="Un croissant pur beurre aux couches dorées.">
+      <div class="produit-texte">
+        <h3 class="titre-m">Croissant</h3>
+        <ul class="badges"><li class="badge">Pur beurre</li></ul>
+      </div>
+    </div>
+    <div class="produit" data-apparait>
+      <img src="images/brioche.webp" width="900" height="694" loading="lazy" alt="Une brioche ronde parsemée de pralines roses.">
+      <div class="produit-texte">
+        <h3 class="titre-m">Brioche aux pralines</h3>
+        <ul class="badges"><li class="badge">La lyonnaise</li></ul>
+      </div>
+    </div>
+
+    <h3 class="titre-m titre-liste" data-apparait>Et aussi</h3>
+    <ul class="liste" data-apparait>
+      <li><span>Pain au levain naturel</span><span class="badge">Levain maison</span></li>
+      <li><span>Tarte du moment</span><span class="badge badge--creux">Demandez au comptoir</span></li>
+      <li><span>Gâteaux d'anniversaire</span><span class="badge badge--creux">Sur commande, 48&nbsp;h</span></li>
+    </ul>
+  </section>
+
+  <hr class="pointilles">
+
+  <section class="gateaux" id="gateaux" aria-labelledby="t-gateau">
+    <div class="gateaux-tete">
+      <p class="titre-geant" aria-hidden="true">48&nbsp;h</p>
+      <img src="images/gateau.webp" width="1000" height="723" loading="lazy" alt="Un gâteau au chocolat garni de framboises.">
+    </div>
+    <div class="carte">
+      <h2 id="t-gateau" class="titre-m">Un gâteau sur commande</h2>
+      <p>Anniversaire, baptême, goûter du dimanche&nbsp;: commandez au moins 48&nbsp;h à l'avance. Préparez votre demande ici, puis appelez-nous pour la confirmer.</p>
+      <form class="commande" data-commande novalidate>
+        <label class="champ"><span>Pour quel jour&nbsp;?</span><input name="jour" type="date" required></label>
+        <label class="champ"><span>Combien de parts&nbsp;?</span>
+          <select name="parts" required><option value="">Choisir</option><option>4 parts</option><option>6 parts</option><option>8 parts</option><option>10 parts</option><option>12 parts ou plus</option></select>
+        </label>
+        <label class="champ"><span>Quelle envie&nbsp;?</span><input name="envie" autocomplete="off" placeholder="chocolat, framboise…"></label>
+        <label class="champ"><span>À quel nom&nbsp;?</span><input name="nom" autocomplete="given-name" placeholder="votre prénom"></label>
+        <p class="erreur" role="alert" hidden data-erreur></p>
+        <button class="pilule pilule--pleine" type="submit">Préparer ma demande</button>
+        <p class="aide">Rien n'est envoyé : la demande reste sur votre téléphone. <a href="confidentialite.html">Confidentialité</a></p>
+      </form>
+      <div class="recu" data-recu hidden tabindex="-1">
+        <p class="badge">Votre demande</p>
+        <p class="recu-texte" data-recu-texte></p>
+        <div class="actions">
+          <a class="pilule pilule--pleine" href="tel:+33478000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>Appeler pour confirmer</a>
+          <button class="pilule" type="button" data-recommencer>Modifier</button>
         </div>
-        <div class="champ">
-          <dt>Téléphone</dt>
-          <dd class="rempli"><a href="tel:+33478000000">04 78 00 00 00</a></dd>
-        </div>
-      </dl>
+      </div>
+      <noscript><p>Pour commander, appelez le <a href="tel:+33478000000">04 78 00 00 00</a>, au moins 48 h à l'avance.</p></noscript>
+    </div>
+  </section>
 
-      <table class="horaires">
-        <caption>Horaires d'ouverture</caption>
+  <hr class="pointilles">
+
+  <!-- HORAIRES : modifier ici (et dans le JSON-LD en haut, et dans js/main.js) -->
+  <section class="horaires" id="horaires" aria-labelledby="t-horaires">
+    <p class="titre-geant titre-etat" data-etat-geant aria-hidden="true">7 h</p>
+    <div class="horaires-grille">
+      <div>
+        <h2 id="t-horaires" class="titre-m">Horaires</h2>
+        <p class="etat" data-etat>Du mardi au dimanche, dès 7&nbsp;h. Fermé le lundi.</p>
+      </div>
+      <table class="table-horaires">
+        <caption class="visuellement-cache">Horaires d'ouverture</caption>
         <tbody>
           <tr data-jour="2"><th scope="row">Mardi</th><td>7 h – 19 h 30</td></tr>
           <tr data-jour="3"><th scope="row">Mercredi</th><td>7 h – 19 h 30</td></tr>
           <tr data-jour="4"><th scope="row">Jeudi</th><td>7 h – 19 h 30</td></tr>
           <tr data-jour="5"><th scope="row">Vendredi</th><td>7 h – 19 h 30</td></tr>
-          <tr data-jour="6"><th scope="row">Samedi</th><td><span class="plage">7 h – 13 h</span> <span class="et">et</span> <span class="plage">15 h – 19 h</span></td></tr>
+          <tr data-jour="6"><th scope="row">Samedi</th><td>7 h – 13 h · 15 h – 19 h</td></tr>
           <tr data-jour="0"><th scope="row">Dimanche</th><td>7 h – 13 h</td></tr>
           <tr data-jour="1" class="ferme"><th scope="row">Lundi</th><td>Fermé</td></tr>
         </tbody>
       </table>
-      <p class="note">Fermetures annuelles : [À COMPLÉTER : dates de congés]</p>
-
-      <div class="actions">
-        <a class="bouton bouton--plein" href="https://www.google.com/maps/search/?api=1&amp;query=Au+Pain+Dor%C3%A9+12+rue+d%27Austerlitz+69004+Lyon">
-          <svg class="ic" aria-hidden="true"><use href="#i-lieu"/></svg>Itinéraire
-        </a>
-        <a class="bouton" href="tel:+33478000000">
-          <svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>Appeler
-        </a>
-      </div>
     </div>
+    <p class="aide">Fermetures annuelles : [À COMPLÉTER : dates de congés]</p>
   </section>
 
-  <section class="bon bon--rose" id="le-pain" aria-labelledby="t-pain">
-    <div class="souche" aria-hidden="true"><span class="numero">N° 0002</span></div>
-    <div class="feuillet">
-      <h2 id="t-pain" class="titre-bon">Ce qui sort du four</h2>
-      <p class="chapeau">Chaque nuit, le fournil façonne et cuit sur place tout ce qui est en vitrine le matin. Notre levain est entretenu depuis l'ouverture de la boutique.</p>
+  <hr class="pointilles">
 
-      <table class="lignes">
-        <caption class="visually-hidden">Nos produits</caption>
-        <thead><tr><th scope="col">Désignation</th><th scope="col">Note du fournil</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Pain au levain naturel</th><td><span class="ticket"><span class="ticket-heure">sorti du four à [À COMPLÉTER : heure]</span><span class="ticket-note">levain maison</span></span></td></tr>
-          <tr><th scope="row">Baguette tradition</th><td><span class="ticket"><span class="ticket-heure">sorti du four à [À COMPLÉTER : heure]</span><span class="ticket-note">façonnée ici</span></span></td></tr>
-          <tr><th scope="row">Croissant pur beurre</th><td><span class="ticket"><span class="ticket-heure">sorti du four à [À COMPLÉTER : heure]</span></span></td></tr>
-          <tr><th scope="row">Brioche aux pralines</th><td><span class="ticket"><span class="ticket-heure">sorti du four à [À COMPLÉTER : heure]</span><span class="ticket-note">la lyonnaise</span></span></td></tr>
-          <tr><th scope="row">Tarte du moment</th><td><span class="ticket"><span class="ticket-note">demandez au comptoir</span></span></td></tr>
-          <tr><th scope="row">Gâteaux d'anniversaire</th><td><span class="ticket"><span class="ticket-note">sur commande, 48 h</span></span></td></tr>
-        </tbody>
-      </table>
-
-      <figure class="agrafe">
-        <img src="images/produits.jpg" width="1200" height="1200" loading="lazy" alt="Vue de dessus : un pain au levain, une brioche aux pralines, des croissants et une part de tarte sur un papier jaune.">
-        <figcaption>Ce qui sort du four. <span class="illus">Illustration</span></figcaption>
-      </figure>
+  <section class="venir" id="venir" aria-labelledby="t-venir">
+    <h2 id="t-venir" class="titre-xl">12 rue<br>d'Austerlitz</h2>
+    <p class="intro">Sur le plateau de la Croix-Rousse, 69004 Lyon.</p>
+    <div class="actions">
+      <a class="pilule pilule--pleine" href="https://www.google.com/maps/search/?api=1&amp;query=Au+Pain+Dor%C3%A9+12+rue+d%27Austerlitz+69004+Lyon"><svg class="ic" aria-hidden="true"><use href="#i-lieu"/></svg>Itinéraire</a>
+      <a class="pilule" href="tel:+33478000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>04 78 00 00 00</a>
+      <a class="pilule" href="https://instagram.com/aupaindore.lyon"><svg class="ic" aria-hidden="true"><use href="#i-insta"/></svg>Instagram</a>
     </div>
   </section>
-
-  <section class="bon bon--jaune" id="gateaux" aria-labelledby="t-gateau">
-    <div class="souche" aria-hidden="true"><span class="numero">N° 0003</span></div>
-    <div class="feuillet">
-      <h2 id="t-gateau" class="titre-bon">Bon de commande&nbsp;: un gâteau</h2>
-      <p class="chapeau">Anniversaire, baptême, goûter du dimanche&nbsp;: commandez au moins 48&nbsp;h à l'avance. Remplissez le bon, puis appelez-nous pour le confirmer.</p>
-
-      <figure class="agrafe agrafe--gateau">
-        <img src="images/gateau.jpg" width="879" height="1100" loading="lazy" alt="Un gâteau au chocolat garni de framboises sur un présentoir, à côté d'un bon de commande.">
-        <figcaption>Sur commande, 48&nbsp;h avant. <span class="illus">Illustration</span></figcaption>
-      </figure>
-      <form class="commande" data-commande novalidate>
-        <div class="champ champ--saisie">
-          <label for="c-jour">Pour quel jour&nbsp;?</label>
-          <input id="c-jour" name="jour" type="date" required aria-describedby="c-jour-aide">
-          <p class="aide" id="c-jour-aide">Au plus tôt dans 2 jours. Pas de retrait le lundi.</p>
-        </div>
-        <div class="champ champ--saisie">
-          <label for="c-parts">Combien de parts&nbsp;?</label>
-          <select id="c-parts" name="parts" required>
-            <option value="">Choisir</option>
-            <option>4 parts</option>
-            <option>6 parts</option>
-            <option>8 parts</option>
-            <option>10 parts</option>
-            <option>12 parts ou plus</option>
-          </select>
-        </div>
-        <div class="champ champ--saisie">
-          <label for="c-envie">Quelle envie&nbsp;?</label>
-          <input id="c-envie" name="envie" type="text" autocomplete="off" placeholder="chocolat, fruits…">
-        </div>
-        <div class="champ champ--saisie">
-          <label for="c-nom">À quel nom&nbsp;?</label>
-          <input id="c-nom" name="nom" type="text" autocomplete="given-name" placeholder="votre prénom">
-        </div>
-        <p class="erreur" data-erreur role="alert" hidden></p>
-        <button class="bouton bouton--plein" type="submit">Détacher mon bon</button>
-        <p class="aide">Rien n'est envoyé&nbsp;: le bon reste sur votre téléphone. <a href="confidentialite.html">Confidentialité</a></p>
-      </form>
-
-      <div class="recu" data-recu hidden tabindex="-1">
-        <p class="recu-titre">Votre bon est prêt</p>
-        <p class="recu-texte rempli" data-recu-texte></p>
-        <p>Appelez la boutique au 04&nbsp;78&nbsp;00&nbsp;00&nbsp;00 pour le confirmer&nbsp;: on vous dira ce que le fournil peut préparer.</p>
-        <div class="actions">
-          <a class="bouton bouton--plein" href="tel:+33478000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
-          <button class="bouton" type="button" data-recommencer>Refaire un bon</button>
-        </div>
-      </div>
-      <noscript><p class="note">Pour commander, appelez le <a href="tel:+33478000000">04 78 00 00 00</a>, au moins 48 h à l'avance.</p></noscript>
-    </div>
-  </section>
-
-  <section class="bon bon--rose" id="venir" aria-labelledby="t-venir">
-    <div class="souche" aria-hidden="true"><span class="numero">N° 0004</span></div>
-    <div class="feuillet">
-      <h2 id="t-venir" class="titre-bon">Venir à la boutique</h2>
-      <p class="chapeau">Sur le plateau de la Croix-Rousse, au 12 rue d'Austerlitz.</p>
-      <div class="actions">
-        <a class="bouton bouton--plein" href="https://www.google.com/maps/search/?api=1&amp;query=Au+Pain+Dor%C3%A9+12+rue+d%27Austerlitz+69004+Lyon">
-          <svg class="ic" aria-hidden="true"><use href="#i-lieu"/></svg>Voir sur Google Maps
-        </a>
-        <a class="bouton" href="https://instagram.com/aupaindore.lyon">
-          <svg class="ic" aria-hidden="true"><use href="#i-insta"/></svg>Instagram
-        </a>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="dos">
-  <p class="dos-nom">Au Pain Doré</p>
-  <address>12 rue d'Austerlitz, 69004 Lyon<br><a href="tel:+33478000000">04 78 00 00 00</a></address>
-  <p class="dos-liens"><a href="mentions-legales.html">Mentions légales</a> <a href="confidentialite.html">Confidentialité</a></p>
-  <p class="dos-petit">Ce site ne dépose aucun cookie. Exemple fictif : les photos sont des illustrations générées par IA.</p>
+<footer class="pied">
+  <p class="marque">Au Pain Doré</p>
+  <p>12 rue d'Austerlitz, 69004 Lyon · <a href="tel:+33478000000">04 78 00 00 00</a></p>
+  <p class="pied-liens"><a href="mentions-legales.html">Mentions légales</a> <a href="confidentialite.html">Confidentialité</a></p>
+  <p class="aide">Ce site ne dépose aucun cookie. Exemple fictif : les photos sont des illustrations générées par IA.</p>
 </footer>
 
 <script src="js/main.js" defer></script>

@@ -1,3 +1,8 @@
-fournil.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération d10fKj6d0dEt5XLcU4Zx
-produits.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération ikUm8vt3uD6x0JPrWGv5
-gateau.jpg — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), exemple fictif — génération 04SejDKyD4EcZpRwesHN
+Images de la démo Au Pain Doré (site fictif)
+
+boule.webp — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), détourée, exemple fictif — génération QjlPYab0x6L5StRDYtlD ; détourage ElevenLabs birefnet-v2-bg-removal V3xffYmx76UObiShbZyB
+gateau.webp — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), détourée, exemple fictif — génération mZJsmPzcG2lOFlNQKshG ; détourage ElevenLabs birefnet-v2-bg-removal ZsGAAnTJeGAfNQlXPBfN
+croissant.webp — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), détourée, exemple fictif — génération xuT4ymh4Q0GN3lbQjwgL ; détourage local rembg (isnet-general-use)
+brioche.webp — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), détourée, exemple fictif — génération NBr9xqg45MOjTv0YlQZI ; détourage local rembg (isnet-general-use)
+baguettes.webp — illustration générée par IA (ElevenLabs, bytedance-seedream-5-pro), détourée, exemple fictif — génération B07IrefN8JfOOm2hiBvr ; détourage local rembg (isnet-general-use)
+partage.jpg — carte de partage composée en HTML à partir de boule.webp, capture Chrome sans IA supplémentaire

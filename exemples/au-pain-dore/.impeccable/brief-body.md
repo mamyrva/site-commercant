@@ -1,20 +1,18 @@
-# Surface : accueil Au Pain Doré
+# Surface : accueil Au Pain Doré (version affiche)
 
-Scope : site/index.html (+ mentions-legales.html, confidentialite.html dans le même univers). Mode : Persuade.
-Audience : familles de la Croix-Rousse, sur téléphone, pressées. Action : venir (itinéraire) ; secondaire : appeler pour un gâteau (48 h).
-Contraintes : HTML/CSS statique, polices auto-hébergées, aucune ressource externe, pas de photos, rien d'inventé, bandeau « exemple fictif ».
+Scope : site/index.html + pages légales. Mode : Persuade.
+Direction imposée par l'utilisateur : fiche de style de référence (« Hungry Tiger », styles.refero.design) traduite pour la boulangerie. Elle l'emporte sur le tirage.
 
 ## Direction contract
 
-THESIS: Le site est le carnet de commandes de la boulangerie : chaque section est un bon numéroté, imprimé en deux encres, qu'on lit et qu'on remplit. Il refuse la grande photo de pains + cartes produits.
+THESIS: La boulangerie comme une affiche de marché : le nom en caractères énormes, un seul or « croûte » sur un brun « four », le pain posé à même le fond. Refuse la photo de pains sur table avec un titre sage.
 
-OWN-WORLD: Feuillet autocopiant jaune canari (#F4D23C) sur une couverture bleu carbone (#2F3A9E) ; encre carbone pour tout le texte, rouge numérotation (#D7261E) uniquement pour numéros et perforations ; champs à filets, perforations en pointillés, tampon « Au Pain Doré » au grain d'encre. Labels de formulaire en Bricolage Grotesque étroit, valeurs remplies en Caveat (manuscrit) avec parcimonie. Nuances par hachures, aucun dégradé.
-AJOUTS CONSIGNÉS (2026-11-07, après revue) : feuillets roses en alternance avec les jaunes (liasse autocopiante jaune/rose) ; les perforations sont des trous qui laissent voir le bleu de la couverture, pas des points rouges ; le rouge sert aux numéros de série et, fonctionnellement, aux erreurs et au champ en cours de saisie. Les tickets d'heure portent « sorti du four à [À COMPLÉTER : heure] » tant que le commerçant n'a pas donné les heures (règle : ne rien inventer).
+OWN-WORLD: Fond brun de four (#78300F, accordé au fond des photos) partout ; or de croûte (#FAAE33) seul accent ; surfaces mie brune (#402011) puis charbon (#281006) ; framboise (#D1255C) réservée à l'état fermé ; Antonio (titres 0,86–1,16 d'interlignage, capitales) et Hanken Grotesk (texte) ; pilules partout, cartes à 6 px ; filets en pointillés or entre les sections ; épis de blé en filigrane ; aucune ombre.
 
-STORY: Le visiteur voit tout de suite si c'est ouvert, l'adresse et les horaires (bon n° 0001), comprend le savoir-faire de nuit par les tickets d'heure sur chaque pain (bon n° 0002), puis remplit un bon de commande de gâteau qui se transforme en appel (bon n° 0003).
+STORY: Le visiteur voit le nom et le pain, sait si c'est ouvert (badge), peut aller ou appeler ; puis les produits un par un, la demande de gâteau (48 h), les horaires avec l'état en très grand, l'adresse.
 
-FIRST VIEWPORT: Couverture bleue en haut (tampon du nom, « Boulangerie · Croix-Rousse »), le premier bon jaune dépasse dessous et occupe l'écran : champs Aujourd'hui (ouvert/fermé calculé), Horaires, Adresse ; au pied du bon, deux boutons tampon : Itinéraire (primaire), Appeler. Ligne perforée rouge numérotée vers la suite.
+FIRST VIEWPORT: Barre : pilules de navigation à gauche, nom au centre, état ouvert/fermé et Appeler à droite. Titre « AU PAIN / DORÉ » sur deux lignes, énorme, à gauche ; la boule de pain posée à droite ; dessous, la phrase, trois badges, Itinéraire (pilule pleine) et le téléphone.
 
-FORM: Carnet de commandes à souches, candidat 7 de ma liste ordonnée. seed:df261a5f020a595d. Signature : le bon de commande de gâteau, rempli au doigt, dont la souche se détache (animation de perforation) et révèle le récapitulatif + bouton Appeler. Raises : deux encres seulement (one-bit desktop) ; rouge confiné aux numéros (nuage irisé) ; ticket d'heure par pain (bazar des ombres).
+FORM: Référence de style imposée par l'utilisateur, traduite. seed: none. Le tirage n'a pas été lancé : l'utilisateur a imposé la direction (fiche de style collée le 2026-11-07, consignée dans PRODUCT.md). Signature : les deux lignes du titre montent à l'ouverture et la boule se pose ; elle tourne légèrement au défilement ; l'état « OUVERT / FERMÉ » s'affiche en très grand dans les horaires.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

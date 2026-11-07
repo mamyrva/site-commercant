@@ -8,3 +8,5 @@ exemples/*/.impeccable/seed.txt
 exemples/*/.impeccable/archive-facade/
 exemples/*/.impeccable/pierre.png
 .generation/
+exemples/*/.impeccable/archive-carnet/
+exemples/*/.impeccable/reference-style-source.md

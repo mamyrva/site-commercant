@@ -32,6 +32,7 @@ Les visiteurs arrivent depuis Google Maps, une recherche « boulangerie Croix-Ro
 - **Exemple fictif** : ce site sert de démonstration du skill. Un bandeau discret doit l'indiquer.
 
 ## Brand Commitments
+- **Style de référence imposé par l'utilisateur (2026-11-07)** : la fiche de style « Hungry Tiger » (styles.refero.design), traduite pour la boulangerie : « or de croûte sur brun de four », titres d'affiche énormes (Antonio), pilules, filets en pointillés, aucune ombre, produits posés à même le fond, épis de blé en filigrane. Le nom, le logo, les textes et la police propriétaire de la marque de référence ne sont pas repris. Ce style remplace l'univers « carnet de commandes », archivé.
 - Nom : « Au Pain Doré ».
 - Style demandé par le commerçant : « chaleureux et artisanal, mais pas vieillot ».
 - Logo : aucun (un logotype typographique est acceptable).

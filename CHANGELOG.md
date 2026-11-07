@@ -2,6 +2,13 @@
 
 Le projet évolue à chaque nouveau site testé. · The project evolves with every site it is tested on.
 
+## 0.4.0 · 2026-11-07
+
+- **Partir d'une référence de style** (`reference-style.md`) : trouver le `DESIGN.md` d'un site que le commerçant aime (par exemple sur styles.refero.design), puis le traduire dans l'univers du commerce sans jamais le cloner. Méthode tirée de la vidéo « Site Web à +10 000 € avec Claude Code » (Web Marketing Tuto). · Start from a reference style sheet.
+- **La boulangerie d'exemple refaite** à partir d'une fiche de style « affiche d'épicerie », traduite en « or de croûte sur brun de four » : titres géants, produits posés à même le fond, état « OUVERT / FERMÉ » en très grand.
+- Option « spectaculaire » : un effet interactif en haut de page qui raconte le métier.
+- Mise en ligne faite par Claude avec Netlify en ligne de commande.
+
 ## 0.3.0 · 2026-11-07
 
 - **Guide « site exceptionnel »** (`excellence.md`) : le test de l'image fixe, les images comme premier levier, un mouvement mis en scène, la performance, et une liste de contrôle avant livraison. Il s'appuie sur les critères des jurys Awwwards et sur les tendances 2026. · "Exceptional site" guide.

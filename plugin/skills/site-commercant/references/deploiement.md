@@ -12,6 +12,18 @@ Propose d'abord la méthode A. Elle ne demande aucune connaissance technique. Ac
 
 **Hébergeur** pour les mentions légales : Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, États-Unis. Site : netlify.com. Vérifie ces coordonnées sur netlify.com avant de livrer.
 
+## A bis. Mise en ligne faite par Claude (Netlify en ligne de commande)
+
+Si la personne le veut, Claude peut publier le site lui-même :
+
+1. La personne crée son compte gratuit sur netlify.com, puis lance une fois dans son terminal `! npx netlify-cli login`, qui ouvre une page de connexion.
+2. Claude publie : `npx netlify-cli deploy --dir site --prod`. La première fois, l'outil demande de créer un site : choisis un nom du type `nom-du-commerce`.
+3. Claude donne l'adresse obtenue, puis remplace les `[À COMPLÉTER : adresse du site]`.
+
+Ne jamais demander ni écrire de mot de passe ou de jeton dans la conversation : la connexion se fait dans le navigateur.
+
+Les formulaires Netlify (`data-netlify="true"`) fonctionnent dès cette mise en ligne. Ils ne marchent pas sur GitHub Pages.
+
 ## B. GitHub Pages : si la personne a déjà un compte GitHub
 
 1. Créer un dépôt public, par exemple `nom-du-commerce`.
