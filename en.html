@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Commerçant · an agency-grade website for every small business, with Claude Code</title>
+<meta name="description" content="A Claude Code skill that builds a personalised website with the shop owner, end to end: interview, custom design, animation, booking, tracking, Google SEO, free hosting.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Site Commerçant · an agency-grade website for every small business">
+<meta property="og:description" content="A Claude Code skill that builds a personalised website with the shop owner, end to end.">
+<meta property="og:image" content="https://mamyrva.github.io/site-commercant/docs/captures/garage.jpg">
+<meta name="theme-color" content="#0E0F10">
+<link rel="icon" href="exemples/garage-delorme/site/favicon.svg" type="image/svg+xml">
+<style>
+@font-face { font-family: "Archivo"; src: url("exemples/garage-delorme/site/fonts/archivo.woff2") format("woff2"); font-weight: 100 900; font-stretch: 62% 125%; font-display: swap; }
+:root { --encre: #0E0F10; --papier: #F4F3EF; --gris: #5E6168; --filet: #D9D7D1; --accent: #F2C230; }
+* { box-sizing: border-box; }
+html { background: var(--papier); color: var(--encre); font-family: "Archivo", "Helvetica Neue", Arial, sans-serif; line-height: 1.55; -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+::selection { background: var(--accent); color: var(--encre); }
+:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
+a { color: inherit; }
+.barre { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem clamp(1.25rem, 5vw, 4rem); font-size: 0.875rem; }
+.barre strong { font-stretch: 125%; font-weight: 800; letter-spacing: 0.02em; text-transform: uppercase; }
+.barre nav { display: flex; gap: 1.25rem; }
+.barre nav a { text-decoration: none; padding: 0.5rem 0; }
+.barre nav a:hover { text-decoration: underline; }
+.ouverture { padding: clamp(3rem, 8vw, 7rem) clamp(1.25rem, 5vw, 4rem) clamp(2.5rem, 5vw, 4rem); }
+h1 { margin: 0; font-weight: 800; font-stretch: 112%; font-size: clamp(2.6rem, 1rem + 7vw, 7.5rem); line-height: 0.95; letter-spacing: -0.035em; max-width: 14ch; text-wrap: balance; }
+h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--accent) 62% 92%, transparent 92%); }
+.chapeau { margin: 1.75rem 0 2.25rem; max-width: 44ch; font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem); color: var(--gris); }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.bouton { display: inline-flex; align-items: center; justify-content: center; min-height: 3.25rem; padding: 0.8rem 1.5rem; border: 1.5px solid var(--encre); border-radius: 999px; font-weight: 700; text-decoration: none; transition: background-color 200ms ease-out, color 200ms ease-out, transform 200ms cubic-bezier(.16,1,.3,1); }
+.bouton:hover { transform: translateY(-2px); }
+.bouton--plein { background: var(--encre); color: var(--papier); }
+.bouton--plein:hover { background: #2A2C30; }
+
+/* Les démos : trois sites en grand, cliquables */
+.demos { display: grid; gap: clamp(2.5rem, 5vw, 4.5rem); padding: 0 clamp(1.25rem, 5vw, 4rem) clamp(4rem, 9vw, 8rem); }
+.demo { display: grid; gap: 1.25rem; text-decoration: none; }
+.ecran { position: relative; border-radius: 14px; overflow: hidden; background: #000; box-shadow: 0 1px 2px rgb(0 0 0 / 0.12), 0 30px 60px -30px rgb(0 0 0 / 0.45); aspect-ratio: 16 / 10; }
+.ecran img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 1200ms cubic-bezier(.16,1,.3,1); }
+.demo:hover .ecran img { transform: scale(1.025); }
+.ecran::after { content: "Open the demo  →"; position: absolute; right: 1rem; bottom: 1rem; padding: 0.55rem 1rem; border-radius: 999px; background: var(--papier); color: var(--encre); font-weight: 700; font-size: 0.875rem; opacity: 0; transform: translateY(6px); transition: opacity 300ms ease-out, transform 300ms cubic-bezier(.16,1,.3,1); }
+.demo:hover .ecran::after, .demo:focus-visible .ecran::after { opacity: 1; transform: none; }
+.legende { display: grid; gap: 0.35rem; }
+.legende h2 { margin: 0; font-weight: 800; font-stretch: 112%; font-size: clamp(1.4rem, 1rem + 1.6vw, 2.2rem); letter-spacing: -0.02em; }
+.legende p { margin: 0; color: var(--gris); max-width: 52ch; }
+.puces { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; list-style: none; padding: 0; }
+.puces li { padding: 0.2rem 0.65rem; border: 1px solid var(--filet); border-radius: 999px; font-size: 0.8125rem; }
+
+/* Comment ça marche */
+.etapes { background: var(--encre); color: var(--papier); padding: clamp(4rem, 9vw, 8rem) clamp(1.25rem, 5vw, 4rem); }
+.etapes h2, .installer h2, .evolue h2 { margin: 0 0 2.5rem; font-weight: 800; font-stretch: 112%; font-size: clamp(2rem, 1.2rem + 3vw, 3.6rem); letter-spacing: -0.03em; line-height: 1; }
+.etapes ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2rem; counter-reset: e; }
+.etapes li { counter-increment: e; border-top: 1px solid #34363B; padding-top: 1.25rem; display: grid; gap: 0.5rem; }
+.etapes li::before { content: counter(e); font-weight: 800; font-stretch: 125%; font-size: 3rem; line-height: 1; color: var(--accent); }
+.etapes h3 { margin: 0; font-size: 1.3rem; font-weight: 700; }
+.etapes p { margin: 0; color: #B3B5BA; max-width: 40ch; }
+
+/* Installer */
+.installer, .evolue { padding: clamp(4rem, 9vw, 8rem) clamp(1.25rem, 5vw, 4rem); }
+.code { position: relative; margin: 0 0 1rem; max-width: 46rem; padding: 1.25rem 1.25rem 1.25rem 1.4rem; background: var(--encre); color: #E8E7E3; border-radius: 12px; font: 500 0.9375rem/1.8 ui-monospace, "SF Mono", Menlo, monospace; overflow-x: auto; }
+.copier { position: absolute; top: 0.75rem; right: 0.75rem; min-height: 2.5rem; padding: 0.4rem 0.9rem; border: 1px solid #44474D; border-radius: 999px; background: transparent; color: #E8E7E3; font: 600 0.8125rem "Archivo", sans-serif; cursor: pointer; }
+.copier:hover { border-color: #8A8D93; }
+.installer p { color: var(--gris); max-width: 52ch; }
+.evolue { border-top: 1px solid var(--filet); }
+.evolue ul { margin: 0 0 2rem; padding-left: 1.2rem; max-width: 52ch; color: var(--gris); }
+.pied { padding: 2rem clamp(1.25rem, 5vw, 4rem) 3rem; font-size: 0.875rem; color: var(--gris); border-top: 1px solid var(--filet); display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; }
+
+[data-apparait] { transition: opacity 700ms ease-out, transform 900ms cubic-bezier(.16,1,.3,1); }
+.js [data-apparait]:not(.vu) { opacity: 0; transform: translateY(28px); }
+
+@media (min-width: 60rem) {
+  .demo { grid-template-columns: 7fr 4fr; align-items: end; column-gap: 3rem; }
+  .demo:nth-child(even) { grid-template-columns: 4fr 7fr; }
+  .demo:nth-child(even) .ecran { order: 2; }
+  .etapes ol { grid-template-columns: repeat(3, 1fr); column-gap: 3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+  .js [data-apparait]:not(.vu) { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+<header class="barre">
+  <strong>Site Commerçant</strong>
+  <nav aria-label="Links"><a href="#demos">Demos</a><a href="#installer">Install</a><a href="https://github.com/mamyrva/site-commercant">GitHub</a><a href="index.html" hreflang="fr" lang="fr">FR</a></nav>
+</header>
+
+<main>
+  <section class="ouverture">
+    <h1>An <em>agency-grade</em> website for every small business.</h1>
+    <p class="chapeau">A Claude Code skill that builds a custom website with the shop owner, end to end. It starts with an interview, then delivers a one-of-a-kind design, animation, features that actually work, Google SEO and free hosting.</p>
+    <div class="actions">
+      <a class="bouton bouton--plein" href="#demos">See the demos</a>
+      <a class="bouton" href="#installer">Install the skill</a>
+    </div>
+  </section>
+
+  <section class="demos" id="demos" aria-label="Demos">
+    <a class="demo" href="exemples/garage-delorme/site/index.html" data-apparait>
+      <div class="ecran"><img src="docs/captures/garage.jpg" width="1440" height="900" alt="Garage Delorme's site: a line-drawn car rises on a vehicle lift." loading="lazy"></div>
+      <div class="legende">
+        <h2>Garage Delorme</h2>
+        <p>The car rises on the lift as you scroll, and each service pins itself to the relevant part. Visitors can book, request a quote and track their repair with a code. English version for tourists.</p>
+        <ul class="puces"><li>Scroll animation</li><li>Booking and quotes</li><li>Repair tracking</li><li>FR / EN</li></ul>
+      </div>
+    </a>
+    <a class="demo" href="exemples/maison-vauclair/site/index.html" data-apparait>
+      <div class="ecran"><img src="docs/captures/bijouterie.jpg" width="1440" height="900" alt="Maison Vauclair's site: a large solitaire ring, a fine headline." loading="lazy"></div>
+      <div class="legende">
+        <h2>Maison Vauclair</h2>
+        <p>An understated luxury jeweller, finished to the standard of the great houses: generous space, very fine type, a signature colour, the workshop in the spotlight.</p>
+        <ul class="puces"><li>Understated luxury</li><li>Creation workshop</li><li>Open now</li></ul>
+      </div>
+    </a>
+    <a class="demo" href="exemples/au-pain-dore/site/index.html" data-apparait>
+      <div class="ecran"><img src="docs/captures/boulangerie.jpg" width="1440" height="900" alt="Au Pain Doré's site: a blue and yellow order book, a rubber stamp, a photo of the bakehouse." loading="lazy"></div>
+      <div class="legende">
+        <h2>Au Pain Doré</h2>
+        <p>The whole bakery lives in an order book: numbered slips, handwriting, and a cake order slip that really tears off along its perforations.</p>
+        <ul class="puces"><li>Bespoke world</li><li>Animated order slip</li><li>Live opening hours</li></ul>
+      </div>
+    </a>
+    <p class="legende"><span>Three fictional businesses built with the skill. Photos are AI-generated illustrations; a real business uses its own photos. The demo sites themselves are in French (the garage also in English).</span></p>
+  </section>
+
+  <section class="etapes" aria-labelledby="t-etapes">
+    <h2 id="t-etapes">How it works</h2>
+    <ol>
+      <li><h3>The interview</h3><p>Claude asks the right questions: the business, its customers, the mood, sites the owner likes, what makes the place unique, and what the site must do.</p></li>
+      <li><h3>Choosing the world</h3><p>Several visual directions open in the browser. The owner picks one, and the site is built in that world by the impeccable design skill.</p></li>
+      <li><h3>Checked and live</h3><p>An independent reviewer checks it; it follows French law, is built for Google, and goes live for free. Nothing is made up: anything missing is flagged.</p></li>
+    </ol>
+  </section>
+
+  <section class="installer" id="installer" aria-labelledby="t-installer">
+    <h2 id="t-installer">Install in a minute</h2>
+    <pre class="code"><button class="copier" type="button" data-copier>Copy</button><code>/plugin marketplace add pbakaus/impeccable
+/plugin install impeccable@impeccable
+/plugin marketplace add mamyrva/site-commercant
+/plugin install site-commercant@site-commercant
+/reload-plugins</code></pre>
+    <p>Then, in Claude Code: <strong>/site-commercant</strong> followed by one sentence about your business. Requires Claude Code and a Claude subscription.</p>
+  </section>
+
+  <section class="evolue" aria-labelledby="t-evolue">
+    <h2 id="t-evolue">An evolving project</h2>
+    <ul>
+      <li>New trades and demos with every test.</li>
+      <li>Legal layers for Belgium, Switzerland and Canada.</li>
+      <li>A ready-made admin panel for shop owners.</li>
+      <li>Motion-design presentation videos.</li>
+    </ul>
+    <div class="actions"><a class="bouton bouton--plein" href="https://github.com/mamyrva/site-commercant">View the project on GitHub</a><a class="bouton" href="https://github.com/mamyrva/site-commercant/issues">Suggest an idea</a></div>
+  </section>
+</main>
+
+<footer class="pied"><span>Site Commerçant · MIT licence</span><span>The demos are fictional: these businesses do not exist.</span></footer>
+
+<script>
+document.documentElement.classList.add("js");
+var vus = document.querySelectorAll("[data-apparait]");
+if ("IntersectionObserver" in window) {
+  var o = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("vu"); o.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+  vus.forEach(function (v) { o.observe(v); });
+} else vus.forEach(function (v) { v.classList.add("vu"); });
+var b = document.querySelector("[data-copier]");
+if (b) b.addEventListener("click", function () {
+  navigator.clipboard.writeText(b.nextElementSibling.textContent).then(function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1800); });
+});
+</script>
+</body>
+</html>

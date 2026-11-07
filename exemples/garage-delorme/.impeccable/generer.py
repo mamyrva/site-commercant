@@ -30,7 +30,9 @@ T = {
   "panne_texte": "Votre assistance vous oriente vers nous ? Appelez-nous : on prend le relais, et vous suivez la réparation en ligne avec le code qu'on vous donne.",
   "panne_horaires": "Horaires du dépannage : [À COMPLÉTER : horaires du dépannage]",
   "panne_suivi": "Suivre ma réparation",
-  "photo": "Photo de l'atelier à venir",
+  "photo": "Photo de l'atelier à venir", "illus": "Illustration · exemple fictif",
+  "photo_alt": "Une voiture grise levée sur un pont élévateur aux bras jaunes ; un mécanicien inspecte le dessous, les montagnes au loin.",
+  "diag_alt": "La main d'un mécanicien branche la prise de diagnostic sous le tableau de bord ; une tablette affiche des courbes.",
   "form_titre": "Rendez-vous ou devis",
   "form_intro": "Dites-nous ce dont votre voiture a besoin. On vous rappelle pour confirmer.",
   "type": "Votre demande", "type_rdv": "Un rendez-vous", "type_devis": "Un devis",
@@ -47,7 +49,7 @@ T = {
   "jours": [("1", "Lundi", "8 h – 12 h · 14 h – 18 h 30"), ("2", "Mardi", "8 h – 12 h · 14 h – 18 h 30"), ("3", "Mercredi", "8 h – 12 h · 14 h – 18 h 30"), ("4", "Jeudi", "8 h – 12 h · 14 h – 18 h 30"), ("5", "Vendredi", "8 h – 12 h · 14 h – 18 h 30"), ("6", "Samedi", "8 h – 12 h"), ("0", "Dimanche", "Fermé")],
   "conges": "Fermetures annuelles : [À COMPLÉTER : dates de congés]",
   "itineraire": "Itinéraire",
-  "ml": "Mentions légales", "cookies": "Ce site ne dépose aucun cookie.",
+  "ml": "Mentions légales", "cookies": "Ce site ne dépose aucun cookie.", "illus_pied": "Exemple fictif : les photos sont des illustrations générées par IA.",
   # suivi
   "s_title": "Suivi de réparation · Garage Delorme, Gap",
   "s_desc": "Suivez l'avancement de la réparation de votre véhicule au Garage Delorme à Gap, avec le code remis à la dépose.",
@@ -84,7 +86,9 @@ T = {
   "panne_texte": "Has your assistance company sent you to us? Call us: we take it from there, and you follow the repair online with the code we give you.",
   "panne_horaires": "Breakdown service hours: [À COMPLÉTER : horaires du dépannage]",
   "panne_suivi": "Track my repair",
-  "photo": "Workshop photo coming soon",
+  "photo": "Workshop photo coming soon", "illus": "Illustration · fictional example",
+  "photo_alt": "A grey car raised on a lift with yellow arms; a mechanic inspects the underside, mountains in the distance.",
+  "diag_alt": "A mechanic's hand plugs the diagnostic connector under the dashboard; a tablet shows graphs.",
   "form_titre": "Book or get a quote",
   "form_intro": "Tell us what your car needs. We will call you back to confirm.",
   "type": "Your request", "type_rdv": "A booking", "type_devis": "A quote",
@@ -101,7 +105,7 @@ T = {
   "jours": [("1", "Monday", "8 am – 12 pm · 2 – 6:30 pm"), ("2", "Tuesday", "8 am – 12 pm · 2 – 6:30 pm"), ("3", "Wednesday", "8 am – 12 pm · 2 – 6:30 pm"), ("4", "Thursday", "8 am – 12 pm · 2 – 6:30 pm"), ("5", "Friday", "8 am – 12 pm · 2 – 6:30 pm"), ("6", "Saturday", "8 am – 12 pm"), ("0", "Sunday", "Closed")],
   "conges": "Annual closures: [À COMPLÉTER : dates de congés]",
   "itineraire": "Directions",
-  "ml": "Legal notice (in French)", "cookies": "This site sets no cookies.",
+  "ml": "Legal notice (in French)", "cookies": "This site sets no cookies.", "illus_pied": "Fictional example: photos are AI-generated illustrations.",
   "s_title": "Repair tracking · Garage Delorme, Gap",
   "s_desc": "Follow the progress of your vehicle's repair at Garage Delorme in Gap, French Alps, with the code given when you dropped it off.",
   "s_h1": "Where is my car?",
@@ -190,7 +194,7 @@ def pied(p):
   <div class="pied-marque">{logo(p)}</div>
   <address>14 avenue d'Embrun, 05000 Gap · <a href="tel:+33492000000">04 92 00 00 00</a></address>
   <p class="pied-liens"><a href="{pre}mentions-legales.html">{p['ml']}</a> <a href="{pre}confidentialite.html">{p['conf']}</a> <a href="{p['autre']}index.html" hreflang="{'en' if p['lang']=='fr' else 'fr'}">{p['autre_nom']}</a></p>
-  <p class="pied-petit">{p['cookies']}</p>
+  <p class="pied-petit">{p['cookies']} {p['illus_pied']}</p>
 </footer>"""
 
 # --- Le pont élévateur : colonnes fixes, charge mobile (voiture + bras + dessous) ---
@@ -271,7 +275,10 @@ def accueil(p):
   </section>
 
   <section class="services" id="services" aria-labelledby="t-services">
-    <h2 id="t-services" class="titre-section">{p['services_titre']}</h2>
+    <div class="services-tete">
+      <h2 id="t-services" class="titre-section">{p['services_titre']}</h2>
+      <figure class="photo photo--diag" data-apparait><img src="{pre}images/diagnostic.jpg" width="1500" height="1000" loading="lazy" alt="{p['diag_alt']}"><figcaption>{p['illus']}</figcaption></figure>
+    </div>
     <ul class="liste-services">{services}</ul>
   </section>
 
@@ -285,7 +292,7 @@ def accueil(p):
       </div>
       <p class="note">{p['panne_horaires']}</p>
     </div>
-    <figure class="photo" role="img" aria-label="{p['photo']}"><span>{p['photo']}</span></figure>
+    <figure class="photo"><img src="{pre}images/atelier.jpg" width="1500" height="1125" loading="lazy" alt="{p['photo_alt']}"><figcaption>{p['illus']}</figcaption></figure>
   </section>
 
   <section class="demande" id="demande" aria-labelledby="t-demande">

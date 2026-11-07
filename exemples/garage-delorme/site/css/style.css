@@ -190,7 +190,11 @@ a { color: inherit; text-underline-offset: 0.22em; }
 .panne .bouton--jaune { color: var(--nuit); }
 .note { font-size: 0.875rem; color: var(--texte-doux); margin: 1.25rem 0 0; }
 .panne .note { color: var(--acier-clair); }
-.photo { margin: 0; display: grid; place-items: center; aspect-ratio: 4 / 3; background: var(--nuit-2); border: 1px solid #2C333B; color: var(--acier-clair); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; padding: 1.5rem; }
+.photo { margin: 0; position: relative; overflow: hidden; background: var(--nuit-2); }
+.photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.photo figcaption { position: absolute; right: 0.6rem; bottom: 0.6rem; padding: 0.2rem 0.5rem; background: rgb(17 20 24 / 0.75); color: var(--acier-clair); font-size: 0.6875rem; }
+.photo--diag img { aspect-ratio: 3 / 2; }
+.services-tete { display: grid; gap: 1.5rem; }
 
 /* ---------- Formulaire ---------- */
 .demande { display: grid; gap: 2rem; }
@@ -316,6 +320,7 @@ a { color: inherit; text-underline-offset: 0.22em; }
   .pont { align-self: center; margin: 0; }
   .scene .actions .bouton { flex: 0 0 auto; padding-inline: 1.4rem; }
   .liste-services { grid-template-columns: 1fr 1fr; column-gap: 4rem; }
+  .services-tete { grid-template-columns: 1fr 1fr; align-items: end; column-gap: 4rem; }
   .liste-services li:nth-last-child(2) { border-bottom: 1px solid var(--filet); }
   .panne { grid-template-columns: 1fr 1fr; align-items: center; column-gap: 5rem; }
   .demande { grid-template-columns: 1fr 2fr; column-gap: 5rem; align-items: start; }

@@ -4,6 +4,8 @@
 
 **A professional, fully personalised website for small shops and craftspeople, without paying an agency.**
 
+### ▶ [See the live demos](https://mamyrva.github.io/site-commercant/en.html)
+
 Run a bakery, a garage, a hair salon, a restaurant, a jewellery shop, a boutique, or a craft business? This project lets [Claude Code](https://claude.com/claude-code) build your website **with you, from start to finish**, the way an agency would.
 
 | Bakery | Jewellery shop | Garage |
@@ -11,7 +13,7 @@ Run a bakery, a garage, a hair salon, a restaurant, a jewellery shop, a boutique
 | ![Au Pain Doré, fictional bakery](docs/captures/boulangerie.jpg) | ![Maison Vauclair, fictional jeweller](docs/captures/bijouterie.jpg) | ![Garage Delorme, fictional garage](docs/captures/garage.jpg) |
 | "Order book" world, cake order slip | Understated luxury, jeweller's line drawings in place of photos | Animated car lift, repair tracking, FR/EN |
 
-*All three are fictional examples built with this skill. You can find them in [`exemples/`](exemples/).*
+*All three are fictional examples built with this skill, and you can try them online. Photos are AI-generated illustrations. Sources are in [`exemples/`](exemples/).*
 
 > **Language note:** the skill's instructions are written in French, and its legal layer covers **French law**. Claude talks to the shop owner in their own language. For a business outside France, the skill says so and adapts the legal part after checking local law.
 

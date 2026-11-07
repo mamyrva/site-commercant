@@ -7,3 +7,4 @@ exemples/*/.impeccable/hook.cache.json
 exemples/*/.impeccable/seed.txt
 exemples/*/.impeccable/archive-facade/
 exemples/*/.impeccable/pierre.png
+.generation/

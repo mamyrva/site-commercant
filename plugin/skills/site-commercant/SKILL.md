@@ -33,6 +33,8 @@ Ne pose que les questions dont la réponse manque, et termine par une phrase qui
 
 ## Étape 3 : le design avec impeccable
 
+**Vise l'exceptionnel, pas le correct.** Avant de construire, lis [references/excellence.md](references/excellence.md) : le test de l'image fixe, les images, le mouvement mis en scène et la performance. Repasse sa liste de contrôle avant de livrer. Un site sans images paraît inachevé : règle la question des photos avec la personne dès l'entretien.
+
 Charge le skill `impeccable` (outil Skill, nom `impeccable:impeccable`) et fais une demande de nouvelle surface (new-work) : la page d'accueil du commerce, en mode **Persuade**. Donne-lui :
 
 - le fichier `PRODUCT.md` que tu viens d'écrire. Comme il existe déjà, impeccable n'a pas besoin de refaire son entretien produit ;

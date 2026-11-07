@@ -2,6 +2,13 @@
 
 Le projet évolue à chaque nouveau site testé. · The project evolves with every site it is tested on.
 
+## 0.3.0 · 2026-11-07
+
+- **Guide « site exceptionnel »** (`excellence.md`) : le test de l'image fixe, les images comme premier levier, un mouvement mis en scène, la performance, et une liste de contrôle avant livraison. Il s'appuie sur les critères des jurys Awwwards et sur les tendances 2026. · "Exceptional site" guide.
+- L'entretien demande désormais au commerçant quelles photos il a, et le skill propose une séance photo au téléphone, un photographe ou des illustrations générées par IA, signalées comme telles.
+- **Démos en ligne** sur GitHub Pages, avec une page de présentation en FR et en EN. · Live demos.
+- Les trois exemples ont maintenant de vraies images : des illustrations générées par IA, signalées comme telles. Maison Vauclair a une photo plein écran en ouverture, Au Pain Doré un tirage du fournil sur la couverture du carnet.
+
 ## 0.2.0 · 2026-11-07
 
 - **Entretien complet** avec le commerçant : la vision du site, les sites aimés, le niveau d'animation, la vidéo, l'idée unique, les fonctions et les questions fréquentes (`entretien.md`). · Full owner interview.

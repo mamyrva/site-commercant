@@ -4,6 +4,8 @@
 
 **Un site professionnel et personnalisé pour votre commerce, sans payer une agence.**
 
+### ▶ [Voir les démos en ligne](https://mamyrva.github.io/site-commercant/)
+
 Vous tenez une boulangerie, un garage, un salon de coiffure, un restaurant, une bijouterie, une boutique, ou vous êtes artisan ? Ce projet permet à [Claude Code](https://claude.com/claude-code) de créer votre site **avec vous, de A à Z**, comme le ferait une agence.
 
 | Boulangerie | Bijouterie | Garage |
@@ -11,7 +13,7 @@ Vous tenez une boulangerie, un garage, un salon de coiffure, un restaurant, une 
 | ![Au Pain Doré, boulangerie fictive](docs/captures/boulangerie.jpg) | ![Maison Vauclair, bijouterie fictive](docs/captures/bijouterie.jpg) | ![Garage Delorme, garage fictif](docs/captures/garage.jpg) |
 | Univers « carnet de commandes », bon de commande de gâteau | Luxe sobre, dessins de bijoutier à la place des photos | Pont élévateur animé, suivi de réparation, FR/EN |
 
-*Ces trois sites sont des exemples fictifs, créés avec ce skill. Ils sont dans le dossier [`exemples/`](exemples/).*
+*Ces trois sites sont des exemples fictifs, créés avec ce skill, et on peut les essayer en ligne. Les photos sont des illustrations générées par IA. Les sources sont dans [`exemples/`](exemples/).*
 
 ---
 

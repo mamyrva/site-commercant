@@ -147,6 +147,11 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
   text-transform: uppercase;
   color: #5F594F;
 }
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.visuel--hero .photo img { object-position: 70% 50%; animation: approcher 2400ms cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes approcher { from { transform: scale(1.08); } to { transform: none; } }
+.tuile .photo img { transition: transform 900ms cubic-bezier(.16, 1, .3, 1); }
+.tuile:hover .photo img { transform: scale(1.04); }
 .photo--carre { aspect-ratio: 1; }
 .photo--portrait { aspect-ratio: 4 / 5; }
 .photo--paysage { aspect-ratio: 3 / 2; }
@@ -342,7 +347,12 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
   .entete-lieu { display: block; justify-self: start; }
   .entete-etat { display: block; justify-self: end; order: 0; font-size: 0.75rem; letter-spacing: 0.14em; }
   .nav { grid-column: 1 / -1; }
-  .visuel--hero .photo { aspect-ratio: 16 / 7; max-height: 36vh; }
+  /* Ordinateur : la photo occupe le premier écran, le titre se pose dans son espace vide à gauche */
+  .ouverture { display: grid; }
+  .ouverture > * { grid-area: 1 / 1; }
+  .visuel--hero .photo { aspect-ratio: auto; height: calc(100svh - 8.5rem); min-height: 34rem; max-height: none; }
+  .ouverture-texte { align-self: center; justify-self: start; justify-items: start; text-align: left; padding: 0 var(--marge); max-width: 40rem; position: relative; z-index: 1; }
+  .ouverture-texte .actions { justify-content: flex-start; }
   .ouverture-texte { padding-top: 2.5rem; }
   .chapeau { margin: 1rem 0 1.75rem; }
   .grille { grid-template-columns: repeat(4, 1fr); }
@@ -353,7 +363,8 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .visuel--hero .photo { animation: none; }
+  .visuel--hero .photo, .visuel--hero .photo img { animation: none; }
+  .tuile:hover .photo img { transform: none; }
 }
 
 /* Petits écrans : libellés des créations en bas de casse, sur deux lignes au plus */
