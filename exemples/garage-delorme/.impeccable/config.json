@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-11-07T16:05:11.727Z",
+        "reason": "builder: .scene-collante carries padding var(--marge)=clamp(1.25rem,5vw,5rem); detector does not resolve clamp()"
+      }
+    ]
+  }
+}

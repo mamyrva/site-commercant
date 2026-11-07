@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repair tracking · Garage Delorme, Gap</title>
+<meta name="description" content="Follow the progress of your vehicle's repair at Garage Delorme in Gap, French Alps, with the code given when you dropped it off.">
+<link rel="canonical" href="[À COMPLÉTER : adresse du site]/en/suivi.html">
+<link rel="alternate" hreflang="fr" href="[À COMPLÉTER : adresse du site]/suivi.html">
+<link rel="alternate" hreflang="en" href="[À COMPLÉTER : adresse du site]/en/suivi.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Repair tracking · Garage Delorme, Gap">
+<meta property="og:description" content="Follow the progress of your vehicle's repair at Garage Delorme in Gap, French Alps, with the code given when you dropped it off.">
+<meta property="og:image" content="[À COMPLÉTER : adresse du site]/images/partage.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#111418">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-suivi">
+<svg class="defs" aria-hidden="true" focusable="false">
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.5a11 11 0 0 0 7.1 7.1l1.5-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z"/></symbol>
+  <symbol id="i-lieu" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10" r="2.4"/></symbol>
+  <symbol id="i-fleche" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+</svg>
+<p class="fictif">Fictional example: this site demonstrates the <em>site-commercant</em> skill. This garage does not exist.</p>
+<header class="entete">
+  <a class="logo" href="index.html" aria-label="Garage Delorme">
+    <svg class="logo-pont" viewBox="0 0 40 32" aria-hidden="true"><path class="lp-col" d="M5 2v28M35 2v28"/><path class="lp-bras" d="M5 22h30"/><path class="lp-sol" d="M1 30.5h38"/></svg>
+    <span class="logo-nom"><span>Garage</span> Delorme</span>
+  </a>
+  <nav class="nav" aria-label="Sections"><a href="index.html#services">Services</a><a href="index.html#panne">Broken down?</a><a href="index.html#demande">Book</a><a href="suivi.html">Track</a></nav>
+  <div class="entete-actions">
+    <a class="entete-tel" href="tel:+33492000000"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg><span>04 92 00 00 00</span></a>
+    <a class="langue" href="../suivi.html" hreflang="fr" lang="fr" aria-label="Version française">FR</a>
+  </div>
+</header>
+<main class="suivi">
+  <h1 class="titre">Where is my car?</h1>
+  <p class="chapeau">Enter the code the garage gave you when you dropped off your vehicle.</p>
+  <form class="suivi-form" data-suivi novalidate>
+    <label class="champ"><span>Tracking code</span><input name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="e.g. DEMO-4821" required></label>
+    <button class="bouton bouton--jaune" type="submit">Show progress</button>
+  </form>
+  <p class="aide">To try it: code DEMO-4821.</p>
+  <p class="erreur" role="alert" hidden data-erreur></p>
+  <div class="resultat" data-resultat hidden tabindex="-1">
+    <ol class="etapes"><li data-etape="1"><span>Vehicle received</span></li><li data-etape="2"><span>Diagnosis</span></li><li data-etape="3"><span>Repair</span></li><li data-etape="4"><span>Ready for pick-up</span></li></ol>
+    <p class="resultat-note" data-note></p>
+    <p class="aide" data-maj></p>
+  </div>
+  <p class="aide">A question? Call the garage. <a href="tel:+33492000000">04 92 00 00 00</a></p>
+  <p class="aide">No personal data is shown here: only the code and the step.</p>
+  <p><a class="retour" href="index.html">Back to home</a></p>
+</main>
+<footer class="pied">
+  <div class="pied-marque"><a class="logo" href="index.html" aria-label="Garage Delorme">
+    <svg class="logo-pont" viewBox="0 0 40 32" aria-hidden="true"><path class="lp-col" d="M5 2v28M35 2v28"/><path class="lp-bras" d="M5 22h30"/><path class="lp-sol" d="M1 30.5h38"/></svg>
+    <span class="logo-nom"><span>Garage</span> Delorme</span>
+  </a></div>
+  <address>14 avenue d'Embrun, 05000 Gap · <a href="tel:+33492000000">04 92 00 00 00</a></address>
+  <p class="pied-liens"><a href="../mentions-legales.html">Legal notice (in French)</a> <a href="../confidentialite.html">Privacy (in French)</a> <a href="../index.html" hreflang="fr">Version française</a></p>
+  <p class="pied-petit">This site sets no cookies.</p>
+</footer>
+<script src="../js/main.js" defer></script>
+</body>
+</html>

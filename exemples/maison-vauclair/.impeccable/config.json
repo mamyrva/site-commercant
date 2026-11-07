@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "site/mentions-legales.html"
+        ],
+        "createdAt": "2026-11-07T15:13:47.022Z",
+        "reason": "builder: .feuille has padding clamp(1.25rem, 4vw, 2.5rem); detector does not resolve clamp()"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "site/confidentialite.html"
+        ],
+        "createdAt": "2026-11-07T15:13:47.046Z",
+        "reason": "builder: .feuille has padding clamp(1.25rem, 4vw, 2.5rem); detector does not resolve clamp()"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-11-07T15:32:40.710Z",
+        "reason": "builder: section padding is clamp(5rem,10vw,9rem)/clamp(1.25rem,5vw,5rem) which the detector does not resolve; .photo placeholders hold only a centered line drawing"
+      }
+    ]
+  }
+}

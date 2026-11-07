@@ -1,0 +1,11 @@
+{
+  "_aide": "Fichier modifiable par le garage. Laissez le texte vide (\"\") pour ne rien afficher. Puis republiez le site.",
+  "annonce": {
+    "fr": "",
+    "en": ""
+  },
+  "conges": {
+    "fr": "Fermetures annuelles : [À COMPLÉTER : dates de congés]",
+    "en": "Annual closures: [À COMPLÉTER : dates de congés]"
+  }
+}

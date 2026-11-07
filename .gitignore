@@ -1,0 +1,9 @@
+.DS_Store
+.impeccable/config.local.json
+# Fichiers de travail d'impeccable à ne pas publier
+exemples/*/.impeccable/review/
+exemples/*/.impeccable/questions/
+exemples/*/.impeccable/hook.cache.json
+exemples/*/.impeccable/seed.txt
+exemples/*/.impeccable/archive-facade/
+exemples/*/.impeccable/pierre.png

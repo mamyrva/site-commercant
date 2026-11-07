@@ -1,0 +1,14 @@
+{
+  "_aide": "Suivi des réparations. Un dossier par véhicule : un code au hasard remis au client (jamais de nom ni de plaque), l'étape (1 reçu, 2 diagnostic, 3 réparation, 4 prête) et une note facultative. Supprimez le dossier quand le client a récupéré son véhicule. Le dossier DEMO-4821 sert d'exemple : supprimez-le avant la mise en ligne réelle.",
+  "mis_a_jour": "2026-11-07",
+  "dossiers": [
+    {
+      "code": "DEMO-4821",
+      "etape": 3,
+      "note": {
+        "fr": "Exemple : pièce reçue, remontage en cours.",
+        "en": "Example: part received, reassembly in progress."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Composed social share card (1200x630): HTML/CSS page .impeccable/review/carte-partage.html using the site's own fonts and jade colour, rendered with headless Chrome. No image model, no live data. Claude Code, 2026-11-07.

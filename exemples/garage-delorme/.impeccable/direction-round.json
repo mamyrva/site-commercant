@@ -1,0 +1,93 @@
+{
+  "title": "Choisis l'univers visuel du Garage Delorme",
+  "question": "Le tirage propose « Le carnet d'entretien ». Garde-le, prends une autre piste, ou relance.",
+  "options": [
+    {
+      "id": "assigned", "kind": "assigned", "label": "Le carnet d'entretien, version numérique",
+      "kicker": "THE ROLL",
+      "lineage": "le carnet d'entretien constructeur : lignes datées, kilométrage, tampon du garage, chaque intervention consignée",
+      "thesis": "Le site est un carnet d'entretien moderne : chaque service est une ligne consignée, le suivi de réparation en est la page vivante.",
+      "palette": ["#0E1116", "#F4F5F2", "#2F6BFF", "#C9CDD3", "#E8B23A"],
+      "materials": ["papier technique blanc", "grille fine", "tampon du garage", "chiffres tabulaires"],
+      "viewport": "Le logotype animé en haut, une grande ligne de carnet « Votre voiture est entre de bonnes mains » avec date et kilométrage vivants, le téléphone et Prendre rendez-vous.",
+      "risk": "Peut sembler administratif si la grille l'emporte sur l'émotion.",
+      "raised": [
+        {"from": "pop-culture-shelf-industrial-starship-terminal", "raise": "Chaque zone porte son code et son pictogramme, comme l'atelier étiquette ses postes."},
+        {"from": "scientific-notation-particle-detector-event-display", "raise": "Les étiquettes sont épinglées à ce qu'elles décrivent, chiffres en tabulaire."}
+      ]
+    },
+    {
+      "id": "model-pick", "kind": "pick", "label": "Le pont élévateur",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "le pont élévateur de l'atelier : la voiture monte, on voit le dessous, rien n'est caché",
+      "thesis": "Au défilement, la voiture monte sur le pont et la page révèle ce qu'il y a dessous : les services, comme des pièces qu'on inspecte.",
+      "palette": ["#111418", "#E9ECEF", "#F2C230", "#5B6573"],
+      "materials": ["sol époxy gris", "bras du pont jaune sécurité", "éclairage d'atelier", "dessin technique"],
+      "viewport": "Une silhouette de voiture au trait sur les bras du pont, qui s'élève quand on défile ; dessous, « On vous montre tout » et les quatre services.",
+      "risk": "Familier pour un garage (jaune sécurité et gris atelier) ; l'animation doit rester fluide sur les vieux téléphones."
+    },
+    {
+      "id": "challenger-terminal", "kind": "challenger", "catalogId": "pop-culture-shelf-industrial-starship-terminal",
+      "label": "Terminal d'atelier", "verdict": "competitive",
+      "lineage": "terminaux industriels, plaques de pictogrammes, codes au pochoir",
+      "thesis": "Le site comme le terminal de l'atelier : lignes qui s'écrivent, codes de poste, pictogrammes de sécurité.",
+      "palette": ["#0B0E0C", "#6CFF9A", "#FFB547", "#E6E2D6"],
+      "materials": ["écran noir", "texte vert et ambre", "pochoir", "plaques rayées"],
+      "viewport": "Un écran noir où s'écrit « DIAGNOSTIC… OK. On s'occupe de vous. », les services en codes de poste.",
+      "case": "Très « pointu », le suivi de réparation y est naturel ; mais un touriste stressé s'y rassure moins.",
+      "risk": "Peut faire jeu vidéo rétro plutôt que garage sérieux."
+    },
+    {
+      "id": "challenger-pushpin", "kind": "challenger", "catalogId": "brand-identity-canon-push-pin-poster",
+      "label": "Affiche Push Pin", "verdict": "declined",
+      "lineage": "affiches illustrées années 60", "thesis": "Un garage en affiche colorée.",
+      "palette": ["#F4E9D8", "#E85D8E", "#2BB3A8", "#F2A93B"], "materials": ["aplats", "lettrage nouveau"],
+      "viewport": "Une voiture illustrée en aplats de couleur.", "case": "Trop fantaisiste pour rassurer.",
+      "kept": "L'illustration chaleureuse tenue par une structure claire.", "risk": "Pas sérieux."
+    },
+    {
+      "id": "challenger-cathode", "kind": "challenger", "catalogId": "operate-b-struck-cathode-gauze",
+      "label": "Tubes Nixie", "verdict": "declined",
+      "lineage": "compteurs à tubes cathodiques", "thesis": "Les chiffres du garage allumés comme des tubes Nixie.",
+      "palette": ["#0D1220", "#FF7A1A", "#B8A27A"], "materials": ["verre", "grille de bronze"],
+      "viewport": "Un grand chiffre orange allumé.", "case": "Beau mais sans lien avec l'automobile.",
+      "kept": "Un seul élément allumé à la fois : l'état actuel.", "risk": "Décoratif."
+    },
+    {
+      "id": "challenger-detector", "kind": "challenger", "catalogId": "scientific-notation-particle-detector-event-display",
+      "label": "Détecteur de particules", "verdict": "declined",
+      "lineage": "affichages de collisionneur", "thesis": "Le diagnostic comme un événement scientifique.",
+      "palette": ["#0A0D14", "#F2D13A", "#3FC6E0", "#D9342B"], "materials": ["anneaux", "traces"],
+      "viewport": "Une coupe en anneaux.", "case": "Trop abstrait pour un garage.",
+      "kept": "Étiquettes épinglées et chiffres tabulaires.", "risk": "Froid."
+    },
+    {
+      "id": "challenger-versailles", "kind": "challenger", "catalogId": "architecture-inhabitable-space-versailles-bosquet-vistas",
+      "label": "Jardins de Versailles", "verdict": "declined",
+      "lineage": "jardins à la française", "thesis": "Perspectives et symétrie.",
+      "palette": ["#3E5B3A", "#D8C9A6", "#C9A23A"], "materials": ["haies taillées", "gravier"],
+      "viewport": "Une perspective axiale.", "case": "Hors sujet.",
+      "kept": "Un axe clair qui guide le regard.", "risk": "Hors sujet."
+    },
+    {
+      "id": "challenger-rain", "kind": "challenger", "catalogId": "dream-surreal-impossible-worlds-gravity-rain-garden",
+      "label": "Jardin de pluie", "verdict": "declined",
+      "lineage": "monde onirique", "thesis": "Une pluie qui tombe dans tous les sens.",
+      "palette": ["#5E6B63", "#3B7BD9", "#D9483B"], "materials": ["pluie", "jardin"],
+      "viewport": "Des gouttes qui tombent vers le haut.", "case": "Inquiétant pour un client en panne.",
+      "kept": "Un code couleur par état.", "risk": "Confus."
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code"},
+  "canon": true,
+  "canonCard": {
+    "kind": "canon", "label": "Le site façon constructeur",
+    "thesis": "Le standard des grandes marques automobiles, exécuté avec soin : grandes images, peu de texte, précision.",
+    "palette": ["#0F1115", "#FFFFFF", "#8A9099", "#1F6FEB"],
+    "materials": ["photographie pleine largeur", "sans-serif précise", "fonds sombres et blancs"],
+    "viewport": "Une grande image d'atelier pleine largeur, le titre court en blanc, Prendre rendez-vous et Appeler.",
+    "risk": "Ressemble aux autres garages haut de gamme."
+  },
+  "steer": true
+}

@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T15:43:18+00:00",
+  "title": "Design System: Maison Vauclair",
+  "extensions": {
+    "colorMeta": {
+      "fond": {
+        "role": "neutral",
+        "displayName": "Blanc vitrine",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#7D7D7D",
+          "#9E9E9E",
+          "#C4C4C4",
+          "#EEEEEE"
+        ]
+      },
+      "fond-doux": {
+        "role": "neutral",
+        "displayName": "Blanc cassé",
+        "canonical": "oklch(97.0% 0.003 106.4)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242423",
+          "#40403F",
+          "#5E5E5C",
+          "#7D7D7C",
+          "#9E9E9D",
+          "#C4C4C3",
+          "#EEEEEE"
+        ]
+      },
+      "encre": {
+        "role": "neutral",
+        "displayName": "Encre",
+        "canonical": "oklch(19.1% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#7D7D7D",
+          "#9E9E9E",
+          "#C4C4C4",
+          "#EEEEEE"
+        ]
+      },
+      "encre-douce": {
+        "role": "neutral",
+        "displayName": "Encre douce",
+        "canonical": "oklch(43.9% 0.010 84.6)",
+        "tonalRamp": [
+          "#0C0B0A",
+          "#252421",
+          "#413F3C",
+          "#605D58",
+          "#807D77",
+          "#A09E99",
+          "#C6C4C0",
+          "#EFEEEC"
+        ]
+      },
+      "filet": {
+        "role": "neutral",
+        "displayName": "Filet",
+        "canonical": "oklch(91.2% 0.005 95.1)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#242423",
+          "#40403E",
+          "#5E5E5B",
+          "#7E7D7A",
+          "#9F9E9C",
+          "#C4C4C2",
+          "#EFEEED"
+        ]
+      },
+      "photo": {
+        "role": "neutral",
+        "displayName": "Gris photo",
+        "canonical": "oklch(94.9% 0.004 91.4)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242423",
+          "#40403E",
+          "#5E5D5B",
+          "#7E7D7B",
+          "#9F9E9C",
+          "#C4C4C2",
+          "#EFEEED"
+        ]
+      },
+      "jade": {
+        "role": "primary",
+        "displayName": "Vert jade",
+        "canonical": "oklch(38.5% 0.061 182.1)",
+        "tonalRamp": [
+          "#040D0C",
+          "#132925",
+          "#254741",
+          "#396860",
+          "#568980",
+          "#81A8A0",
+          "#AFCBC5",
+          "#E3F2EF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Grand titre",
+        "purpose": "Le seul titre d'accueil, centré sous le visuel."
+      },
+      "headline": {
+        "displayName": "Titre de section",
+        "purpose": "Titres de section et des pages légales."
+      },
+      "title": {
+        "displayName": "Adresse en grand",
+        "purpose": "Adresse de la boutique dans la section visite ; même famille pour la promesse de la bande jade."
+      },
+      "logotype": {
+        "displayName": "Logotype",
+        "purpose": "MAISON VAUCLAIR en capitales espacées, en-tête et pied de page."
+      },
+      "body": {
+        "displayName": "Texte",
+        "purpose": "Chapeaux et paragraphes, Jost 300."
+      },
+      "body-small": {
+        "displayName": "Texte petit",
+        "purpose": "Descriptions des tuiles, services, horaires."
+      },
+      "label": {
+        "displayName": "Libellé",
+        "purpose": "Menu, boutons, titres des tuiles, légendes : capitales Jost 500 espacées."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "devoiler",
+        "value": "clip-path inset(0 0 100% 0) → inset(0) 1600ms cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Unique mouvement : le visuel d'ouverture se dévoile au chargement. Supprimé si moins d'animations est demandé."
+      },
+      {
+        "name": "fondu-survol",
+        "value": "300ms ease-out",
+        "purpose": "Couleurs des boutons et soulignement du menu au survol."
+      },
+      {
+        "name": "fondu-tuile",
+        "value": "400ms ease-out / 400ms cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Teinte de la photo et allongement du trait jade des tuiles."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tres-petit",
+        "value": "26rem (max-width)"
+      },
+      {
+        "name": "grand-ecran",
+        "value": "56rem (min-width)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bouton plein (jade)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Action principale : venir en boutique, itinéraire. Un seul par groupe d'actions.",
+      "html": "<a class=\"ds-bouton-plein\" href=\"#\">Venir à la Maison</a>",
+      "css": ".ds-bouton-plein{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;min-width:13rem;padding:.8rem 1.75rem;border:1px solid var(--jade, #134E46);border-radius:0;background:var(--jade, #134E46);color:var(--fond, #FFFFFF);font-family:Jost,Futura,'Avenir Next',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:background-color 300ms ease-out,border-color 300ms ease-out}.ds-bouton-plein:hover{background:#0C3832;border-color:#0C3832}.ds-bouton-plein:focus-visible{outline:1px solid var(--encre, #141414);outline-offset:4px}"
+    },
+    {
+      "name": "Bouton filet",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Action secondaire : appeler. Contour encre d'un pixel, se remplit d'encre au survol.",
+      "html": "<a class=\"ds-bouton\" href=\"#\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 3.5h3.2l1.6 4.2-2.1 1.5a11 11 0 0 0 7.1 7.1l1.5-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z\"/></svg>Appeler</a>",
+      "css": ".ds-bouton{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;min-width:13rem;padding:.8rem 1.75rem;border:1px solid var(--encre, #141414);border-radius:0;background:transparent;color:var(--encre, #141414);font-family:Jost,Futura,'Avenir Next',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:background-color 300ms ease-out,color 300ms ease-out}.ds-bouton:hover{background:var(--encre, #141414);color:var(--fond, #FFFFFF)}.ds-bouton:focus-visible{outline:1px solid var(--encre, #141414);outline-offset:4px}.ds-ic{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}"
+    },
+    {
+      "name": "En-tête",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Logotype Italiana centré en capitales espacées, menu Jost en petites capitales, filet en bas.",
+      "html": "<header class=\"ds-entete\"><a class=\"ds-logotype\" href=\"#\">Maison Vauclair</a><nav class=\"ds-nav\"><a href=\"#\">Créations</a><a href=\"#\">L'atelier</a><a href=\"#\">Montres</a><a href=\"#\">La Maison</a></nav></header>",
+      "css": ".ds-entete{display:grid;justify-items:center;gap:.75rem;padding:1.5rem 1.25rem 0;background:var(--fond, #FFFFFF);border-bottom:1px solid var(--filet, #E3E2DE)}.ds-logotype{font-family:Italiana,Didot,serif;font-size:1.75rem;letter-spacing:.32em;margin-right:-.32em;text-transform:uppercase;text-decoration:none;line-height:1.1;color:var(--encre, #141414)}.ds-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:0 2rem}.ds-nav a{padding:.85rem 0 .95rem;font-family:Jost,Futura,sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--encre, #141414);border-bottom:1px solid transparent;transition:border-color 300ms ease-out}.ds-nav a:hover{border-bottom-color:var(--jade, #134E46);color:var(--jade, #134E46)}.ds-nav a:focus-visible{outline:1px solid var(--encre, #141414);outline-offset:4px}"
+    },
+    {
+      "name": "Emplacement photo (dessin au trait)",
+      "kind": "custom",
+      "refersTo": "photo-placeholder",
+      "description": "Aplat gris photo, dessin d'atelier au trait et mention « Photo à venir », en attendant la photo du commerçant.",
+      "html": "<div class=\"ds-photo\" role=\"img\" aria-label=\"Emplacement photo : bague\"><svg class=\"ds-trait\" viewBox=\"0 0 200 200\" aria-hidden=\"true\"><ellipse cx=\"100\" cy=\"132\" rx=\"50\" ry=\"52\"/><ellipse cx=\"100\" cy=\"132\" rx=\"42\" ry=\"44\"/><path d=\"M84 84l6-12h20l6 12\"/><path d=\"M74 66L85.7 48H114.3L126 66ZM74 66L100 86L126 66\"/></svg><span class=\"ds-photo-mention\">Photo à venir</span></div>",
+      "css": ".ds-photo{position:relative;display:grid;place-items:center;aspect-ratio:3/2;width:22rem;background:var(--photo, #EFEEEB);overflow:hidden}.ds-trait{width:min(40%,14rem);aspect-ratio:1;margin-bottom:1.5rem;fill:none;stroke:#857E71;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}.ds-photo-mention{position:absolute;bottom:1.1rem;left:0;right:0;text-align:center;font-family:Jost,Futura,sans-serif;font-size:.6875rem;letter-spacing:.2em;text-transform:uppercase;color:#5F594F}"
+    },
+    {
+      "name": "Tuile de création",
+      "kind": "card",
+      "refersTo": "tile",
+      "description": "Photo carrée, titre en libellé capitales, court trait jade qui s'allonge au survol.",
+      "html": "<a class=\"ds-tuile\" href=\"#\"><div class=\"ds-tuile-photo\"></div><h3>Alliances</h3><p>Assorties, ou chacune la sienne.</p></a>",
+      "css": ".ds-tuile{display:block;width:14rem;text-decoration:none;color:var(--encre, #141414)}.ds-tuile-photo{aspect-ratio:1;background:var(--photo, #EFEEEB);transition:background-color 400ms ease-out}.ds-tuile h3{margin:1.1rem 0 .25rem;font-family:Jost,Futura,sans-serif;font-size:.8125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase}.ds-tuile h3::after{content:'';display:block;width:1.5rem;height:1px;margin-top:.5rem;background:var(--jade, #134E46);transition:width 400ms cubic-bezier(.16,1,.3,1)}.ds-tuile p{margin:.4rem 0 0;font-family:Jost,Futura,sans-serif;font-size:.9375rem;font-weight:300;color:var(--encre-douce, #55524C)}.ds-tuile:hover .ds-tuile-photo{background:#E6EEEB}.ds-tuile:hover h3{color:var(--jade, #134E46)}.ds-tuile:hover h3::after{width:3.5rem}.ds-tuile:focus-visible{outline:1px solid var(--encre, #141414);outline-offset:4px}"
+    },
+    {
+      "name": "Bande jade (atelier)",
+      "kind": "custom",
+      "refersTo": "jade-band",
+      "description": "Le seul aplat pleine largeur en couleur : titre, promesse Italiana, services séparés par des filets blancs translucides.",
+      "html": "<section class=\"ds-jade\"><h2>L'atelier est dans la boutique</h2><p class=\"ds-promesse\">On vient en parler, on revient les voir naître.</p><dl class=\"ds-services\"><div><dt>Mise à taille</dt><dd>Bagues et alliances.</dd></div><div><dt>Montres</dt><dd>Entretien et réparation.</dd></div></dl></section>",
+      "css": ".ds-jade{padding:3rem 2rem;background:var(--jade, #134E46);color:var(--fond, #FFFFFF)}.ds-jade h2{margin:0 0 1.5rem;font-family:Italiana,Didot,serif;font-weight:400;font-size:2.6rem;line-height:1.06}.ds-promesse{margin:0 0 2.5rem;font-family:Italiana,Didot,serif;font-size:2rem;line-height:1.12}.ds-services{margin:0;border-top:1px solid rgb(250 248 244 / .25)}.ds-services>div{padding:1.1rem 0;border-bottom:1px solid rgb(250 248 244 / .25)}.ds-services dt{font-family:Jost,Futura,sans-serif;font-size:.8125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase}.ds-services dd{margin:0;font-family:Jost,Futura,sans-serif;font-size:.9375rem;font-weight:300;color:#D6E4E0}"
+    },
+    {
+      "name": "Tableau des horaires",
+      "kind": "custom",
+      "refersTo": "hours-table",
+      "description": "Jours à gauche, heures à droite en chiffres à chasse fixe, filets entre les lignes, jour courant en jade.",
+      "html": "<table class=\"ds-horaires\"><caption>Horaires</caption><tbody><tr><th scope=\"row\">Mardi</th><td>10 h – 19 h</td></tr><tr class=\"ds-aujourdhui\"><th scope=\"row\">Mercredi</th><td>10 h – 19 h</td></tr><tr class=\"ds-ferme\"><th scope=\"row\">Dimanche</th><td>Fermé</td></tr></tbody></table>",
+      "css": ".ds-horaires{width:20rem;border-collapse:collapse;font-family:Jost,Futura,sans-serif;font-variant-numeric:tabular-nums;color:var(--encre, #141414)}.ds-horaires caption{margin:0 0 .75rem;text-align:left;font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--encre-douce, #55524C)}.ds-horaires th,.ds-horaires td{padding:.8rem 0;border-bottom:1px solid var(--filet, #E3E2DE);font-weight:300;text-align:left;font-size:.9375rem}.ds-horaires tr:first-child th,.ds-horaires tr:first-child td{border-top:1px solid var(--filet, #E3E2DE)}.ds-horaires td{text-align:right}.ds-ferme{color:#5F594F}.ds-aujourdhui th,.ds-aujourdhui td{font-weight:500;color:var(--jade, #134E46)}"
+    },
+    {
+      "name": "Pied de page",
+      "kind": "nav",
+      "refersTo": "footer",
+      "description": "Tout centré : logotype réduit, adresse, liens en capitales espacées, filet en haut.",
+      "html": "<footer class=\"ds-pied\"><p class=\"ds-pied-logo\">Maison Vauclair</p><address>18 cours de l'Intendance, 33000 Bordeaux</address><p class=\"ds-pied-liens\"><a href=\"#\">Mentions légales</a><a href=\"#\">Confidentialité</a></p></footer>",
+      "css": ".ds-pied{display:grid;justify-items:center;gap:.9rem;text-align:center;padding:4rem 1.25rem 3rem;background:var(--fond, #FFFFFF);border-top:1px solid var(--filet, #E3E2DE);font-family:Jost,Futura,sans-serif;font-size:.8125rem;color:var(--encre-douce, #55524C)}.ds-pied-logo{margin:0;font-family:Italiana,Didot,serif;font-size:1.5rem;letter-spacing:.32em;text-transform:uppercase;color:var(--encre, #141414)}.ds-pied address{font-style:normal}.ds-pied-liens{margin:0;display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 2rem}.ds-pied-liens a{padding:.4rem 0;letter-spacing:.1em;text-transform:uppercase;font-size:.75rem;color:var(--encre, #141414);text-underline-offset:.3em}.ds-pied-liens a:hover{color:var(--jade, #134E46)}.ds-pied-liens a:focus-visible{outline:1px solid var(--encre, #141414);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La vitrine claire",
+    "overview": "Maison Vauclair joue franchement la catégorie de la grande joaillerie moderne : beaucoup de blanc, de la lumière, une typographie très fine, et une seule couleur signature, le vert jade. Rien n'est ironique ni décalé : le visiteur doit reconnaître en une seconde une maison sérieuse, puis trouver l'adresse et les horaires. Le niveau de finition vise celui des grandes maisons (Tiffany, Messika servent de référence de finition seulement : on ne reprend ni leurs couleurs, ni leurs noms, ni leur identité).\n\nLa page respire. Les sections sont séparées par de grands espaces verticaux et par des filets d'un pixel, jamais par des ombres ou des cadres arrondis. Les titres sont en Italiana, une capitale de vitrine très déliée ; tout le reste (texte, boutons, menus, libellés) est en Jost, avec des libellés en petites capitales très espacées. Le jade apparaît en aplat pleine largeur une fois (la bande de l'atelier) et sur l'action principale ; ailleurs il ne sert qu'aux états (survol, jour du jour, « Ouvert »).\n\nTant que le commerçant n'a pas fourni ses photos, chaque emplacement photo est un aplat gris clair avec un dessin d'atelier au trait et la mention « Photo à venir ». Ces dessins sont provisoires par nature : ils tiennent la place de la photo, ils ne la remplacent pas.",
+    "keyCharacteristics": [
+      "Fond blanc pur, encre presque noire, filets fins couleur pierre claire.",
+      "Une seule couleur signature, le vert jade, en aplat et sur l'action principale.",
+      "Titres Italiana fins ; texte et libellés Jost, petites capitales espacées.",
+      "Angles droits partout, aucune ombre, profondeur par aplats et filets.",
+      "Emplacements photo dessinés au trait, prêts à recevoir les vraies photos.",
+      "Un seul mouvement : le grand visuel du haut se dévoile au chargement."
+    ],
+    "rules": [
+      {
+        "name": "La règle de la voix unique",
+        "body": "Le jade est la seule couleur vive du site. Une seule bande pleine largeur en jade par page ; sinon il se limite à l'action principale et aux états. On n'ajoute jamais une deuxième couleur d'accent.",
+        "section": "colors"
+      },
+      {
+        "name": "La règle des teintes dérivées",
+        "body": "Les quelques tons hors palette (jade profond #0C3832 au survol, fond sombre des photos sur jade #0F3F39, textes clairs sur jade #E3ECE9 et #D6E4E0) sont des déclinaisons du jade ou de la pierre. Toute nouvelle teinte doit en être une aussi.",
+        "section": "colors"
+      },
+      {
+        "name": "La règle des deux voix",
+        "body": "Italiana pour ce qui se regarde (titres, logotype, promesse), Jost pour ce qui se lit ou se clique. Jamais Italiana dans un bouton, un menu ou un paragraphe ; jamais Jost en grand titre.",
+        "section": "typography"
+      },
+      {
+        "name": "La règle du poids léger",
+        "body": "Le texte courant est en Jost 300 ; le 500 est réservé aux libellés en capitales et au jour courant. Pas de gras dans les titres : Italiana n'existe qu'en 400.",
+        "section": "typography"
+      },
+      {
+        "name": "La règle du papier à plat",
+        "body": "Aucune ombre, nulle part. Pour séparer, on change d'aplat ou on trace un filet.",
+        "section": "elevation"
+      },
+      {
+        "name": "La règle du mouvement unique",
+        "body": "Un seul moment animé par page, le dévoilement du visuel d'ouverture. Les survols sont de simples fondus (300 à 400 ms) ; rien ne bouge au défilement.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** garder le fond blanc pur (fond) et réserver le blanc cassé (fond-doux) à la section visite.",
+      "**Do** utiliser le jade pour une seule bande pleine largeur, l'action principale et les états, rien d'autre.",
+      "**Do** composer les titres en Italiana 400 et tout le reste en Jost, texte courant en 300.",
+      "**Do** séparer par des filets d'un pixel (filet) et par l'espace de section, jamais par une ombre.",
+      "**Do** garder les angles droits (0 px) sur les boutons, photos et tuiles.",
+      "**Do** respecter les proportions des emplacements photo (carré, 4/5, 3/2, 16/7) quand on y place les photos du commerçant.",
+      "**Do** décrire chaque emplacement photo et chaque photo pour les lecteurs d'écran."
+    ],
+    "donts": [
+      "**Don't** ajouter une deuxième couleur vive ni un dégradé.",
+      "**Don't** utiliser d'ombre portée, d'arrondi ou d'effet de verre.",
+      "**Don't** écrire un titre en Jost gras ou un bouton en Italiana.",
+      "**Don't** animer autre chose que le dévoilement du visuel d'ouverture.",
+      "**Don't** remplacer un dessin au trait par une photo de banque d'images ou un visuel de marque : seule une vraie photo de la maison prend sa place.",
+      "**Don't** reprendre les couleurs, les noms ou l'identité de Tiffany ou de Messika : elles servent de référence de finition, pas de modèle."
+    ]
+  }
+}

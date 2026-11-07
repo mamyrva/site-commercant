@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-11-07T15:04:21.720Z",
+        "reason": "builder: .bon is a two-column grid whose .feuillet child carries 1.25rem+ padding; rendered screenshots show proper inset"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "site/mentions-legales.html"
+        ],
+        "createdAt": "2026-11-07T15:04:21.751Z",
+        "reason": "builder: .bon is a two-column grid whose .feuillet child carries 1.25rem+ padding; rendered screenshots show proper inset"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "site/confidentialite.html"
+        ],
+        "createdAt": "2026-11-07T15:04:21.780Z",
+        "reason": "builder: .bon is a two-column grid whose .feuillet child carries 1.25rem+ padding; rendered screenshots show proper inset"
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "site/css/style.css"
+        ],
+        "createdAt": "2026-11-07T15:04:25.283Z",
+        "reason": "builder: only match is the focus underline of a borderless radius-0 form input, not a card accent"
+      }
+    ]
+  }
+}

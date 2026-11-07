@@ -1,0 +1,37 @@
+<symbol id="d-solitaire" viewBox="0 0 400 320">
+<ellipse cx="200" cy="205" rx="118" ry="92"/><ellipse cx="200" cy="211" rx="103" ry="78"/>
+<path d="M88 228c10 40 60 70 112 70s102-30 112-70"/>
+<path d="M150 128c12-8 30-12 50-12s38 4 50 12"/>
+<path d="M168 122l8 -22h48l8 22"/>
+<path d="M154.0 96.0L174.7 66.0H225.3L246.0 96.0ZM154.0 96.0L200.0 130.0L246.0 96.0M174.7 66.0L174.2 96.0M191.6 66.0L190.8 96.0M174.2 96.0L200.0 130.0M190.8 96.0L196.3 119.8M225.3 66.0L225.8 96.0M208.4 66.0L209.2 96.0M225.8 96.0L200.0 130.0M209.2 96.0L203.7 119.8M174.7 79.5H225.3"/>
+<path d="M154.0 102.0C152.0 84.0 158.0 69.0 160.0 64.5M182.5 102.0C181.8 84.0 184.0 69.0 184.8 64.5M217.5 102.0C218.2 84.0 216.0 69.0 215.2 64.5M246.0 102.0C248.0 84.0 242.0 69.0 240.0 64.5"/>
+<path d="M300 150l14-14M312 168l18-6M286 134l6-18" stroke-dasharray="2 4"/>
+</symbol><symbol id="d-bague" viewBox="0 0 200 200">
+<ellipse cx="100" cy="132" rx="50" ry="52"/><ellipse cx="100" cy="132" rx="42" ry="44"/>
+<path d="M84 84l6-12h20l6 12"/>
+<path d="M74.0 66.0L85.7 48.0H114.3L126.0 66.0ZM74.0 66.0L100.0 86.0L126.0 66.0M85.7 48.0L85.4 66.0M95.2 48.0L94.8 66.0M85.4 66.0L100.0 86.0M94.8 66.0L97.9 80.0M114.3 48.0L114.6 66.0M104.8 48.0L105.2 66.0M114.6 66.0L100.0 86.0M105.2 66.0L102.1 80.0M85.7 56.1H114.3"/><path d="M74.0 69.6C72.0 58.8 78.0 49.8 80.0 47.1M90.1 69.6C89.4 58.8 91.6 49.8 92.4 47.1M109.9 69.6C110.6 58.8 108.4 49.8 107.6 47.1M126.0 69.6C128.0 58.8 122.0 49.8 120.0 47.1"/>
+</symbol><symbol id="d-alliances" viewBox="0 0 200 200">
+<ellipse cx="80" cy="110" rx="46" ry="40"/><ellipse cx="80" cy="113" rx="38" ry="31"/>
+<path d="M34 112c2 14 22 28 46 28s44-14 46-28"/>
+<ellipse cx="124" cy="98" rx="46" ry="40"/><ellipse cx="124" cy="101" rx="38" ry="31"/>
+<path d="M78 100c2 14 22 28 46 28s44-14 46-28"/>
+<path d="M58 84c8-6 18-9 26-9M104 72c8-6 18-9 26-9" stroke-dasharray="1 3"/>
+</symbol><symbol id="d-collier" viewBox="0 0 200 200"><ellipse cx="35.8" cy="42.4" rx="3.4" ry="1.8" transform="rotate(64.7 35.8 42.4)"/><ellipse cx="41.7" cy="54.6" rx="3.4" ry="1.8" transform="rotate(64.1 41.7 54.6)"/><ellipse cx="47.5" cy="66.4" rx="3.4" ry="1.8" transform="rotate(63.1 47.5 66.4)"/><ellipse cx="53.3" cy="77.5" rx="3.4" ry="1.8" transform="rotate(61.6 53.3 77.5)"/><ellipse cx="59.2" cy="87.8" rx="3.4" ry="1.8" transform="rotate(59.4 59.2 87.8)"/><ellipse cx="65.0" cy="97.2" rx="3.4" ry="1.8" transform="rotate(56.4 65.0 97.2)"/><ellipse cx="70.8" cy="105.4" rx="3.4" ry="1.8" transform="rotate(52.4 70.8 105.4)"/><ellipse cx="76.7" cy="112.3" rx="3.4" ry="1.8" transform="rotate(46.8 76.7 112.3)"/><ellipse cx="82.5" cy="117.8" rx="3.4" ry="1.8" transform="rotate(39.2 82.5 117.8)"/><ellipse cx="88.3" cy="121.8" rx="3.4" ry="1.8" transform="rotate(28.9 88.3 121.8)"/><ellipse cx="94.2" cy="124.2" rx="3.4" ry="1.8" transform="rotate(15.5 94.2 124.2)"/><ellipse cx="100.0" cy="125.0" rx="3.4" ry="1.8" transform="rotate(0.0 100.0 125.0)"/><ellipse cx="105.8" cy="124.2" rx="3.4" ry="1.8" transform="rotate(-15.5 105.8 124.2)"/><ellipse cx="111.7" cy="121.8" rx="3.4" ry="1.8" transform="rotate(-28.9 111.7 121.8)"/><ellipse cx="117.5" cy="117.8" rx="3.4" ry="1.8" transform="rotate(-39.2 117.5 117.8)"/><ellipse cx="123.3" cy="112.3" rx="3.4" ry="1.8" transform="rotate(-46.8 123.3 112.3)"/><ellipse cx="129.2" cy="105.4" rx="3.4" ry="1.8" transform="rotate(-52.4 129.2 105.4)"/><ellipse cx="135.0" cy="97.2" rx="3.4" ry="1.8" transform="rotate(-56.4 135.0 97.2)"/><ellipse cx="140.8" cy="87.8" rx="3.4" ry="1.8" transform="rotate(-59.4 140.8 87.8)"/><ellipse cx="146.7" cy="77.5" rx="3.4" ry="1.8" transform="rotate(-61.6 146.7 77.5)"/><ellipse cx="152.5" cy="66.4" rx="3.4" ry="1.8" transform="rotate(-63.1 152.5 66.4)"/><ellipse cx="158.3" cy="54.6" rx="3.4" ry="1.8" transform="rotate(-64.1 158.3 54.6)"/><ellipse cx="164.2" cy="42.4" rx="3.4" ry="1.8" transform="rotate(-64.7 164.2 42.4)"/>
+<path d="M100 126v6"/><circle cx="100" cy="134" r="2.5"/>
+<path d="M100 137l13 16-13 26-13-26z"/><path d="M87 153h26M100 137l-5 16 5 26 5-26z"/>
+</symbol><symbol id="d-montre" viewBox="0 0 200 200">
+<path d="M80 22h40l-3 38H83zM83 140h34l3 38H80z"/><path d="M86 30h28M86 170h28M95 160v4M105 160v4" />
+<path d="M76 66l-6-8M124 66l6-8M76 134l-6 8M124 134l6 8"/>
+<circle cx="100" cy="100" r="44"/><circle cx="100" cy="100" r="39"/>
+<path d="M100.0 72.0L100.0 65.0M115.5 73.2L117.5 69.7M126.8 84.5L130.3 82.5M128.0 100.0L135.0 100.0M126.8 115.5L130.3 117.5M115.5 126.8L117.5 130.3M100.0 128.0L100.0 135.0M84.5 126.8L82.5 130.3M73.2 115.5L69.7 117.5M72.0 100.0L65.0 100.0M73.2 84.5L69.7 82.5M84.5 73.2L82.5 69.7"/>
+<path d="M100 100L100 72M100 100l18 10"/><circle cx="100" cy="100" r="2"/>
+<path d="M144 95h7v10h-7M151 97h3v6h-3"/>
+</symbol><symbol id="d-atelier" viewBox="0 0 320 400">
+<path d="M20 250H300M20 262H300M40 262v120M280 262v120"/>
+<path d="M120 250l-14 -40h108l-14 40"/><path d="M160 226v-14" />
+<path d="M150 250l60-170 14 4-58 166"/><path d="M178 128l18 6"/>
+<ellipse cx="192" cy="134" rx="16" ry="6" transform="rotate(19 192 134)"/><ellipse cx="192" cy="134" rx="12" ry="4" transform="rotate(19 192 134)"/>
+<circle cx="80" cy="170" r="34"/><circle cx="80" cy="170" r="28"/><path d="M104 194l40 40M110 188l40 40M144 234l6-6"/>
+<path d="M232 60h56v150h-56M232 60v-12M232 210v12M246 60v150" />
+<path d="M246 80l42 0M246 190l42 0" stroke-dasharray="2 3"/>
+</symbol>

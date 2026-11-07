@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T16:11:46",
+  "title": "Design System: Au Pain Doré",
+  "extensions": {
+    "colorMeta": {
+      "couverture": {
+        "role": "primary",
+        "displayName": "Bleu couverture",
+        "canonical": "#2F3A9E",
+        "tonalRamp": [
+          "#10143A",
+          "#1A2160",
+          "#232C7E",
+          "#2F3A9E",
+          "#4A55B8",
+          "#7179CC",
+          "#A3A9E2",
+          "#D6D9F4"
+        ]
+      },
+      "jaune-autocopiant": {
+        "role": "secondary",
+        "displayName": "Jaune autocopiant",
+        "canonical": "#F4D23C",
+        "tonalRamp": [
+          "#4A3D06",
+          "#7A650C",
+          "#AE9214",
+          "#DDBB22",
+          "#F4D23C",
+          "#F7DE6E",
+          "#FAEAA2",
+          "#FDF6D6"
+        ]
+      },
+      "rose-autocopiant": {
+        "role": "secondary",
+        "displayName": "Rose autocopiant",
+        "canonical": "#F5C3CF",
+        "tonalRamp": [
+          "#4D1F2B",
+          "#7A3446",
+          "#A84D63",
+          "#D47E93",
+          "#F5C3CF",
+          "#F8D3DC",
+          "#FBE3E9",
+          "#FDF2F5"
+        ]
+      },
+      "rouge-numerotation": {
+        "role": "tertiary",
+        "displayName": "Rouge numérotation",
+        "canonical": "#A8150F",
+        "tonalRamp": [
+          "#3A0705",
+          "#5E0B08",
+          "#83100C",
+          "#A8150F",
+          "#CC3A33",
+          "#E06D67",
+          "#EFA29E",
+          "#F9D6D4"
+        ]
+      },
+      "carbone": {
+        "role": "neutral",
+        "displayName": "Encre carbone",
+        "canonical": "#1E2156",
+        "tonalRamp": [
+          "#0B0C22",
+          "#14163B",
+          "#1E2156",
+          "#3C3F78",
+          "#5F6297",
+          "#878AB5",
+          "#B3B5D3",
+          "#DEDFEE"
+        ]
+      },
+      "ticket": {
+        "role": "neutral",
+        "displayName": "Papier ticket",
+        "canonical": "#FFFDF2"
+      },
+      "creme-couverture": {
+        "role": "neutral",
+        "displayName": "Crème couverture",
+        "canonical": "#F7F1D2"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Tampon",
+        "purpose": "Le nom au tampon sur la couverture, uniquement."
+      },
+      "headline": {
+        "displayName": "Titre de bon",
+        "purpose": "Titre de chaque bon numéroté."
+      },
+      "body": {
+        "displayName": "Texte",
+        "purpose": "Chapeaux et pages légales, 60–68ch au maximum."
+      },
+      "label": {
+        "displayName": "Libellé imprimé",
+        "purpose": "Libellés de champs et légendes, en capitales étroites."
+      },
+      "manuscrit": {
+        "displayName": "Manuscrit",
+        "purpose": "Valeurs remplies à la main : champs, état ouvert/fermé, tickets."
+      }
+    },
+    "shadows": [
+      {
+        "name": "feuillet-pose",
+        "value": "0 1px 1px rgb(0 0 0 / 0.22), 0 14px 28px -14px rgb(0 0 0 / 0.5)",
+        "purpose": "Chaque bon posé sur la couverture."
+      },
+      {
+        "name": "feuillet-arrache",
+        "value": "0 1px 1px rgb(0 0 0 / 0.22), 0 18px 32px -14px rgb(0 0 0 / 0.55)",
+        "purpose": "Le bon détaché, soulevé."
+      },
+      {
+        "name": "ticket",
+        "value": "0 1px 2px rgb(30 33 86 / 0.25)",
+        "purpose": "Petits papiers épinglés."
+      }
+    ],
+    "motion": [
+      {
+        "name": "arracher",
+        "value": "800ms cubic-bezier(.3,.7,.2,1)",
+        "purpose": "Le bon de commande s'arrache le long des perforations."
+      },
+      {
+        "name": "tampon-appui",
+        "value": "160ms cubic-bezier(.2,.8,.2,1)",
+        "purpose": "Appui sur un bouton tampon."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "produits-empiles",
+        "value": "32rem"
+      },
+      {
+        "name": "deux-colonnes",
+        "value": "52rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bouton tampon plein",
+      "kind": "button",
+      "refersTo": "bouton-plein",
+      "description": "Action principale : Itinéraire, Détacher mon bon.",
+      "html": "<a class=\"ds-tampon ds-tampon--plein\" href=\"#\">Itinéraire</a>",
+      "css": ".ds-tampon{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.7rem 1.25rem;color:var(--carbone,#1E2156);font-family:Bricolage,'Arial Narrow',sans-serif;font-weight:800;font-stretch:75%;letter-spacing:.07em;text-transform:uppercase;text-decoration:none}.ds-tampon::before{content:'';position:absolute;inset:3px;z-index:-1;border:2px solid #1E2156;border-radius:.4rem;outline:1.5px solid #1E2156;outline-offset:2px}.ds-tampon--plein{color:#F4D23C}.ds-tampon--plein::before{background:#1E2156}.ds-tampon:hover::before{background:rgb(30 33 86 / .1)}.ds-tampon--plein:hover::before{background:#2B2F72}.ds-tampon:focus-visible{outline:2px dashed #1E2156;outline-offset:4px}"
+    },
+    {
+      "name": "Bouton tampon contour",
+      "kind": "button",
+      "refersTo": "bouton-contour",
+      "description": "Action secondaire : Appeler, Instagram.",
+      "html": "<a class=\"ds-tampon\" href=\"#\">Appeler</a>",
+      "css": ".ds-tampon{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.7rem 1.25rem;color:#1E2156;font-family:Bricolage,'Arial Narrow',sans-serif;font-weight:800;font-stretch:75%;letter-spacing:.07em;text-transform:uppercase;text-decoration:none}.ds-tampon::before{content:'';position:absolute;inset:3px;z-index:-1;border:2px solid #1E2156;border-radius:.4rem;outline:1.5px solid #1E2156;outline-offset:2px}.ds-tampon:hover::before{background:rgb(30 33 86 / .1)}.ds-tampon:focus-visible{outline:2px dashed #1E2156;outline-offset:4px}"
+    },
+    {
+      "name": "Champ de formulaire",
+      "kind": "input",
+      "description": "Libellé imprimé, filet, saisie manuscrite.",
+      "html": "<label class=\"ds-champ\"><span>Pour quel jour ?</span><input placeholder=\"votre prénom\"></label>",
+      "css": ".ds-champ{display:block;background:#F4D23C;padding:1rem;color:#1E2156}.ds-champ span{display:block;font:700 .75rem/1.4 Bricolage,'Arial Narrow',sans-serif;font-stretch:80%;letter-spacing:.08em;text-transform:uppercase;color:#3C3F78}.ds-champ input{display:block;width:100%;border:0;border-bottom:1.5px solid #1E2156;background:transparent;font:600 1.6rem/1.2 Caveat,cursive;color:#1E2156;caret-color:#A8150F}.ds-champ input:focus{outline:none;border-bottom:3px solid #A8150F}"
+    },
+    {
+      "name": "Bon numéroté",
+      "kind": "card",
+      "refersTo": "bon-jaune",
+      "description": "Section type : souche numérotée + feuillet.",
+      "html": "<div class=\"ds-bon\"><div class=\"ds-souche\"><span>N° 0001</span></div><div class=\"ds-feuillet\"><h3>On passe aujourd'hui ?</h3></div></div>",
+      "css": ".ds-bon{display:grid;grid-template-columns:2.75rem 1fr;background:#F4D23C;border-radius:3px;box-shadow:0 1px 1px rgb(0 0 0 / .22),0 14px 28px -14px rgb(0 0 0 / .5);color:#1E2156}.ds-souche{position:relative;display:grid;place-items:center;border-right:1px dashed rgb(30 33 86 / .35)}.ds-souche::after{content:'';position:absolute;inset:0 -4px 0 auto;width:8px;background:radial-gradient(circle,#2F3A9E 0 3.5px,transparent 4px) 0 0/8px 14px repeat-y}.ds-souche span{writing-mode:vertical-rl;transform:rotate(180deg);color:#A8150F;font:700 1.15rem Bricolage,sans-serif;font-stretch:75%;letter-spacing:.12em}.ds-feuillet{padding:1.5rem 1.25rem}.ds-feuillet h3{margin:0;font:800 2rem/1 Bricolage,sans-serif;font-stretch:78%}"
+    },
+    {
+      "name": "Ticket",
+      "kind": "chip",
+      "refersTo": "ticket",
+      "description": "Petit papier épinglé à un produit.",
+      "html": "<span class=\"ds-ticket\"><small>sorti du four à 4 h</small>levain maison</span>",
+      "css": ".ds-ticket{display:inline-block;padding:.2rem .55rem;background:#FFFDF2;color:#1E2156;font:600 1.2rem/1.1 Caveat,cursive;transform:rotate(-1.5deg);box-shadow:0 1px 2px rgb(30 33 86 / .25);border-left:1px dashed rgb(30 33 86 / .4)}.ds-ticket small{display:block;font:700 .75rem Bricolage,sans-serif;font-stretch:80%;color:#3C3F78}"
+    },
+    {
+      "name": "Navigation de couverture",
+      "kind": "nav",
+      "description": "Liens jaunes sur la couverture bleue.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">Horaires</a><a href=\"#\">Le pain</a><a href=\"#\">Gâteaux</a></nav>",
+      "css": ".ds-nav{display:flex;gap:1.25rem;background:#2F3A9E;padding:1rem;font:600 .9375rem Bricolage,sans-serif;font-stretch:80%;letter-spacing:.02em}.ds-nav a{color:#F4D23C;text-decoration:none}.ds-nav a:hover{text-decoration:underline}.ds-nav a:focus-visible{outline:2px dashed #F4D23C;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le carnet de commandes",
+    "overview": "Le site est le carnet à souches de la boutique : une couverture bleu carbone qui tient une liasse de bons autocopiants jaunes et roses. Chaque section est un bon numéroté. On le lit comme un formulaire imprimé, avec des libellés étroits et des filets, les valeurs sont remplies à la main, et le bon de commande se détache vraiment le long de ses perforations.\n\nTout est dessiné en deux encres : le carbone (bleu-noir) porte le texte, les filets et les tampons, et le rouge de numérotation porte les numéros de série. Les nuances viennent de hachures, jamais de dégradés. L'ambiance est chaleureuse par la couleur du papier et l'écriture, mais pas vieillotte : la typographie est une grotesque étroite et contemporaine, pas une serif d'antan.",
+    "keyCharacteristics": [
+      "Couverture bleue pleine page, bons en papier coloré posés dessus.",
+      "Souche verticale à gauche de chaque bon : numéro de série rouge, colonne de trous qui laisse voir la couverture.",
+      "Libellés imprimés en petites capitales étroites au-dessus de filets, valeurs en écriture manuscrite.",
+      "Tampons encreurs (contours irréguliers par filtre SVG) pour le nom et les boutons."
+    ],
+    "rules": [
+      {
+        "name": "La règle des deux encres",
+        "body": "Sur le papier, on n'imprime qu'en carbone et en rouge. Toute nuance supplémentaire se fait par hachure (lignes de 1 px) ou par transparence du carbone, jamais par une nouvelle couleur ni par un dégradé.",
+        "section": "colors"
+      },
+      {
+        "name": "La règle du rouge de série",
+        "body": "Le rouge est réservé aux numéros de série et aux signaux de saisie ou d'erreur. Il ne sert jamais à mettre un mot en valeur : l'emphase passe par la graisse et le soulignement carbone.",
+        "section": "colors"
+      },
+      {
+        "name": "La règle du formulaire rempli",
+        "body": "L'écriture manuscrite n'apparaît que pour une valeur écrite dans un champ ou sur un ticket, jamais pour un titre ou un paragraphe.",
+        "section": "typography"
+      },
+      {
+        "name": "La règle de l'ombre noire",
+        "body": "Les ombres sont neutres (noir transparent), décalées vers le bas et floues. Jamais de halo coloré sur le fond bleu.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do poser chaque nouvelle section comme un bon numéroté (souche + feuillet), en alternant jaune et rose.",
+      "Do écrire les libellés en petites capitales étroites (0.75rem, 0.08em) au-dessus d'un filet, et les valeurs à la main.",
+      "Do ombrer par hachures de 1px (repeating-linear-gradient à 45°) quand une case est vide ou fermée.",
+      "Do thémer les surfaces du navigateur : sélection carbone sur jaune, curseur rouge, barre de défilement jaune sur bleu sombre."
+    ],
+    "donts": [
+      "Don't ajouter une troisième encre ni un dégradé de couleur sur le papier.",
+      "Don't utiliser le rouge pour mettre un mot en valeur.",
+      "Don't employer l'écriture manuscrite pour un titre ou un paragraphe.",
+      "Don't utiliser de photo de banque d'images présentée comme celle de la boutique : l'emplacement photo agrafé attend les vraies photos."
+    ]
+  }
+}
