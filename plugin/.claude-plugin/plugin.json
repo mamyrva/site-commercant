@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "Crée avec le commerçant, de A à Z, le site de son commerce : entretien, design sur mesure (impeccable), animations, motion design, fonctions dynamiques, référencement Google, mentions légales françaises, mise en ligne gratuite. · Builds a small business website end to end with the owner.",
   "author": {
-    "name": "maxlebg22"
+    "name": "mamyrva"
   },
   "license": "MIT",
   "keywords": [
@@ -13,6 +13,6 @@
     "france",
     "seo-local"
   ],
-  "homepage": "https://github.com/maxlebg22/site-commercant",
-  "repository": "https://github.com/maxlebg22/site-commercant"
+  "homepage": "https://github.com/mamyrva/site-commercant",
+  "repository": "https://github.com/mamyrva/site-commercant"
 }

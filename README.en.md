@@ -46,7 +46,7 @@ In Claude Code, run these commands one at a time:
 ```
 /plugin marketplace add pbakaus/impeccable
 /plugin install impeccable@impeccable
-/plugin marketplace add maxlebg22/site-commercant
+/plugin marketplace add mamyrva/site-commercant
 /plugin install site-commercant@site-commercant
 /reload-plugins
 ```

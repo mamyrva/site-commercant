@@ -5,7 +5,7 @@
     "description": "Un site professionnel et personnalisé pour les petits commerçants et artisans, fait avec Claude Code. · Personalised professional websites for small shops and craftspeople, built with Claude Code."
   },
   "owner": {
-    "name": "maxlebg22"
+    "name": "mamyrva"
   },
   "plugins": [
     {
@@ -24,7 +24,7 @@
         "local-seo",
         "website-builder"
       ],
-      "homepage": "https://github.com/maxlebg22/site-commercant"
+      "homepage": "https://github.com/mamyrva/site-commercant"
     }
   ]
 }
