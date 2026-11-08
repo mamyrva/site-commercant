@@ -29,7 +29,7 @@ Le critère des jurés : un site exceptionnel réunit **une direction artistique
 
 - **Un ou deux moments forts**, chorégraphiés, qui racontent quelque chose (la voiture qui monte sur le pont, le bon qui se détache), plutôt que des effets partout.
 - **Chaque animation explique un changement d'état.** Une animation purement décorative, c'est du bruit.
-- **Les durées** : 0,2 à 0,6 s pour les interactions, une courbe qui démarre vite et ralentit (`cubic-bezier(.16,1,.3,1)`), des apparitions en cascade avec 60 à 100 ms d'écart.
+- **Les durées** (détail dans `finitions.md`) : moins de 0,3 s pour les interactions, jusqu'à 0,6 s pour une entrée en scène, une courbe qui démarre vite et ralentit (`cubic-bezier(.16,1,.3,1)`), des apparitions en cascade avec 60 à 100 ms d'écart.
 - **N'anime que `transform` et `opacity`** (ainsi que `clip-path` et `filter` s'ils restent fluides).
 - **Pas d'écran de chargement**, pas de défilement détourné, pas de contenu caché tant qu'une animation n'a pas tourné.
 - **Toujours** prévoir un chemin `prefers-reduced-motion` où tout reste visible et compréhensible.
@@ -77,5 +77,6 @@ Le critère des jurés : un site exceptionnel réunit **une direction artistique
 - [ ] Le site reste fluide avec le processeur ralenti ×4.
 - [ ] Les états (survol, focus, erreur, succès) sont tous dessinés.
 - [ ] L'image de partage et les icônes sont soignées.
+- [ ] La liste de contrôle de `finitions.md` est passée (animations, téléphone, pire cas des données).
 
 Sources (consultées le 2026-11-07) : critères Awwwards (via webdesignawards.io), analyse d'un juré Awwwards (hontran.dev, « Best award-winning websites 2026 »), tendances 2026 d'Envato, MotionKit et We.Inc. Ces sources sont commerciales : on n'en garde que les points qui se recoupent.

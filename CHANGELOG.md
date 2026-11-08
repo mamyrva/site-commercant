@@ -2,6 +2,10 @@
 
 Le projet évolue à chaque nouveau site testé. · The project evolves with every site it is tested on.
 
+## 0.5.1 · 2026-11-08
+
+- **Guide des finitions** (`finitions.md`) : quand animer et combien de temps, les courbes à utiliser, le bouton qui s'enfonce sous le doigt, ce qu'on peut animer sans ralentir un vieux téléphone, les dix défauts qui trahissent un site web sur un téléphone, et le « pire cas réaliste » des données d'un commerce (nom long, e-mail sans coupure, horaires coupés, prix à quatre chiffres, version anglaise plus longue). Inspiré des principes publiés par Emil Kowalski, réécrit avec nos mots. · Finishing guide: motion timing, mobile tells, worst-case shop data.
+
 ## 0.5.0 · 2026-11-07
 
 - **Mouvement naturel : filmer plutôt que dessiner.** Pour un objet réel qui bouge, le skill produit une vraie séquence filmée (image de départ, courte vidéo caméra fixe, 60 images WebP) que le défilement fait avancer sur un `<canvas>`, avec un lissage qui fait démarrer et s'arrêter le mouvement en douceur. Il prévoit une image fixe en mouvement réduit. Ajouté à `excellence.md` et `motion.md`. · Natural motion: film it, don't draw it (scroll-scrubbed image sequence with smoothing).

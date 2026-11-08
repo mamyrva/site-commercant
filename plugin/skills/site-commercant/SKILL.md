@@ -52,7 +52,7 @@ Suis ensuite les étapes d'impeccable (direction visuelle, `DESIGN.md`, construc
 ## Étape 4 : fonctions, animations et vidéo
 
 - **Fonctions dynamiques** : construis chacune comme décrit dans [references/fonctionnalites.md](references/fonctionnalites.md), dans l'univers visuel d'impeccable. Teste chaque fonction pour de vrai : envoi du formulaire, ouverture de la galerie au clavier et au doigt, affichage des actualités depuis le fichier JSON.
-- **Animations** : au niveau choisi, toujours avec `prefers-reduced-motion`.
+- **Animations et finitions** : au niveau choisi, toujours avec `prefers-reduced-motion`. Suis [references/finitions.md](references/finitions.md) : quand animer, courbes et durées, ce qui trahit un site web sur un téléphone, et le pire cas réaliste des données du commerce (nom long, horaires coupés, prix à quatre chiffres).
 - **Vidéo en motion design** : si elle a été demandée, suis [references/motion.md](references/motion.md). Le skill `hyperframes` sert à la produire s'il est installé ; sinon, l'animation se fait en SVG et CSS.
 
 ## Étape 5 : la couche commerçant
